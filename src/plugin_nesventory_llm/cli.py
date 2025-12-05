@@ -153,7 +153,7 @@ def cmd_stats(args):
 def main():
     """Main entry point for the CLI."""
     parser = argparse.ArgumentParser(
-        description="NesVentory LLM Plugin - Department 65 Village Collectibles AI",
+        description="NesVentory LLM Plugin - Department 56 Village Collectibles AI",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

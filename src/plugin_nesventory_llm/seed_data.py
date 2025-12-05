@@ -1,5 +1,5 @@
 """
-Sample seed data for Department 65 Village Collectibles.
+Sample seed data for Department 56 Village Collectibles.
 
 This module provides example items to get started with the knowledge base
 when scraping is not available or for testing purposes.
@@ -69,7 +69,7 @@ SAMPLE_COLLECTIONS = [
 SAMPLE_ITEMS = [
     # Dickens Village
     VillageItem(
-        id="dept65-dv001",
+        id="dept56-dv001",
         name="Scrooge & Marley Counting House",
         item_number="65.6500-5",
         collection="Dickens Village",
@@ -85,7 +85,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-dv002",
+        id="dept56-dv002",
         name="The Old Curiosity Shop",
         item_number="65.5905-6",
         collection="Dickens Village",
@@ -101,7 +101,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-dv003",
+        id="dept56-dv003",
         name="Crown & Cricket Inn",
         item_number="65.5750-9",
         collection="Dickens Village",
@@ -114,7 +114,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-dv004",
+        id="dept56-dv004",
         name="Carolers - Set of 3",
         item_number="65.6526-9",
         collection="Dickens Village",
@@ -130,7 +130,7 @@ SAMPLE_ITEMS = [
     ),
     # Snow Village
     VillageItem(
-        id="dept65-sv001",
+        id="dept56-sv001",
         name="Mountain Lodge",
         item_number="50.5001-3",
         collection="Original Snow Village",
@@ -147,7 +147,7 @@ SAMPLE_ITEMS = [
         notes="One of the original 6 Snow Village pieces",
     ),
     VillageItem(
-        id="dept65-sv002",
+        id="dept56-sv002",
         name="Nantucket Renovation",
         item_number="54.5441-0",
         collection="Original Snow Village",
@@ -163,7 +163,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-sv003",
+        id="dept56-sv003",
         name="Starbucks Coffee",
         item_number="54.5459-5",
         collection="Original Snow Village",
@@ -181,7 +181,7 @@ SAMPLE_ITEMS = [
     ),
     # North Pole
     VillageItem(
-        id="dept65-np001",
+        id="dept56-np001",
         name="Santa's Workshop",
         item_number="56.5600-6",
         collection="North Pole Series",
@@ -194,7 +194,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-np002",
+        id="dept56-np002",
         name="Elf Bunkhouse",
         item_number="56.5601-4",
         collection="North Pole Series",
@@ -210,7 +210,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-np003",
+        id="dept56-np003",
         name="Reindeer Barn",
         item_number="56.5620-1",
         collection="North Pole Series",
@@ -224,7 +224,7 @@ SAMPLE_ITEMS = [
     ),
     # New England Village
     VillageItem(
-        id="dept65-ne001",
+        id="dept56-ne001",
         name="Cape Keag Fish Cannery",
         item_number="59.5652-8",
         collection="New England Village",
@@ -240,7 +240,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-ne002",
+        id="dept56-ne002",
         name="Craggy Cove Lighthouse",
         item_number="59.5930-7",
         collection="New England Village",
@@ -258,7 +258,7 @@ SAMPLE_ITEMS = [
     ),
     # Christmas in the City
     VillageItem(
-        id="dept65-cc001",
+        id="dept56-cc001",
         name="Hollydale's Department Store",
         item_number="58.5534-4",
         collection="Christmas in the City",
@@ -274,7 +274,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-cc002",
+        id="dept56-cc002",
         name="City Hall",
         item_number="58.5969-2",
         collection="Christmas in the City",
@@ -287,7 +287,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-cc003",
+        id="dept56-cc003",
         name="Radio City Music Hall",
         item_number="58.5889-0",
         collection="Christmas in the City",
@@ -305,7 +305,7 @@ SAMPLE_ITEMS = [
     ),
     # Alpine Village
     VillageItem(
-        id="dept65-av001",
+        id="dept56-av001",
         name="Alpine Church",
         item_number="65.6541-2",
         collection="Alpine Village",
@@ -321,7 +321,7 @@ SAMPLE_ITEMS = [
         materials="Porcelain, hand-painted",
     ),
     VillageItem(
-        id="dept65-av002",
+        id="dept56-av002",
         name="Kukuck Uhren",
         item_number="65.6189-1",
         collection="Alpine Village",

@@ -1,7 +1,7 @@
 [project]
 name = "plugin-nesventory-llm"
 version = "0.1.0"
-description = "LLM AI Plugin for NesVentory - Pre-trained on Department 65 Village Collectibles Inventory"
+description = "LLM AI Plugin for NesVentory - Pre-trained on Department 56 Village Collectibles Inventory"
 readme = "README.md"
 requires-python = ">=3.9"
 license = {text = "MIT"}

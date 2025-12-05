@@ -1,5 +1,5 @@
 """
-Data models for Department 65 Village Collectibles.
+Data models for Department 56 Village Collectibles.
 
 These models represent the structure of collectible items from
 The Village Chronicler's collections (thevillagechronicler.com).
@@ -11,12 +11,12 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class VillageItem(BaseModel):
-    """Represents a Department 65 village collectible item."""
+    """Represents a Department 56 village collectible item."""
 
     model_config = ConfigDict(
         json_schema_extra={
             "example": {
-                "id": "dept65-56789",
+                "id": "dept56-56789",
                 "name": "Victorian House",
                 "item_number": "56.12345",
                 "collection": "Dickens Village",
@@ -37,7 +37,7 @@ class VillageItem(BaseModel):
 
     id: str = Field(..., description="Unique identifier for the item")
     name: str = Field(..., description="Name of the collectible item")
-    item_number: Optional[str] = Field(None, description="Official Department 65 item number")
+    item_number: Optional[str] = Field(None, description="Official Department 56 item number")
     collection: Optional[str] = Field(None, description="Collection the item belongs to")
     category: Optional[str] = Field(None, description="Category (e.g., buildings, accessories)")
     description: Optional[str] = Field(None, description="Detailed description of the item")

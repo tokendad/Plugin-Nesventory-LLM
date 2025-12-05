@@ -28,7 +28,7 @@ COLLECTIONS_URL = f"{BASE_URL}/TheCollections.shtml"
 def generate_item_id(name: str, item_number: Optional[str] = None) -> str:
     """Generate a unique ID for an item based on its name and item number."""
     source = f"{name}-{item_number}" if item_number else name
-    return f"dept65-{hashlib.md5(source.encode()).hexdigest()[:8]}"
+    return f"dept56-{hashlib.md5(source.encode()).hexdigest()[:8]}"
 
 
 def parse_year(text: str) -> Optional[int]:

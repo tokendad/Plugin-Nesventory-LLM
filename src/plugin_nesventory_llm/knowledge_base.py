@@ -1,5 +1,5 @@
 """
-Knowledge base for Department 65 village collectibles.
+Knowledge base for Department 56 village collectibles.
 
 This module provides semantic search capabilities using sentence embeddings
 for finding relevant items based on natural language queries.
@@ -243,7 +243,7 @@ class KnowledgeBase:
         if not results:
             return LLMResponse(
                 query=query,
-                answer="I couldn't find any items matching your query in the Department 65 inventory.",
+                answer="I couldn't find any items matching your query in the Department 56 inventory.",
                 sources=[],
                 confidence=0.0,
             )

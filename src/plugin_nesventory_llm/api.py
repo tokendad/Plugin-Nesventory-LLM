@@ -1,7 +1,7 @@
 """
 FastAPI server for the NesVentory LLM Plugin.
 
-This provides REST API endpoints for querying the Department 65
+This provides REST API endpoints for querying the Department 56
 village collectibles knowledge base.
 """
 
@@ -69,7 +69,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(
     title="NesVentory LLM Plugin",
-    description="LLM-powered assistant for Department 65 Village Collectibles inventory",
+    description="LLM-powered assistant for Department 56 Village Collectibles inventory",
     version=__version__,
     lifespan=lifespan,
 )
@@ -251,7 +251,7 @@ async def identify_item(query: str = Query(..., description="Item name or descri
     """Identify an item from user input.
 
     This endpoint is designed for NesVentory integration - given a user's
-    description of an item, it tries to identify the exact Department 65 item.
+    description of an item, it tries to identify the exact Department 56 item.
     """
     if not kb:
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
