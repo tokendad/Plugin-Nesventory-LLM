@@ -1,0 +1,1115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/alpine-village.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2023-07-20T11:01:46-05:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881136607350</id>
+    <published>2023-07-20T11:01:46-05:00</published>
+    <updated>2023-07-20T11:01:46-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/pretzels-beer"/>
+    <title>Pretzels &amp; Beer</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808777.jpg?v=1754599576"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2011</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Male</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881136607350</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>808777</s:sku>
+      <s:grams>181</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881136574582</id>
+    <published>2023-07-20T11:01:44-05:00</published>
+    <updated>2023-07-20T11:01:44-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/wolfstein-beer-wagon"/>
+    <title>Wolfstein Beer Wagon</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808756.jpg?v=1754599573"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            40.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2013</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Father</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Male</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881136574582</id>
+      <title>Default Title</title>
+      <s:price currency="USD">40.00</s:price>
+      <s:sku>808756</s:sku>
+      <s:grams>567</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881136541814</id>
+    <published>2023-07-20T11:01:42-05:00</published>
+    <updated>2023-07-20T11:01:42-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/snowdrop-cottage"/>
+    <title>Snowdrop Cottage</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808755.jpg?v=1754599570"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            70.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Bride and Groom</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881136541814</id>
+      <title>Default Title</title>
+      <s:price currency="USD">70.00</s:price>
+      <s:sku>808755</s:sku>
+      <s:grams>998</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881136509046</id>
+    <published>2023-07-20T11:01:41-05:00</published>
+    <updated>2023-07-20T11:01:41-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/wolfstein-beer-hall"/>
+    <title>Wolfstein Beer Hall</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808754.jpg?v=1754599567"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2011</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Father</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Male</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881136509046</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>808754</s:sku>
+      <s:grams>1701</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881135001718</id>
+    <published>2023-07-20T11:00:33-05:00</published>
+    <updated>2023-07-20T11:00:33-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/xmas-market-gingerbread-booth"/>
+    <title>Xmas Market Gingerbread Booth</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            45.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced May 2009 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2009</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881135001718</id>
+      <title>Default Title</title>
+      <s:price currency="USD">45.00</s:price>
+      <s:sku>807296</s:sku>
+      <s:grams>578</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881133068406</id>
+    <published>2023-07-20T10:59:09-05:00</published>
+    <updated>2023-07-20T10:59:09-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christkindl-church"/>
+    <title>Christkindl Church</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            125.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2008 </li>
+<li>Retired December 2011</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2008</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Religious</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881133068406</id>
+      <title>Default Title</title>
+      <s:price currency="USD">125.00</s:price>
+      <s:sku>805530</s:sku>
+      <s:grams>2189</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881132281974</id>
+    <published>2023-07-20T10:58:38-05:00</published>
+    <updated>2023-07-20T10:58:38-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/xmas-market-ornament-booth"/>
+    <title>Xmas Market Ornament Booth</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            40.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced May 2008 </li>
+<li>Retired December 2011</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2008</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881132281974</id>
+      <title>Default Title</title>
+      <s:price currency="USD">40.00</s:price>
+      <s:sku>804441</s:sku>
+      <s:grams>431</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881131069558</id>
+    <published>2023-07-20T10:57:47-05:00</published>
+    <updated>2023-07-20T10:57:47-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-night-watchman"/>
+    <title>The Night Watchman</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            15.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2007 </li>
+<li>Retired December 2009</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2007</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881131069558</id>
+      <title>Default Title</title>
+      <s:price currency="USD">15.00</s:price>
+      <s:sku>801154</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881128546422</id>
+    <published>2023-07-20T10:56:17-05:00</published>
+    <updated>2023-07-20T10:56:17-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/schultzs-wurst-restaurant"/>
+    <title>Schultz&apos;S Wurst Restaurant</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            75.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2007 </li>
+<li>Retired December 2009</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2007</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881128546422</id>
+      <title>Default Title</title>
+      <s:price currency="USD">75.00</s:price>
+      <s:sku>799904</s:sku>
+      <s:grams>1111</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881120288886</id>
+    <published>2023-07-20T10:49:52-05:00</published>
+    <updated>2023-07-20T10:49:52-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/market-square-town-tree"/>
+    <title>Market Square Town Tree</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4042392.jpg?v=1754591424"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            65.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Welcome to Alpine Village by Department 56 - a series as unique as Bavarian hamlets they represent. Market Square Town Tree, hand-crafted  porcelain lit accessory. Part of the Christmas Market Series.  With battery box for 2 C size batteries.<br><ul class="productList">
+<li> Introduced May 2014 </li>
+<li>Retired November 2016</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2014</s:tag>
+    <s:tag>Retired November 2016</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881120288886</id>
+      <title>Default Title</title>
+      <s:price currency="USD">65.00</s:price>
+      <s:sku>4042392</s:sku>
+      <s:grams>567</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881098596470</id>
+    <published>2023-07-20T10:34:39-05:00</published>
+    <updated>2023-07-20T10:34:39-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/peaceful-reflection"/>
+    <title>Peaceful Reflection</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030339.jpg?v=1754429438"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            12.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Welcome to Alpine Village by Department 56 - a series as unique as the towns and hamlets of the Alpine and Bavarian regions they represent. Peaceful Reflection, hand-crafted and hand-painted porcelain figurine accessory. 2.375in H x 0.875in W x 1.25in L<br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881098596470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">12.50</s:price>
+      <s:sku>4030339</s:sku>
+      <s:grams>41</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881097285750</id>
+    <published>2023-07-20T10:33:58-05:00</published>
+    <updated>2023-07-20T10:33:58-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-market-pyramid-booth"/>
+    <title>Christmas Market Pyramid Booth</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4028695.jpg?v=1754429324"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            45.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced May 2012 </li>
+<li>Retired December 2013</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2012</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881097285750</id>
+      <title>Default Title</title>
+      <s:price currency="USD">45.00</s:price>
+      <s:sku>4028695</s:sku>
+      <s:grams>397</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081491574</id>
+    <published>2023-07-20T10:20:43-05:00</published>
+    <updated>2023-07-20T10:20:43-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/my-octoberfest-debut"/>
+    <title>My Octoberfest Debut</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025240.jpg?v=1754427994"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            22.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Welcome to Alpine Village by Department 56 - a series as unique as the towns and hamlets of the Alpine region they represent. A final lesson from the master, before the Oktoberfest performance. Hand-crafted and hand-painted porcelain figurine accessory.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081491574</id>
+      <title>Default Title</title>
+      <s:price currency="USD">22.50</s:price>
+      <s:sku>4025240</s:sku>
+      <s:grams>68</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081458806</id>
+    <published>2023-07-20T10:20:41-05:00</published>
+    <updated>2023-07-20T10:20:41-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/treats-for-the-nanny-goat"/>
+    <title>Treats For The Nanny Goat</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025239.jpg?v=1754427991"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            17.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Welcome to Alpine Village by Department 56 - a series as unique as the towns and hamlets of the Alpine and Bavarian regions they represent. Treats For The Nanny Goat, hand-crafted and hand-painted porcelain figurine accessory.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081458806</id>
+      <title>Default Title</title>
+      <s:price currency="USD">17.50</s:price>
+      <s:sku>4025239</s:sku>
+      <s:grams>57</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081426038</id>
+    <published>2023-07-20T10:20:40-05:00</published>
+    <updated>2023-07-20T10:20:40-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/just-in-time-to-celebrate"/>
+    <title>&quot;Just In Time To Celebrate&quot;</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025238.jpg?v=1754427988"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            27.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081426038</id>
+      <title>Default Title</title>
+      <s:price currency="USD">27.50</s:price>
+      <s:sku>4025238</s:sku>
+      <s:grams>113</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081393270</id>
+    <published>2023-07-20T10:20:38-05:00</published>
+    <updated>2023-07-20T10:20:38-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/rhineland-wine-tavern"/>
+    <title>“Rhineland Wine Tavern”</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025237.jpg?v=1754427985"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Welcome to Alpine Village by Department 56 - a series as unique as Bavarian hamlets they represent. The Rhine river valley is renown for Wine and only the finest is offered at Rhineland Wine Tavern. Hand-crafted &amp; hand-painted porcelain lit building.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2014</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081393270</id>
+      <title>Default Title</title>
+      <s:price currency="USD">90.00</s:price>
+      <s:sku>4025237</s:sku>
+      <s:grams>1009</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081360502</id>
+    <published>2023-07-20T10:20:37-05:00</published>
+    <updated>2023-07-20T10:20:37-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/basel-cheese-shop"/>
+    <title>&quot;Basel Cheese Shop&quot;</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025236.jpg?v=1754427982"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081360502</id>
+      <title>Default Title</title>
+      <s:price currency="USD">90.00</s:price>
+      <s:sku>4025236</s:sku>
+      <s:grams>1191</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881081327734</id>
+    <published>2023-07-20T10:20:34-05:00</published>
+    <updated>2023-07-20T10:20:34-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/reit-train-station"/>
+    <title>&quot;Reit Train Station&quot;</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025235.jpg?v=1754427979"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            100.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881081327734</id>
+      <title>Default Title</title>
+      <s:price currency="USD">100.00</s:price>
+      <s:sku>4025235</s:sku>
+      <s:grams>1667</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881072185462</id>
+    <published>2023-07-20T10:11:49-05:00</published>
+    <updated>2023-07-20T10:11:49-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/octoberfest-musicians"/>
+    <title>Octoberfest Musicians</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4020187.jpg?v=1754426715"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            20.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired December 2012</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Male</s:tag>
+    <s:tag>Retired December 2012</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881072185462</id>
+      <title>Default Title</title>
+      <s:price currency="USD">20.00</s:price>
+      <s:sku>4020187</s:sku>
+      <s:grams>79</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881071857782</id>
+    <published>2023-07-20T10:11:33-05:00</published>
+    <updated>2023-07-20T10:11:33-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/alpine-clock-tower"/>
+    <title>Alpine Clock Tower</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4020170.jpg?v=1754426678"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            35.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired December 2011</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881071857782</id>
+      <title>Default Title</title>
+      <s:price currency="USD">35.00</s:price>
+      <s:sku>4020170</s:sku>
+      <s:grams>374</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6633323692150</id>
+    <published>2022-01-08T07:07:07-06:00</published>
+    <updated>2022-01-08T07:07:07-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/omas-bakery"/>
+    <title>Oma&apos;s Bakery</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6005375.jpg?v=1689718704"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            125.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Oma, a beloved German team of endearment, translating to "Grandma'.  With a wide selection of homemade, old-world recipes still made with love.  Fresh loaves are easily accessible in the side bins and heart cut outs on the shutters add to the charm.<br><ul class="productList">
+<li> Introduced January 2020 </li>
+<li>Retired November 2021</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2020</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>Seasonal Holiday</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6633323692150</id>
+      <title>Default Title</title>
+      <s:price currency="USD">125.00</s:price>
+      <s:sku>6005375</s:sku>
+      <s:grams>953</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629569888374</id>
+    <published>2021-12-10T07:07:30-06:00</published>
+    <updated>2021-12-10T07:07:30-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/opas-cabin"/>
+    <title>Opa&apos;s Cabin</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007579.jpg?v=1689719346"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            115.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">In areas of the Rhineland and Scandinavia, grandfather is affectionately called "Opa". "Opa's Cabin" is a nod to all Opas, but it may be a special nod to Heidi's grandfather who surely could have lived here.<br><ul class="productList">
+<li> Introduced January 2021 </li>
+<li>Retired November 2021</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2021</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629569888374</id>
+      <title>Default Title</title>
+      <s:price currency="USD">115.00</s:price>
+      <s:sku>6007579</s:sku>
+      <s:grams>1089</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629570019446</id>
+    <published>2021-11-16T07:13:10-06:00</published>
+    <updated>2021-11-16T07:13:10-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/just-in-time-delivery"/>
+    <title>Just In Time Delivery</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007582.jpg?v=1689719363"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            54.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The Bavarian craftsman guiding his horse-drawn sled, is delivering some fine timbers to the clock shop. Good hard Bavarian wood  will be used in the carving of pieces for the Cuckoo clocks still made in the traditional manner.<br><ul class="productList">
+<li> Introduced January 2021 </li>
+<li>Retired November 2021</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2021</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629570019446</id>
+      <title>Default Title</title>
+      <s:price currency="USD">54.00</s:price>
+      <s:sku>6007582</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629569953910</id>
+    <published>2021-11-16T07:13:04-06:00</published>
+    <updated>2021-11-16T07:13:04-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/clock-shop"/>
+    <title>Clock Shop</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007580.jpg?v=1689719353"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            125.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">There is no mistaking what craftwork happens here. The Uhrengeschäft or Cuckoo Clock Shop was designed with many of the features seen on a Bavarian Cuckoo Clock, the roman numerals, a dancing couple, and the Cuckoo bird peeking out of the upper window.<br><ul class="productList">
+<li> Introduced January 2021 </li>
+<li>Retired November 2021</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2021</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629569953910</id>
+      <title>Default Title</title>
+      <s:price currency="USD">125.00</s:price>
+      <s:sku>6007580</s:sku>
+      <s:grams>816</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629569724534</id>
+    <published>2021-11-16T07:12:48-06:00</published>
+    <updated>2021-11-16T07:12:48-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-market-wine-booth"/>
+    <title>Christmas Market, Wine Booth</title>
+    <s:type>Alpine Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007260.jpg?v=1689719305"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Alpine Village<br>
+        <strong>Price: </strong>
+            75.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">We salute the traditional Glühwein, warm spiced mulled wine that is sold during the Christmas Markets.  These markets have been an important part of the holiday season for hundreds of years. Set of 2.<br><ul class="productList">
+<li> Introduced June 2020 </li>
+<li>Retired November 2021</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2020</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>THANKS</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629569724534</id>
+      <title>Default Title</title>
+      <s:price currency="USD">75.00</s:price>
+      <s:sku>6007260</s:sku>
+      <s:grams>544</s:grams>
+    </s:variant>
+  </entry>
+</feed>

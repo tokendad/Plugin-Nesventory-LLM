@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/harry-potter-village.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2023-08-10T05:07:14-05:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6884822876278</id>
+    <published>2023-08-10T05:07:14-05:00</published>
+    <updated>2023-08-10T05:07:14-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/runaway-lollipop"/>
+    <title>Runaway Lollipop</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007413.jpg?v=1754596007"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            38.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Neville has just left Honeydukes with a magical, runaway lollipop. It seems to float in the air.<br><ul class="productList">
+<li> Introduced January 2021 </li>
+<li>Retired November 2022</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced January 2021</s:tag>
+    <s:tag>Retired November 2022</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6884822876278</id>
+      <title>Default Title</title>
+      <s:price currency="USD">38.50</s:price>
+      <s:sku>6007413</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6884822810742</id>
+    <published>2023-08-10T05:07:11-05:00</published>
+    <updated>2023-08-10T05:07:11-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/bellatrix-lestrange"/>
+    <title>Bellatrix Lestrange</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6006514.jpg?v=1754595963"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            28.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A convicted murderer and prison escapee, Bellatrix Lestrange is one of the most unpredictable and terrifying witches in the wizarding world. Wing woman to Voldemort, she casts spells that leave you wishing you were dead, if you aren't already.<br><ul class="productList">
+<li> Introduced January 2020 </li>
+<li>Retired November 2022</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Accessory</s:tag>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced January 2020</s:tag>
+    <s:tag>Retired November 2022</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6884822810742</id>
+      <title>Default Title</title>
+      <s:price currency="USD">28.50</s:price>
+      <s:sku>6006514</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6884822777974</id>
+    <published>2023-08-10T05:07:07-05:00</published>
+    <updated>2023-08-10T05:07:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/griphook"/>
+    <title>Griphook</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6005622.jpg?v=1754595867"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            27.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Griphook, the goblin, works at the bank and later helps Harry with a break-in.<br><ul class="productList">
+<li> Introduced August 2019 </li>
+<li>Retired November 2022</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced August 2019</s:tag>
+    <s:tag>Retired November 2022</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6884822777974</id>
+      <title>Default Title</title>
+      <s:price currency="USD">27.00</s:price>
+      <s:sku>6005622</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4339234472054</id>
+    <published>2022-09-16T07:07:07-05:00</published>
+    <updated>2022-09-16T07:07:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/a-proud-hippogriff-indeed"/>
+    <title>A Proud Hippogriff, Indeed</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6002315.jpg?v=1754595049"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            46.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Hagrid, half human, half giant, is the Keeper of the Keys and Grounds of Hogwarts. His kind-hearted personality allows him a strong relationship with the Hippogriffs, a mythological creature of half eagle and half horse.<br><ul class="productList">
+<li> Introduced June 2018 </li>
+<li>Retired November 2019</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced June 2018</s:tag>
+    <s:tag>Retired November 2019</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4339234472054</id>
+      <title>Default Title</title>
+      <s:price currency="USD">46.00</s:price>
+      <s:sku>6002315</s:sku>
+      <s:grams>204</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622863171702</id>
+    <published>2022-01-22T07:07:07-06:00</published>
+    <updated>2022-01-22T07:07:07-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/ollivanders-wand-shop"/>
+    <title>Ollivanders Wand Shop</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6002313.jpg?v=1754595042"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            120.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Located in Diagon Alley, Ollivanders was founded in 382, BC. It is the place where every young wizard receives his or her wand. Do you choose the wand, or does the wand choose you? Special details include the iconic curved glass bay windows.<br><ul class="productList">
+<li> Introduced June 2018 </li>
+<li>Retired November 2020</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced June 2018</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622863171702</id>
+      <title>Default Title</title>
+      <s:price currency="USD">120.00</s:price>
+      <s:sku>6002313</s:sku>
+      <s:grams>1442</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4625586847862</id>
+    <published>2020-12-15T07:07:07-06:00</published>
+    <updated>2020-12-15T07:07:07-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/whomping-willow-tree"/>
+    <title>Whomping Willow Tree</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6003334HPTVL19.jpg?v=1689718198"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            125.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">This whimsical animated accessory portrays a well-loved scene.  Not able to access the Hogwarts Express, Ron and Harry decide to use the Flying Ford Anglia for their return to Hogwarts.  Mechanical failures landed the vehicle into the Whomping Willow.<br><ul class="productList">
+<li> Introduced July 2019 </li>
+<li>Retired November 2020</li> <li> Village Animated Accessories </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced July 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Animated Accessories</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4625586847862</id>
+      <title>Default Title</title>
+      <s:price currency="USD">125.00</s:price>
+      <s:sku>6003334</s:sku>
+      <s:grams>998</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864121974</id>
+    <published>2020-12-08T07:08:56-06:00</published>
+    <updated>2020-12-08T07:08:56-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/draco-waits-at-platform-9-3-4"/>
+    <title>Draco Waits at Platform 9 3/4</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6003333HPTVL9.jpg?v=1689718195"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            32.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Dressed in his Slytherin finest. Draco waits to Draco Malfoy, Harry Potter's arch rival and least favorite classmate, impatiently waits at Platform 9 3/4, proudly wearing his Slytherin robes, while letting Dobby haul his school supplies to the station.<br><ul class="productList">
+<li> Introduced January 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced January 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864121974</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.50</s:price>
+      <s:sku>6003333</s:sku>
+      <s:grams>136</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622863270006</id>
+    <published>2020-12-08T07:08:03-06:00</published>
+    <updated>2020-12-08T07:08:03-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/chasing-the-snitch"/>
+    <title>Chasing The Snitch</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6002317.jpg?v=1754595061"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Harry Potter proves himself in a game of Quidditch. Animated effect features Harry, riding his broomstick, while chasing the golden snitch.  Quidditch has been played at Hogwarts for nearly 1000 years.<br><ul class="productList">
+<li> Introduced June 2018 </li>
+<li>Retired November 2020</li> <li> Village Animated Accessories </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced June 2018</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Animated Accessories</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622863270006</id>
+      <title>Default Title</title>
+      <s:price currency="USD">90.00</s:price>
+      <s:sku>6002317</s:sku>
+      <s:grams>567</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622863204470</id>
+    <published>2020-12-08T07:08:00-06:00</published>
+    <updated>2020-12-08T07:08:00-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/wingardium-leviosa"/>
+    <title>Wingardium Leviosa!</title>
+    <s:type>Harry Potter Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6002316.jpg?v=1754595055"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Harry Potter Village<br>
+        <strong>Price: </strong>
+            35.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A fine test of powers, "Wingardium Leviosa" is a magical charm, one of the first learned by a young wizard.  Using their wands, Ron and Hermiome test their newfound skills on an unsuspecting rat.<br><ul class="productList">
+<li> Introduced June 2018 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Harry Potter</s:tag>
+    <s:tag>Introduced June 2018</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622863204470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">35.00</s:price>
+      <s:sku>6002316</s:sku>
+      <s:grams>113</s:grams>
+    </s:variant>
+  </entry>
+</feed>

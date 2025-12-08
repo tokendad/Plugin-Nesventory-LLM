@@ -1,0 +1,1121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/dickens-a-christmas-carol.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2023-11-04T05:16:15-05:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944561922166</id>
+    <published>2023-11-04T05:16:15-05:00</published>
+    <updated>2023-11-04T05:16:15-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/last-minute-holiday-shopping"/>
+    <title>Last Minute Holiday Shopping</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011403.jpg?v=1754597163"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            36.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">This fashionable couple hurries to the Cornhill Shoppes to complete some last minute holiday shopping. Designed to accompany the Christmas Carol "Cornhill Shoppes."<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944561922166</id>
+      <title>Default Title</title>
+      <s:price currency="USD">36.00</s:price>
+      <s:sku>6011403</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944561889398</id>
+    <published>2023-11-04T05:16:12-05:00</published>
+    <updated>2023-11-04T05:16:12-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-carol-cornhill-shops"/>
+    <title>Christmas Carol Cornhill Shops</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011402.jpg?v=1754597148"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            160.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Housed in Cornhill Shoppes is a high-end custom Milliner and William &amp; Son Bespoke Tailer. The word bespoke means that each garment is made from a custom pattern and assures that the fit is perfect. Cornhill is one of the 25 wards within London.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944561889398</id>
+      <title>Default Title</title>
+      <s:price currency="USD">160.00</s:price>
+      <s:sku>6011402</s:sku>
+      <s:grams>998</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944555204726</id>
+    <published>2023-11-04T05:07:51-05:00</published>
+    <updated>2023-11-04T05:07:51-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-carol-cemetery"/>
+    <title>Christmas Carol Cemetery</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6000601.jpg?v=1754594300"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">We are so excited to incorporate the glowing Ghost of Christmas Yet to Come into this spectacular graveyard scene. We've captured the moment when Scrooge learns his fate, and makes the life changing decision to improve his ways and alter his life.<br><ul class="productList">
+<li> Introduced January 2018 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2018</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944555204726</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6000601</s:sku>
+      <s:grams>1248</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944555040886</id>
+    <published>2023-11-04T05:07:42-05:00</published>
+    <updated>2023-11-04T05:07:42-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/chestnut-vendor"/>
+    <title>Chestnut Vendor</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58557.jpg?v=1754593922"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            55.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Hand-crafted and hand-painted porcelain figurine.  The chestnut stove glows. Battery operated (use 2 C batteries, not included) but also works with 56.52206 Adapter  or 56.53500 Lighting System.  3.5 x 2 x 4.5"<br><ul class="productList">
+<li> Introduced May 2002 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2002</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944555040886</id>
+      <title>Default Title</title>
+      <s:price currency="USD">55.00</s:price>
+      <s:sku>56.58557</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554975350</id>
+    <published>2023-11-04T05:07:39-05:00</published>
+    <updated>2023-11-04T05:07:39-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-carol-visit"/>
+    <title>Christmas Carol Visit</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58542.jpg?v=1754593902"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            50.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The three spirits of Christmas with Scrooge. Hand-crafted and hand-painted porcelain figurine.  2.25, 2.5, 3.5, 2.5"<br><ul class="productList">
+<li> Introduced December 2001 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2001</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554975350</id>
+      <title>Default Title</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku>56.58542</s:sku>
+      <s:grams>170</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554942582</id>
+    <published>2023-11-04T05:07:36-05:00</published>
+    <updated>2023-11-04T05:07:36-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/bob-cratchit-tiny-tim"/>
+    <title>Bob Cratchit &amp; Tiny Tim</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58537.jpg?v=1754593899"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            32.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Hand-crafted and hand-painted porcelain figurine featuring the triumphant Bob Cratchit with Tiny Tim.  2 x 2.75"<br><ul class="productList">
+<li> Introduced May 2001 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2001</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554942582</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.50</s:price>
+      <s:sku>56.58537</s:sku>
+      <s:grams>57</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554909814</id>
+    <published>2023-11-04T05:07:33-05:00</published>
+    <updated>2023-11-04T05:07:33-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/ebenezer-scrooges-house"/>
+    <title>Ebenezer Scrooge&apos;s House</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58490.jpg?v=1754593884"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            160.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A cornerstone of the Dickens' Village "A Christmas Carol", this piece which was introduced in 1991 and continues to be a favorite among collectors. Lit with LED lights, this piece has an animated interior scene features the three Christmas Carol ghosts.<br><ul class="productList">
+<li> Introduced December 2001 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2001</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554909814</id>
+      <title>Default Title</title>
+      <s:price currency="USD">160.00</s:price>
+      <s:sku>56.58490</s:sku>
+      <s:grams>1792</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554877046</id>
+    <published>2023-11-04T05:07:30-05:00</published>
+    <updated>2023-11-04T05:07:30-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/cratchits-corner"/>
+    <title>Cratchit&apos;s Corner</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58486.jpg?v=1754593878"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            134.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">If you look in the window you may catch a glimpse of the Cratchit family celebrating the holidays. Hand-crafted and hand-painted porcelain lit building,  Designed and manufactured by the artists of Department 56 for "A Christmas Carol".<br><ul class="productList">
+<li> Introduced May 2001 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced May 2001</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554877046</id>
+      <title>Default Title</title>
+      <s:price currency="USD">134.00</s:price>
+      <s:sku>56.58486</s:sku>
+      <s:grams>1644</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554844278</id>
+    <published>2023-11-04T05:07:27-05:00</published>
+    <updated>2023-11-04T05:07:27-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/scrooge-marleys-counting-hs"/>
+    <title>Scrooge &amp; Marley&apos;s Counting Hs</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58483.jpg?v=1754593862"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            140.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A central building in the "Christmas Carol" Village series,  this is where Scrooge and Marley operated their lucrative business. Hand-crafted &amp; hand-painted porcelain lit building, Includes light cord &amp; bulb.<br><ul class="productList">
+<li> Introduced December 2000 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2000</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554844278</id>
+      <title>Default Title</title>
+      <s:price currency="USD">140.00</s:price>
+      <s:sku>56.58483</s:sku>
+      <s:grams>1293</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944554745974</id>
+    <published>2023-11-04T05:07:22-05:00</published>
+    <updated>2023-11-04T05:07:22-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-a-humbug-uncle"/>
+    <title>Christmas A Humbug, Uncle</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4036526XMCVL14.jpg?v=1754430884"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            34.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Quoting a phrase by the crabby Uncle Scrooge, this hand painted porcelain accessory is part of Dickens' "A Christmas Carol" by Department 56.<br><ul class="productList">
+<li> Introduced January 2014 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2014</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944554745974</id>
+      <title>Default Title</title>
+      <s:price currency="USD">34.00</s:price>
+      <s:sku>4036526</s:sku>
+      <s:grams>102</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6806987931766</id>
+    <published>2022-11-05T07:07:56-05:00</published>
+    <updated>2022-11-05T07:07:56-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/visiting-the-miners-home"/>
+    <title>Visiting The Miner&apos;s Home</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6007602.jpg?v=1689719421"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            160.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From Dickens' most popular story, "A Christmas Carol", the Spirit of Christmas Present appears to Ebenezer dressed in a green velvet robe. Together they travel through the city seeing the celebration of Christmas, from the very rich to the very poor.<br><ul class="productList">
+<li> Introduced January 2021 </li>
+<li>Retired November 2022</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2021</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2022</s:tag>
+    <s:tag>VIL_RET_2022</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6806987931766</id>
+      <title>Default Title</title>
+      <s:price currency="USD">160.00</s:price>
+      <s:sku>6007602</s:sku>
+      <s:grams>975</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629567332470</id>
+    <published>2021-11-16T07:09:45-06:00</published>
+    <updated>2021-11-16T07:09:45-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/scrooges-boyhood-home"/>
+    <title>Scrooge&apos;s Boyhood Home</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6005415_7308829e-d39f-4a0c-8255-700694768342.jpg?v=1689718809"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">First in a grouping of 3, Scrooge meets the Ghost of Christmas Past, making several stops including one the home where Scrooge grew up.  Set of 4 includes: "Scrooge with the First Spirit" accessory, sisal tree, and bag of snow.<br><ul class="productList">
+<li> Introduced January 2020 </li>
+<li>Retired November 2021</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2020</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>Seasonal Holiday</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629567332470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6005415</s:sku>
+      <s:grams>1315</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6629565661302</id>
+    <published>2021-11-16T07:07:31-06:00</published>
+    <updated>2021-11-16T07:07:31-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/caroling-with-crachit-family"/>
+    <title>Caroling With Crachit Family</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.58396.jpg?v=1754593844"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            55.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">This delightful set of three pieces features the family of Bob Cratchit out for some holiday caroling. Hand-crafted and hand-painted porcelain figurine.  Designed and manufactured by the artists of Department 56.  4.75", 2", 1.25"<br><ul class="productList">
+<li> Introduced May 1996 </li>
+<li>Retired November 2021</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 1996</s:tag>
+    <s:tag>Retired November 2021</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6629565661302</id>
+      <title>Default Title</title>
+      <s:price currency="USD">55.00</s:price>
+      <s:sku>56.58396</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4339236143222</id>
+    <published>2019-11-08T07:16:30-06:00</published>
+    <updated>2019-11-08T07:16:30-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/mrs-perrywells-puddings"/>
+    <title>Mrs. Perrywell&apos;s Puddings</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6003093.jpg?v=1689717956"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            145.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Plum pudding, a traditional course for special occasions in Victorian England, was served as a flaming dessert, making a spectacular statement and festive end to any meal.  Includes "Pretty Please Pudding", sisal tree and snow.<br><ul class="productList">
+<li> Introduced January 2019 </li>
+<li>Retired November 2019</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2019</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2019</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4339236143222</id>
+      <title>Default Title</title>
+      <s:price currency="USD">145.00</s:price>
+      <s:sku>6003093</s:sku>
+      <s:grams>1247</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4339226411126</id>
+    <published>2019-11-08T07:08:44-06:00</published>
+    <updated>2019-11-08T07:08:44-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/xmas-carol-poulterers-shop-set"/>
+    <title>Xmas Carol Poulterers Shop Set</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4056648.jpg?v=1754592847"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            135.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The Olde Camden Town Poulterer was brisk with business leading up to Christmas, for the centerpiece of many Victorian holiday dinners was goose, duck, or other fowl.  But that year, at Cratchit's Corner, the big prize Turkey made for a feast to behold.<br><ul class="productList">
+<li> Introduced January 2017 </li>
+<li>Retired November 2019</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2017</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2019</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4339226411126</id>
+      <title>Default Title</title>
+      <s:price currency="USD">135.00</s:price>
+      <s:sku>4056648</s:sku>
+      <s:grams>1474</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501583179894</id>
+    <published>2018-06-13T17:12:10-05:00</published>
+    <updated>2018-06-13T17:12:10-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/melancholy-tavern"/>
+    <title>Melancholy Tavern</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58703.jpg?v=1528927931"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            65.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV MELANCHOLY TAVERN<br><ul class="productList">
+<li> Introduced May 2003 </li>
+<li>Retired December 2005</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced May 2003</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2005</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501583179894</id>
+      <title>Default Title</title>
+      <s:price currency="USD">65.00</s:price>
+      <s:sku>56.58703</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501575741558</id>
+    <published>2018-06-13T17:11:09-05:00</published>
+    <updated>2018-06-13T17:11:09-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/for-love-or-money"/>
+    <title>For Love or Money?</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58563.jpg?v=1528927870"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            15.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV LOVE OR MONEY?<br><ul class="productList">
+<li> Introduced December 2002 </li>
+<li>Retired December 2004</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 2002</s:tag>
+    <s:tag>Retired December 2004</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501575741558</id>
+      <title>Default Title</title>
+      <s:price currency="USD">15.00</s:price>
+      <s:sku>56.58563</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501572104310</id>
+    <published>2018-06-13T17:10:38-05:00</published>
+    <updated>2018-06-13T17:10:38-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/sliding-down-cornhill-with-bob"/>
+    <title>Sliding Down Cornhill With Bob</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58528.jpg?v=1528927838"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV SLDNG CORNHILL W/BOB CRCHIT<br><ul class="productList">
+<li> Introduced December 2000 </li>
+<li>Retired December 2005</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 2000</s:tag>
+    <s:tag>Retired December 2005</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501572104310</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>56.58528</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501570072694</id>
+    <published>2018-06-13T17:10:19-05:00</published>
+    <updated>2018-06-13T17:10:19-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/belles-house"/>
+    <title>Belle&apos;s House</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58512.jpg?v=1528927820"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            55.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV BELLE'S HOUSE<br><ul class="productList">
+<li> Introduced December 2002 </li>
+<li>Retired December 2004</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 2002</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2004</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501570072694</id>
+      <title>Default Title</title>
+      <s:price currency="USD">55.00</s:price>
+      <s:sku>56.58512</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501567484022</id>
+    <published>2018-06-13T17:09:57-05:00</published>
+    <updated>2018-06-13T17:09:57-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/fred-holiwells-house"/>
+    <title>Fred Holiwell&apos;s House</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58492.jpg?v=1528927798"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            62.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV FRED HOLIWELL'S HOUSE<br><ul class="productList">
+<li> Introduced December 2001 </li>
+<li>Retired December 2004</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 2001</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2004</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501567484022</id>
+      <title>Default Title</title>
+      <s:price currency="USD">62.00</s:price>
+      <s:sku>56.58492</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501567320182</id>
+    <published>2018-06-13T17:09:56-05:00</published>
+    <updated>2018-06-13T17:09:56-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/norfolk-biffins-bakery"/>
+    <title>Norfolk Biffins Bakery</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.58491.jpg?v=1528927796"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            65.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV NORFOLK BIFFINS BAKERY<br><ul class="productList">
+<li> Introduced May 2002 </li>
+<li>Retired December 2004</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced May 2002</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2004</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501567320182</id>
+      <title>Default Title</title>
+      <s:price currency="USD">65.00</s:price>
+      <s:sku>56.58491</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501551034486</id>
+    <published>2018-06-13T17:08:29-05:00</published>
+    <updated>2018-06-13T17:08:29-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-fezziwig-delivery-wagon-r"/>
+    <title>The Fezziwig Delivery Wagon (R</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            32.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">DV'FEZZWG DLVRY WGN'XMS CRL RV<br><ul class="productList">
+<li> Introduced December 1996 </li>
+<li>Retired December 2006</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 1996</s:tag>
+    <s:tag>Retired December 2006</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501551034486</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.50</s:price>
+      <s:sku>56.58400</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501437296758</id>
+    <published>2018-06-13T16:55:33-05:00</published>
+    <updated>2018-06-13T16:55:33-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/christmas-carol-christmas-morn"/>
+    <title>Christmas Carol Christmas Morn</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/56.55883.jpg?v=1528926934"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            18.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">XMAS CAROL XMAS MRNNG ST/3,PRC<br><ul class="productList">
+<li> Introduced December 1989 </li>
+<li>Retired December 2002</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Introduced December 1989</s:tag>
+    <s:tag>Retired December 2002</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501437296758</id>
+      <title>Default Title</title>
+      <s:price currency="USD">18.00</s:price>
+      <s:sku>56.55883</s:sku>
+      <s:grams>0</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501125476470</id>
+    <published>2018-06-13T16:13:59-05:00</published>
+    <updated>2018-06-13T16:13:59-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/old-joes-beetling-shop"/>
+    <title>Old Joe&apos;s Beetling Shop</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4044811XMCVL15.jpg?v=1689713681"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            85.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A beetler in Victorian England would be almost like a resale shop.  In Dickens' Christmas Carol, Scrooge's linens are brought in hopes of a small profit.<br><ul class="productList">
+<li> Introduced January 2015 </li>
+<li>Retired November 2016</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2015</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2016</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501125476470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">85.00</s:price>
+      <s:sku>4044811</s:sku>
+      <s:grams>964</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/1501072523382</id>
+    <published>2018-06-13T16:06:57-05:00</published>
+    <updated>2018-06-13T16:06:57-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/blindmans-buff"/>
+    <title>Blindman&apos;s Buff</title>
+    <s:type>Dickens A Christmas Carol</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4036527XMCVL14.jpg?v=1689712634"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Dickens A Christmas Carol<br>
+        <strong>Price: </strong>
+            32.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A popular children's game from Victorian times, Blind Man's Bluff has been played by children all over the world since it was originally called "Copper Mosquito" by children in China several centuries ago.<br><ul class="productList">
+<li> Introduced January 2014 </li>
+<li>Retired November 2016</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2014</s:tag>
+    <s:tag>Retired November 2016</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/1501072523382</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.50</s:price>
+      <s:sku>4036527</s:sku>
+      <s:grams>182</s:grams>
+    </s:variant>
+  </entry>
+</feed>

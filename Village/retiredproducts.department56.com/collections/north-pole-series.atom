@@ -1,0 +1,1208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/north-pole-series.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2025-11-26T05:11:46-06:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136593014</id>
+    <published>2025-11-26T05:11:46-06:00</published>
+    <updated>2025-11-26T05:11:46-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-yule-jeweler"/>
+    <title>The Yule Jeweler</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6015623.jpg?v=1764155507"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            32.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Santa himself commissioned the biggest emerald for his lovely bride, but careful not to spoil the surprise before he's had a chance to gift it to her!<br><ul class="productList">
+<li> Introduced October 2024 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>BFCM_2025_NLVIL_20</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2024</s:tag>
+    <s:tag>New For 2025</s:tag>
+    <s:tag>New Village For 2025</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136593014</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.00</s:price>
+      <s:sku>6015623</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136560246</id>
+    <published>2025-11-26T05:11:43-06:00</published>
+    <updated>2025-11-26T05:11:43-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/blingtastic-jewelers-lyop"/>
+    <title>Blingtastic Jewelers LYOP</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6015622.jpg?v=1764155504"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            132.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">To help us celebrate 35 years of our beloved North Pole Series in 2025, Santa's Blingtastic Jewelers are working around the clock to facet emerald jewels in honor of the event.  LTYOP 2025.<br><ul class="productList">
+<li> Introduced October 2024 </li>
+<li>Retired November 2025</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>BFCM_2025_NLVIL_20</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2024</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>New For 2025</s:tag>
+    <s:tag>New Village For 2025</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136560246</id>
+      <title>Default Title</title>
+      <s:price currency="USD">132.00</s:price>
+      <s:sku>6015622</s:sku>
+      <s:grams>998</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136298102</id>
+    <published>2025-11-26T05:11:19-06:00</published>
+    <updated>2025-11-26T05:11:19-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/got-your-nose"/>
+    <title>Got Your Nose!</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6014751.jpg?v=1764155481"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            75.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">"Carrots are delicious!" Purple teases Orange as she snatches the nose from the snowman they've just built together. She's only teasing him, as she's proud of how cute the snowman they've built will look for Christmas.<br><ul class="productList">
+<li> Introduced January 2025 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced January 2025</s:tag>
+    <s:tag>MandMs Candy</s:tag>
+    <s:tag>New For 2025</s:tag>
+    <s:tag>New Village for 2025</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136298102</id>
+      <title>Default Title</title>
+      <s:price currency="USD">75.00</s:price>
+      <s:sku>6014751</s:sku>
+      <s:grams>272</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136265334</id>
+    <published>2025-11-26T05:11:17-06:00</published>
+    <updated>2025-11-26T05:11:17-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/light-duty-m-ms"/>
+    <title>Light Duty M&amp;M&apos;S</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6014747.jpg?v=1764155478"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            85.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">With Brown in charge, hanging the Christmas lights this year will be a light duty – pun intended! – for Green and Blue who stand by, eagerly awaiting their instructions.<br><ul class="productList">
+<li> Introduced January 2025 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced January 2025</s:tag>
+    <s:tag>MandMs Candy</s:tag>
+    <s:tag>New For 2025</s:tag>
+    <s:tag>New Village for 2025</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136265334</id>
+      <title>Default Title</title>
+      <s:price currency="USD">85.00</s:price>
+      <s:sku>6014747</s:sku>
+      <s:grams>408</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136068726</id>
+    <published>2025-11-26T05:11:02-06:00</published>
+    <updated>2025-11-26T05:11:02-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/a-tasteful-fence-s-2"/>
+    <title>A Tasteful Fence S/2</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6014518.jpg?v=1764155463"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            50.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">With sockets to hold actual lollipops, our fence is the most tasteful in all the North Pole. **Dum-Dums are not included with the fence**<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Candy</s:tag>
+    <s:tag>Candy Themed Gifts</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Dum Dums</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136068726</id>
+      <title>Default Title</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku>6014518</s:sku>
+      <s:grams>159</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885136003190</id>
+    <published>2025-11-26T05:10:56-06:00</published>
+    <updated>2025-11-26T05:10:56-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-daily-grind"/>
+    <title>The Daily Grind</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6014510.jpg?v=1764155457"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            37.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The Bean Depot owes much of its decadence to the beans that are dark roasted and hand ground by Santa's baristas throughout the day.<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885136003190</id>
+      <title>Default Title</title>
+      <s:price currency="USD">37.00</s:price>
+      <s:sku>6014510</s:sku>
+      <s:grams>68</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134430326</id>
+    <published>2025-11-26T05:08:55-06:00</published>
+    <updated>2025-11-26T05:08:55-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/first-edition-santa-boot-shop"/>
+    <title>First Edition Santa Boot Shop</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013444fe.jpg?v=1764155337"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">FIRST EDITION - It has been said that the shoemaker's son runs barefoot, but with only one client, Santa's Boot Shop has plenty of time to create the perfect, magical pair of boots for the Big Man each year.<br><ul class="productList">
+<li> Introduced October 2024 </li>
+<li>Retired November 2025</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>First Edition</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2024</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>New For 2025</s:tag>
+    <s:tag>New Village For 2025</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134430326</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6013444FE</s:sku>
+      <s:grams>998</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134364790</id>
+    <published>2025-11-26T05:08:49-06:00</published>
+    <updated>2025-11-26T05:08:49-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/follow-the-m-m-road"/>
+    <title>Follow The M&amp;M Road</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013438.jpg?v=1764155331"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            20.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A tasty tessellation, the M&amp;M road segments piece together seamlessly to create a delicious pathway.<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Candy</s:tag>
+    <s:tag>Candy Themed Gifts</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>M&amp;Ms Candy</s:tag>
+    <s:tag>MandMs Candy</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134364790</id>
+      <title>Default Title</title>
+      <s:price currency="USD">20.00</s:price>
+      <s:sku>6013438</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134299254</id>
+    <published>2025-11-26T05:08:46-06:00</published>
+    <updated>2025-11-26T05:08:46-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/building-a-tree-of-our-own"/>
+    <title>Building A Tree Of Our Own</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013437.jpg?v=1764155328"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            56.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Of course a peanut M&amp;M deserves to be the star on top when Red and Yellow build a tree!<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Candy</s:tag>
+    <s:tag>Candy Themed Gifts</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>M&amp;Ms Candy</s:tag>
+    <s:tag>MandMs Candy</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134299254</id>
+      <title>Default Title</title>
+      <s:price currency="USD">56.00</s:price>
+      <s:sku>6013437</s:sku>
+      <s:grams>159</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134266486</id>
+    <published>2025-11-26T05:08:43-06:00</published>
+    <updated>2025-11-26T05:08:43-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/reds-m-m-cottage"/>
+    <title>Red&apos;s M&amp;M Cottage</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013435.jpg?v=1764155325"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">We prove M&amp;Ms melt in your mouth and in your heart as we debut Red's adorable M&amp;M cottage decorated for the holidays and dusted with snow.  Even Red himself couldn't be angry at this sweet addition to our North Pole Series!<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Candy</s:tag>
+    <s:tag>Candy Themed Gifts</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>M&amp;Ms Candy</s:tag>
+    <s:tag>MandMs Candy</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134266486</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6013435</s:sku>
+      <s:grams>635</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134200950</id>
+    <published>2025-11-26T05:08:40-06:00</published>
+    <updated>2025-11-26T05:08:40-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/road-test"/>
+    <title>Road Test</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013434.jpg?v=1764155321"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            36.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Every shiny red wagon produced in the North Pole is elf tested and Santa approved!<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134200950</id>
+      <title>Default Title</title>
+      <s:price currency="USD">36.00</s:price>
+      <s:sku>6013434</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885134168182</id>
+    <published>2025-11-26T05:08:37-06:00</published>
+    <updated>2025-11-26T05:08:37-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/56-wagon-factory"/>
+    <title>56 Wagon Factory</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6013433.jpg?v=1764155318"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            120.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Santa knows a ride in a shiny red wagon is a core memory central to most childhoods.  To help ensure he's stamping enough of them in time to meet the Christmas demands, Santa's put his best and brightest to work at the Fifty-Six Wagon Factory.<br><ul class="productList">
+<li> Introduced October 2023 </li>
+<li>Retired November 2025</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>BFCM_2025_NLVIL_20</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2023</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885134168182</id>
+      <title>Default Title</title>
+      <s:price currency="USD">120.00</s:price>
+      <s:sku>6013433</s:sku>
+      <s:grams>1089</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7885133578358</id>
+    <published>2025-11-26T05:07:54-06:00</published>
+    <updated>2025-11-26T05:07:54-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/teacup-delivery-service"/>
+    <title>Teacup Delivery Service</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011407.jpg?v=1764155275"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            45.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Everyone who purchases tea at the Peppermint Tea Shop is invited to take home one of their finely crafted tea cups, so delivery of more teacups occurs every day by the Teacup Delivery Service.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2025</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Graceland NPSVL</s:tag>
+    <s:tag>GRACELAND_6009815_PROMO_NOV25</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2025</s:tag>
+    <s:tag>Village 2025 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7885133578358</id>
+      <title>Default Title</title>
+      <s:price currency="USD">45.00</s:price>
+      <s:sku>6011407</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584543473782</id>
+    <published>2024-11-05T05:08:49-06:00</published>
+    <updated>2024-11-05T05:08:49-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/gingerbread-button-treats"/>
+    <title>Gingerbread Button Treats</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011414.jpg?v=1754597278"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            26.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Stop in and sample some of the finest button treats before adding them to your gingerbread house.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2024</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>candy</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Gingerbread</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584543473782</id>
+      <title>Default Title</title>
+      <s:price currency="USD">26.50</s:price>
+      <s:sku>6011414</s:sku>
+      <s:grams>27</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584543408246</id>
+    <published>2024-11-05T05:08:46-06:00</published>
+    <updated>2024-11-05T05:08:46-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/gingerbread-supply-company"/>
+    <title>Gingerbread Supply Company</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011413.jpg?v=1754597262"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">All the elves shop for molasses, nutmeg, ginger and cinnamon at the NP Gingerbread Supply Company. Shaped like the engine of a festive train, could this be the start of something big?<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2024</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Gingerbread</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584543408246</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6011413</s:sku>
+      <s:grams>839</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584543375478</id>
+    <published>2024-11-05T05:08:42-06:00</published>
+    <updated>2024-11-05T05:08:42-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/santa-at-the-man-cave"/>
+    <title>Santa At The Man Cave</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011405.jpg?v=1754597193"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            50.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">And what would Santa be doing to relax at the Man Cave? Santa would kick back in his favorite recliner and watch a little football on television.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2024</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Santa</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584543375478</id>
+      <title>Default Title</title>
+      <s:price currency="USD">50.00</s:price>
+      <s:sku>6011405</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584543342710</id>
+    <published>2024-11-05T05:08:38-06:00</published>
+    <updated>2024-11-05T05:08:38-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/santas-man-cave"/>
+    <title>Santa&apos;s Man Cave</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011404.jpg?v=1754597178"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            135.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">At the North Pole, Santa's Man Cave sits apart from his residence in a cozy travel trailer decked out with brightly colored lighted , garland and a snowman standing guard near the door.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2024</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Santa</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584543342710</id>
+      <title>Default Title</title>
+      <s:price currency="USD">135.00</s:price>
+      <s:sku>6011404</s:sku>
+      <s:grams>635</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584541278326</id>
+    <published>2024-11-05T05:07:28-06:00</published>
+    <updated>2024-11-05T05:07:28-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/hot-chocolate-tower"/>
+    <title>Hot Chocolate Tower</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/56.56872.jpg?v=1754593723"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            64.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">With the tower shaped like a pot of Hot Cocoa, this accessory is part of The North Pole Collection by Department 56. Hand-crafted and hand-painted porcelain figurine.  6 x 3.75 x 5"<br><ul class="productList">
+<li> Introduced December 2004 </li>
+<li>Retired November 2024</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Candy</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced December 2004</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584541278326</id>
+      <title>Default Title</title>
+      <s:price currency="USD">64.00</s:price>
+      <s:sku>56.56872</s:sku>
+      <s:grams>414</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/7584541048950</id>
+    <published>2024-11-05T05:07:22-06:00</published>
+    <updated>2024-11-05T05:07:22-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/santas-hot-cocoa-cafe"/>
+    <title>Santa&apos;s Hot Cocoa Cafe</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4020207NPSVL10.jpg?v=1754426745"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            70.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">A part of the North Pole Collection, inspired by magic and charming legends.  This Santa mug shaped building is a favorite hang-out for all hard working elves.  Hand-crafted &amp; hand-painted porcelain lit building, Includes light cord &amp; bulb.<br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired November 2024</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Candy</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2024</s:tag>
+    <s:tag>Village 2024 Retirements</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/7584541048950</id>
+      <title>Default Title</title>
+      <s:price currency="USD">70.00</s:price>
+      <s:sku>4020207</s:sku>
+      <s:grams>680</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944562020470</id>
+    <published>2023-11-04T05:16:24-05:00</published>
+    <updated>2023-11-04T05:16:24-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/this-one-passes-qc"/>
+    <title>This One Passes QC</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011412.jpg?v=1754597247"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            38.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Testing every Jack-in-the Box is a hair raising job for this dedicated elf who puts his stamp of approval on each and every one he tests!<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944562020470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">38.00</s:price>
+      <s:sku>6011412</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944561987702</id>
+    <published>2023-11-04T05:16:22-05:00</published>
+    <updated>2023-11-04T05:16:22-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/jacques-jack-in-the-box-shop"/>
+    <title>Jacques Jack In The Box Shop</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011411.jpg?v=1754597226"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            158.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The Jack-in-the Box children's toy was first made in the 1500s by a German clockmaker named Claus. Originally made for royal children they are a favorite toy through the world. Jacque's Jack In The Box Shop is the newest factory at the North Pole.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944561987702</id>
+      <title>Default Title</title>
+      <s:price currency="USD">158.00</s:price>
+      <s:sku>6011411</s:sku>
+      <s:grams>1157</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944561954934</id>
+    <published>2023-11-04T05:16:18-05:00</published>
+    <updated>2023-11-04T05:16:18-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/fao-piano-dance-contest"/>
+    <title>FAO Piano Dance Contest</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6011408.jpg?v=1754597211"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            56.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">These elves are tinkling the keys of the giant piano at FAO Schwarz for the "FAO Piano Dance Contest." They will win on cuteness alone!<br><ul class="productList">
+<li> Introduced January 2023 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>FAO Schwarz</s:tag>
+    <s:tag>Introduced January 2023</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944561954934</id>
+      <title>Default Title</title>
+      <s:price currency="USD">56.00</s:price>
+      <s:sku>6011408</s:sku>
+      <s:grams>113</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944559399030</id>
+    <published>2023-11-04T05:12:38-05:00</published>
+    <updated>2023-11-04T05:12:38-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/crayola-delivery-service"/>
+    <title>Crayola Delivery Service</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6009835.jpg?v=1754596670"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            52.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">There's no mistaking what company this little pickup truck is from - "Crayola Delivery Service" brings a new supply of freshly sharpened crayons every day!<br><ul class="productList">
+<li> Introduced January 2023 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Crayola</s:tag>
+    <s:tag>Introduced January 2023</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944559399030</id>
+      <title>Default Title</title>
+      <s:price currency="USD">52.50</s:price>
+      <s:sku>6009835</s:sku>
+      <s:grams>86</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944559366262</id>
+    <published>2023-11-04T05:12:35-05:00</published>
+    <updated>2023-11-04T05:12:35-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/ready-for-paint"/>
+    <title>Ready For Paint</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6009829.jpg?v=1754596656"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            28.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">After carving and assembling a wooden rocking horse toy, this elf is "Ready For Paint." Designed to accompany the "North Pole's Finest Wooden Toys."<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944559366262</id>
+      <title>Default Title</title>
+      <s:price currency="USD">28.50</s:price>
+      <s:sku>6009829</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6944559333494</id>
+    <published>2023-11-04T05:12:32-05:00</published>
+    <updated>2023-11-04T05:12:32-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/north-poles-finest-wooden-toys"/>
+    <title>North Poles Finest Wooden Toys</title>
+    <s:type>North Pole Series</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6009828.jpg?v=1754596642"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>North Pole Series<br>
+        <strong>Price: </strong>
+            158.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Many elves get their manufacturing start at the "North Pole's Finest Wooden Toys" where some of the original children's toys were designed and built.<br><ul class="productList">
+<li> Introduced October 2022 </li>
+<li>Retired November 2023</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Graceland</s:tag>
+    <s:tag>Introduced October 2022</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2023</s:tag>
+    <s:tag>VIL_RET_2023</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6944559333494</id>
+      <title>Default Title</title>
+      <s:price currency="USD">158.00</s:price>
+      <s:sku>6009828</s:sku>
+      <s:grams>916</s:grams>
+    </s:variant>
+  </entry>
+</feed>

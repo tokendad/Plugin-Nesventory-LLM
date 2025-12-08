@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/hot-properties-village.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2020-12-08T07:09:50-06:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864842870</id>
+    <published>2020-12-08T07:09:50-06:00</published>
+    <updated>2020-12-08T07:09:50-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/wonder-woman"/>
+    <title>Wonder Woman</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6005633.jpg?v=1754595871"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Princess of the Amazons, Wonder Woman is a superhero unlike any other. With womanly prowess and enchanted weaponry straight from the gods, this girl is beautiful and deadly. Celebrate truth, justice, and equality with the symbol herself.<br><ul class="productList">
+<li> Introduced January 2020 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Accessory</s:tag>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>DC Comics</s:tag>
+    <s:tag>Introduced January 2020</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864842870</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>6005633</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864810102</id>
+    <published>2020-12-08T07:09:47-06:00</published>
+    <updated>2020-12-08T07:09:47-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/themyscira"/>
+    <title>Themyscira</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6005632.jpg?v=1689719034"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            260.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">An island hidden from men and modern times, Themyscira is where femininity truly shines. With Greek godlike architecture, it's the birthplace of Wonder Woman and the Amazons. Celebrate female empowerment and always fight like a girl!<br><ul class="productList">
+<li> Introduced January 2020 </li>
+<li>Retired November 2020</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2020</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864810102</id>
+      <title>Default Title</title>
+      <s:price currency="USD">260.00</s:price>
+      <s:sku>6005632</s:sku>
+      <s:grams>3130</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864482422</id>
+    <published>2020-12-08T07:09:26-06:00</published>
+    <updated>2020-12-08T07:09:26-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-steve"/>
+    <title>Minecraft Steve</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004999HOTVL19.jpg?v=1689718589"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            22.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Steve's the hero, willing to help and champion your game to new levels.  Honor   Steve with a prominent spot in your display.  Or gift Steve for as a small reward for a job well done.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864482422</id>
+      <title>Default Title</title>
+      <s:price currency="USD">22.50</s:price>
+      <s:sku>6004999</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864449654</id>
+    <published>2020-12-08T07:09:23-06:00</published>
+    <updated>2020-12-08T07:09:23-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-alex"/>
+    <title>Minecraft Alex</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004998HOTVL19.jpg?v=1689718585"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            22.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">She's got it all together, while making it look easy.  Friend to Steve, ally to evil.  Need a job done? Alex is sure to help with success.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864449654</id>
+      <title>Default Title</title>
+      <s:price currency="USD">22.50</s:price>
+      <s:sku>6004998</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864416886</id>
+    <published>2020-12-08T07:09:20-06:00</published>
+    <updated>2020-12-08T07:09:20-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-pig"/>
+    <title>Minecraft Pig</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004997HOTVL19.jpg?v=1689718582"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            22.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Pig is cute, pig is funny, most of all, pig is popular. Pigs can be bred to create piglets. Piglets can be raised to provide food. Pig can even be rode with a saddle.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864416886</id>
+      <title>Default Title</title>
+      <s:price currency="USD">22.50</s:price>
+      <s:sku>6004997</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864384118</id>
+    <published>2020-12-08T07:09:18-06:00</published>
+    <updated>2020-12-08T07:09:18-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-creeper"/>
+    <title>Minecraft Creeper</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004996HOTVL19.jpg?v=1689718579"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            22.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Beware the creeper.  Prowling silently along.  They're sneaky and detrimental if you get too close. The game wouldn't be the same without Creeper.  Your display wouldn't be the same without Creeper.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864384118</id>
+      <title>Default Title</title>
+      <s:price currency="USD">22.50</s:price>
+      <s:sku>6004996</s:sku>
+      <s:grams>45</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864351350</id>
+    <published>2020-12-08T07:09:14-06:00</published>
+    <updated>2020-12-08T07:09:14-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-tree"/>
+    <title>Minecraft Tree</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004995HOTVL19.jpg?v=1689718576"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            30.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">We claim you can never have too many trees in your Village display.  Also true with Minecraft.  Appreciated for their beauty, function and material value.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864351350</id>
+      <title>Default Title</title>
+      <s:price currency="USD">30.00</s:price>
+      <s:sku>6004995</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864253046</id>
+    <published>2020-12-08T07:09:12-06:00</published>
+    <updated>2020-12-08T07:09:12-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-diamond-mine"/>
+    <title>Minecraft Diamond Mine</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004993HOTVL19.jpg?v=1754595653"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            100.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">The blocks of various landscaping styles are carefully fit together in scale.  The result creates a parklike setting complete with a pond that forms a waterfall and a sub terrain lit diamond mine.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864253046</id>
+      <title>Default Title</title>
+      <s:price currency="USD">100.00</s:price>
+      <s:sku>6004993</s:sku>
+      <s:grams>703</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4622864220278</id>
+    <published>2020-12-08T07:09:08-06:00</published>
+    <updated>2020-12-08T07:09:08-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/minecraft-house"/>
+    <title>Minecraft House</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6004992HOTVL19New.jpg?v=1754595646"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            150.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">During a trip to Stockholm, Sweden, the D56 Village architects met with the Minecraft creator which resulted in our newest Hot Properties Series! An A-frame style structure forms the perfect ‘club-house' and centerpiece to the series.<br><ul class="productList">
+<li> Introduced June 2019 </li>
+<li>Retired November 2020</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced June 2019</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2020</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4622864220278</id>
+      <title>Default Title</title>
+      <s:price currency="USD">150.00</s:price>
+      <s:sku>6004992</s:sku>
+      <s:grams>1066</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4339235225718</id>
+    <published>2019-11-08T07:15:23-06:00</published>
+    <updated>2019-11-08T07:15:23-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/wednesday-and-the-boy-pugsley"/>
+    <title>Wednesday And The Boy Pugsley</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/products/6002952.jpg?v=1573218924"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            23.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Strange siblings create new ways to play with dolls. Add a classic touch to your Halloween decor.<br><ul class="productList">
+<li> Introduced April 2018 </li>
+<li>Retired November 2019</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Halloween</s:tag>
+    <s:tag>Introduced April 2018</s:tag>
+    <s:tag>Retired November 2019</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4339235225718</id>
+      <title>Default Title</title>
+      <s:price currency="USD">23.50</s:price>
+      <s:sku>6002952</s:sku>
+      <s:grams>23</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/4339235192950</id>
+    <published>2019-11-08T07:15:21-06:00</published>
+    <updated>2019-11-08T07:15:21-06:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/uncle-fester"/>
+    <title>Uncle Fester</title>
+    <s:type>Hot Properties Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/6002951HOTVL18.jpg?v=1689717855"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>Hot Properties Village<br>
+        <strong>Price: </strong>
+            37.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">Lightbulb in the mouth!  A fan favorite.  Would work in the Snow Village Halloween as well. Add a classic touch to your Halloween decor.<br><ul class="productList">
+<li> Introduced April 2018 </li>
+<li>Retired November 2019</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Anyone</s:tag>
+    <s:tag>Halloween</s:tag>
+    <s:tag>Introduced April 2018</s:tag>
+    <s:tag>Retired November 2019</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/4339235192950</id>
+      <title>Default Title</title>
+      <s:price currency="USD">37.50</s:price>
+      <s:sku>6002951</s:sku>
+      <s:grams>136</s:grams>
+    </s:variant>
+  </entry>
+</feed>

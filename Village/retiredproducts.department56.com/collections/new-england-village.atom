@@ -1,0 +1,1105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xml:lang="en" xmlns="http://www.w3.org/2005/Atom" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:s="http://jadedpixel.com/-/spec/shopify">
+  <id>https://retiredproducts.department56.com/collections/all.atom</id>
+  <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/collections/all"/>
+  <link rel="self" type="application/atom+xml" href="https://retiredproducts.department56.com/collections/new-england-village.atom"/>
+  <title>Department 56 Retirements</title>
+  <updated>2023-07-20T11:02:08-05:00</updated>
+  <author>
+    <name>Department 56 Retirements</name>
+  </author>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881137229942</id>
+    <published>2023-07-20T11:02:08-05:00</published>
+    <updated>2023-07-20T11:02:08-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/caroling-on-christmas-eve"/>
+    <title>Caroling on Christmas Eve</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808919NV09_OL_JR.jpg?v=1754599670"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2011</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881137229942</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>808919</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881137197174</id>
+    <published>2023-07-20T11:02:07-05:00</published>
+    <updated>2023-07-20T11:02:07-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/a-christmas-pony"/>
+    <title>A Christmas Pony</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808918NV09_OL_JR.jpg?v=1754599667"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2012</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Daughter</s:tag>
+    <s:tag>Female</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Retired December 2012</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881137197174</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>808918</s:sku>
+      <s:grams>91</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881137164406</id>
+    <published>2023-07-20T11:02:05-05:00</published>
+    <updated>2023-07-20T11:02:05-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/waiting-for-the-train"/>
+    <title>Waiting for the Train</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808917NV09_OL_JR.jpg?v=1754599663"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            25.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2011</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Couple</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881137164406</id>
+      <title>Default Title</title>
+      <s:price currency="USD">25.00</s:price>
+      <s:sku>808917</s:sku>
+      <s:grams>79</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881137098870</id>
+    <published>2023-07-20T11:02:04-05:00</published>
+    <updated>2023-07-20T11:02:04-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/tilton-station"/>
+    <title>Tilton Station</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/808914NV09_OL_JR.jpg?v=1754599652"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2010 </li>
+<li>Retired December 2011</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2010</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881137098870</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>808914</s:sku>
+      <s:grams>1758</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881133035638</id>
+    <published>2023-07-20T10:59:08-05:00</published>
+    <updated>2023-07-20T10:59:08-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/welcome-to-windham-country-inn"/>
+    <title>Welcome To Windham Country Inn</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            79.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced May 2009 </li>
+<li>Retired December 2009</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2009</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881133035638</id>
+      <title>Default Title</title>
+      <s:price currency="USD">79.00</s:price>
+      <s:sku>805528</s:sku>
+      <s:grams>1474</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881125040246</id>
+    <published>2023-07-20T10:53:35-05:00</published>
+    <updated>2023-07-20T10:53:35-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/family-sleigh-ride"/>
+    <title>Family Sleigh Ride</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            30.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2003 </li>
+<li>Retired December 2009</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2003</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881125040246</id>
+      <title>Default Title</title>
+      <s:price currency="USD">30.00</s:price>
+      <s:sku>56.57105</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881125007478</id>
+    <published>2023-07-20T10:53:33-05:00</published>
+    <updated>2023-07-20T10:53:33-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/bennington-manor"/>
+    <title>Bennington Manor</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            75.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2007 </li>
+<li>Retired December 2009</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2007</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881125007478</id>
+      <title>Default Title</title>
+      <s:price currency="USD">75.00</s:price>
+      <s:sku>56.57008</s:sku>
+      <s:grams>1463</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881124843638</id>
+    <published>2023-07-20T10:53:25-05:00</published>
+    <updated>2023-07-20T10:53:25-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-perfect-tree"/>
+    <title>The Perfect Tree</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="#"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            20.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced December 2000 </li>
+<li>Retired December 2009</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced December 2000</s:tag>
+    <s:tag>Retired December 2009</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881124843638</id>
+      <title>Default Title</title>
+      <s:price currency="USD">20.00</s:price>
+      <s:sku>56.56645</s:sku>
+      <s:grams>68</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881120845942</id>
+    <published>2023-07-20T10:50:22-05:00</published>
+    <updated>2023-07-20T10:50:22-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-first-tap"/>
+    <title>The First Tap</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4044829NEGVL15.jpg?v=1754591533"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            47.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">It's spring, the sap is running, and this young boy experiences his first tap with dad.<br><ul class="productList">
+<li> Introduced January 2015 </li>
+<li>Retired November 2017</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Fall</s:tag>
+    <s:tag>Introduced January 2015</s:tag>
+    <s:tag>Retired November 2017</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881120845942</id>
+      <title>Default Title</title>
+      <s:price currency="USD">47.50</s:price>
+      <s:sku>4044829</s:sku>
+      <s:grams>272</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881120813174</id>
+    <published>2023-07-20T10:50:21-05:00</published>
+    <updated>2023-07-20T10:50:21-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/echo-glen-little-school"/>
+    <title>Echo Glen Little School</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4044826NEGVL15.jpg?v=1754591529"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            85.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">We can almost hear the bell in the tower ring to call the children to class.  Who would believe that a new puppy followed a pupil to school and waits patiently at the door for the recess.<br><ul class="productList">
+<li> Introduced January 2015 </li>
+<li>Retired November 2016</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2015</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired November 2016</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881120813174</id>
+      <title>Default Title</title>
+      <s:price currency="USD">85.00</s:price>
+      <s:sku>4044826</s:sku>
+      <s:grams>907</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881099939958</id>
+    <published>2023-07-20T10:35:20-05:00</published>
+    <updated>2023-07-20T10:35:20-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/another-crabby-christmas"/>
+    <title>Another Crabby Christmas</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030706NEGVL13.jpg?v=1754429540"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            20.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881099939958</id>
+      <title>Default Title</title>
+      <s:price currency="USD">20.00</s:price>
+      <s:sku>4030706</s:sku>
+      <s:grams>68</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881099907190</id>
+    <published>2023-07-20T10:35:18-05:00</published>
+    <updated>2023-07-20T10:35:18-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/corwin-house"/>
+    <title>Corwin House</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030704NEGVL13.jpg?v=1754429536"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            85.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time when America was beginning its great traditions.  Corwin House, hand-crafted and hand-painted porcelain lit building. Includes light cord and orange bulb.<br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881099907190</id>
+      <title>Default Title</title>
+      <s:price currency="USD">85.00</s:price>
+      <s:sku>4030704</s:sku>
+      <s:grams>1134</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881099841654</id>
+    <published>2023-07-20T10:35:17-05:00</published>
+    <updated>2023-07-20T10:35:17-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-dirty-owl"/>
+    <title>The Dirty Owl</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030703NEGVL13.jpg?v=1754429532"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            85.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time when America was beginning its great traditions.  The Dirty Owl, hand-crafted and hand-painted porcelain lit building. Includes light cord and bulb.<br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881099841654</id>
+      <title>Default Title</title>
+      <s:price currency="USD">85.00</s:price>
+      <s:sku>4030703</s:sku>
+      <s:grams>1032</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881099776118</id>
+    <published>2023-07-20T10:35:15-05:00</published>
+    <updated>2023-07-20T10:35:15-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/peekytoe-crab-shack"/>
+    <title>Peekytoe Crab Shack</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030702NEGVL13.jpg?v=1754429528"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            80.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881099776118</id>
+      <title>Default Title</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku>4030702</s:sku>
+      <s:grams>1123</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881099710582</id>
+    <published>2023-07-20T10:35:14-05:00</published>
+    <updated>2023-07-20T10:35:14-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/tucker-point-light"/>
+    <title>Tucker Point Light</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4030701NEGVL13.jpg?v=1754429524"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time when America was beginning its great traditions.  Tucker Point Light, hand-crafted and hand-painted porcelain lit building. Includes adapter cord and bulb.<br><ul class="productList">
+<li> Introduced January 2013 </li>
+<li>Retired December 2014</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2013</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881099710582</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>4030701</s:sku>
+      <s:grams>1066</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881097449590</id>
+    <published>2023-07-20T10:34:02-05:00</published>
+    <updated>2023-07-20T10:34:02-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/nantucket-christmas-taffy"/>
+    <title>Nantucket Christmas Taffy</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4028701NEGVL12.jpg?v=1754429343"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            89.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time in America. At Chrsitmas, a favorite place to stop is the taffy shop. Hand-crafted &amp; hand-painted porcelain lit building.<br><ul class="productList">
+<li> Introduced May 2012 </li>
+<li>Retired December 2012</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2012</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881097449590</id>
+      <title>Default Title</title>
+      <s:price currency="USD">89.00</s:price>
+      <s:sku>4028701</s:sku>
+      <s:grams>1202</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881083719798</id>
+    <published>2023-07-20T10:23:22-05:00</published>
+    <updated>2023-07-20T10:23:22-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/the-gables"/>
+    <title>The Gables</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025351.jpg?v=1754428230"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time in America.  The multi-gabled houses is filled with stories and fabled lore.  Do you dare to visit? Hand-crafted &amp; hand-painted porcelain lit building.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881083719798</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>4025351</s:sku>
+      <s:grams>1565</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881082212470</id>
+    <published>2023-07-20T10:21:31-05:00</published>
+    <updated>2023-07-20T10:21:31-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/a-salty-dogs-respite"/>
+    <title>A Salty Dog&apos;s Respite</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025272NEGVL12.jpg?v=1754428073"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            32.50
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881082212470</id>
+      <title>Default Title</title>
+      <s:price currency="USD">32.50</s:price>
+      <s:sku>4025272</s:sku>
+      <s:grams>227</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881082179702</id>
+    <published>2023-07-20T10:21:29-05:00</published>
+    <updated>2023-07-20T10:21:29-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/plainfield-sign-co"/>
+    <title>Plainfield Sign Co.</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025271NEGVL12.jpg?v=1754428070"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series, a collection by Department 56, portraying a simpler time in America.  Signmaking a very respected craft and art; many signmakers establish a thriving business. Hand-crafted &amp; hand-painted porcelain lit building.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881082179702</id>
+      <title>Default Title</title>
+      <s:price currency="USD">90.00</s:price>
+      <s:sku>4025271</s:sku>
+      <s:grams>930</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881082146934</id>
+    <published>2023-07-20T10:21:28-05:00</published>
+    <updated>2023-07-20T10:21:28-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/new-britain-vestry-church"/>
+    <title>New Britain Vestry Church</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025270NEGVL12.jpg?v=1754428066"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            80.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series.  Charming clapboard church named for the historical town in Connecticut. The congregation gathers for service and pot-luck suppers! Hand-crafted &amp; hand-painted porcelain lit building. Includes light cord &amp; bulb.<br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired November 2015</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Religious</s:tag>
+    <s:tag>Retired November 2015</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881082146934</id>
+      <title>Default Title</title>
+      <s:price currency="USD">80.00</s:price>
+      <s:sku>4025270</s:sku>
+      <s:grams>1009</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881082114166</id>
+    <published>2023-07-20T10:21:26-05:00</published>
+    <updated>2023-07-20T10:21:26-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/chesapeake-bay-light"/>
+    <title>Chesapeake Bay Light</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4025269NEGVL12.jpg?v=1754428063"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2012 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2012</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881082114166</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>4025269</s:sku>
+      <s:grams>1259</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881080082550</id>
+    <published>2023-07-20T10:19:38-05:00</published>
+    <updated>2023-07-20T10:19:38-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/lakeshore-holiday-house"/>
+    <title>Lakeshore Holiday House</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4023613negvl11.jpg?v=1754427821"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            89.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced May 2011 </li>
+<li>Retired December 2011</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced May 2011</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Lighted Houses</s:tag>
+    <s:tag>Retired December 2011</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881080082550</id>
+      <title>Default Title</title>
+      <s:price currency="USD">89.00</s:price>
+      <s:sku>4023613</s:sku>
+      <s:grams>1043</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881077231734</id>
+    <published>2023-07-20T10:16:10-05:00</published>
+    <updated>2023-07-20T10:16:10-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/kittens-n-cream"/>
+    <title>Kittens &apos;n Cream</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4022329NEGVL10.jpg?v=1754427430"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            20.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2">From the New England Village Series,  portraying a simpler time when America was beginning its great traditions.  From the creamery, this fresh treat appeals to the whole litter.  Hand-crafted and hand-painted porcelain figurine.<br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired December 2014</li> <li> Village Figures </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Retired December 2014</s:tag>
+    <s:tag>Village Figures</s:tag>
+    <s:tag>Villages</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881077231734</id>
+      <title>Default Title</title>
+      <s:price currency="USD">20.00</s:price>
+      <s:sku>4022329</s:sku>
+      <s:grams>64</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881076281462</id>
+    <published>2023-07-20T10:14:51-05:00</published>
+    <updated>2023-07-20T10:14:51-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/nans-cape-cod-creamery"/>
+    <title>Nan&apos;s Cape Cod Creamery</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4021998.jpg?v=1754427199"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            90.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881076281462</id>
+      <title>Default Title</title>
+      <s:price currency="USD">90.00</s:price>
+      <s:sku>4021998</s:sku>
+      <s:grams>953</s:grams>
+    </s:variant>
+  </entry>
+  <entry>
+    <id>https://retiredproducts.department56.com/products/6881076248694</id>
+    <published>2023-07-20T10:14:48-05:00</published>
+    <updated>2023-07-20T10:14:48-05:00</updated>
+    <link rel="alternate" type="text/html" href="https://retiredproducts.department56.com/products/sandy-shoal-lighthouse"/>
+    <title>Sandy Shoal Lighthouse</title>
+    <s:type>New England Village</s:type>
+    <s:vendor>Department 56</s:vendor>
+    <summary type="html">
+      <![CDATA[<table border="0">
+  <tr>
+    <td width="200"><img width="200" src="https://cdn.shopify.com/s/files/1/0031/4972/5814/files/4021997.jpg?v=1754427195"></td>
+    <td valign="bottom">
+      <p>
+
+        <strong>Vendor: </strong>Department 56<br>
+        <strong>Type: </strong>New England Village<br>
+        <strong>Price: </strong>
+            95.00
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2"><br><ul class="productList">
+<li> Introduced January 2011 </li>
+<li>Retired December 2013</li> <li> Lighted Buildings </li>
+</ul></td>
+  </tr>
+</table>
+]]>
+    </summary>
+    <s:tag>Christmas</s:tag>
+    <s:tag>Introduced January 2011</s:tag>
+    <s:tag>Lighted Buildings</s:tag>
+    <s:tag>Retired December 2013</s:tag>
+    <s:variant>
+      <id>https://retiredproducts.department56.com/products/6881076248694</id>
+      <title>Default Title</title>
+      <s:price currency="USD">95.00</s:price>
+      <s:sku>4021997</s:sku>
+      <s:grams>919</s:grams>
+    </s:variant>
+  </entry>
+</feed>
