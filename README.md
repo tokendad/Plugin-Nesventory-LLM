@@ -183,8 +183,36 @@ async def identify_village_item(description: str):
 The knowledge base can be populated from:
 
 1. **Sample Data** - Pre-seeded Department 56 collectibles (included)
-2. **Web Scraping** - Scrape from The Village Chronicler website
+2. **Web Scraping** - Scrape from multiple sources:
+   - The Village Chronicler website (https://thevillagechronicler.com/All-ProductList.shtml)
+   - Department 56 Retired Products (https://retiredproducts.department56.com/pages/history-lists)
 3. **Manual Entry** - Add items via the API
+
+### Web Scraping Details
+
+The scraper automatically collects data from:
+
+**The Village Chronicler** - Provides comprehensive product lists with:
+- Village collection names
+- Item numbers
+- Item descriptions
+- Manufacturing date ranges
+- Links to detailed collection pages
+
+**Department 56 Retired Products** - Downloads and parses PDF files containing:
+- Item numbers
+- Detailed descriptions
+- Year issued
+- Year retired
+- US suggested retail prices (SRP)
+- Canadian suggested retail prices (SRP)
+
+To run the scraper:
+```bash
+nesventory-llm scrape
+```
+
+This will fetch data from both sources and save it to the data directory.
 
 ### Sample Collections Included
 
