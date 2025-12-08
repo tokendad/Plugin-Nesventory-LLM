@@ -1,6 +1,7 @@
 """
 Tests for the Village Chronicler scraper.
 """
+import httpx
 import pytest
 from pathlib import Path
 from unittest.mock import Mock, patch
@@ -201,8 +202,6 @@ class TestScraperAllProductsPage:
     @patch('plugin_nesventory_llm.scraper.httpx.Client')
     def test_scrape_handles_http_error(self, mock_client_class, tmp_path):
         """Test that scraper handles HTTP errors gracefully."""
-        import httpx
-        
         # Setup mock to raise httpx.HTTPError
         mock_client = Mock()
         mock_client.get.side_effect = httpx.HTTPError("Network error")

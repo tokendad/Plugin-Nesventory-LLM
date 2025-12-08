@@ -32,6 +32,10 @@ BASE_URL = "https://thevillagechronicler.com"
 COLLECTIONS_URL = f"{BASE_URL}/TheCollections.shtml"
 ALL_PRODUCTS_URL = f"{BASE_URL}/All-ProductList.shtml"
 
+# Table parsing constants
+MIN_PRODUCT_TABLE_COLUMNS = 5
+HEADER_CELL_INDICATORS = ["village collection", "collection", "name"]
+
 
 def generate_item_id(name: str, item_number: Optional[str] = None) -> str:
     """Generate a unique ID for an item based on its name and item number."""
@@ -55,7 +59,7 @@ def parse_date_range(text: str) -> tuple[Optional[int], Optional[int]]:
         return None, None
     
     # Match patterns like "1995-1998", "1995-Present", "1995"
-    match = re.search(r"(\d{4})\s*-\s*(\d{4}|Present|present)", text, re.IGNORECASE)
+    match = re.search(r"(\d{4})\s*-\s*(\d{4}|Present)", text, re.IGNORECASE)
     if match:
         year_start = int(match.group(1))
         year_end_str = match.group(2)
@@ -187,7 +191,7 @@ class VillageChroniclerScraper:
             tables = soup.find_all("table")
             for t in tables:
                 sample_row = t.find("tr")
-                if sample_row and len(sample_row.find_all(["td", "th"])) >= 5:
+                if sample_row and len(sample_row.find_all(["td", "th"])) >= MIN_PRODUCT_TABLE_COLUMNS:
                     table = t
                     break
         
@@ -205,7 +209,7 @@ class VillageChroniclerScraper:
             if cells:
                 # Skip if this looks like a header row
                 first_cell_text = cells[0].get_text().strip().lower()
-                if first_cell_text not in ["village collection", "collection", "name"]:
+                if first_cell_text not in HEADER_CELL_INDICATORS:
                     data_rows.append(row)
         
         logger.info(f"Found {len(data_rows)} product rows in table")
@@ -215,7 +219,7 @@ class VillageChroniclerScraper:
             cells = row.find_all(["td", "th"])
             
             # Expected columns: Collection, Item Number, Description, Dates, Where Found
-            if len(cells) < 5:
+            if len(cells) < MIN_PRODUCT_TABLE_COLUMNS:
                 continue
             
             collection_name = clean_text(cells[0].get_text())
