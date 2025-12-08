@@ -1,8 +1,9 @@
 """
-Data scraper for The Village Chronicler website.
+Data scraper for The Village Chronicler website and Department 56 retired products.
 
-This module scrapes collectible item information from
-https://thevillagechronicler.com/All-ProductList.shtml
+This module scrapes collectible item information from:
+- https://thevillagechronicler.com/All-ProductList.shtml
+- https://retiredproducts.department56.com/pages/history-lists
 
 The scraper parses the All-ProductList page which contains a table with:
 - Village collection name
@@ -10,6 +11,14 @@ The scraper parses the All-ProductList page which contains a table with:
 - Item description  
 - Dates (manufacturing date range)
 - Where found (links to individual collection pages)
+
+The Department 56 retired products scraper downloads PDFs with:
+- Item Number
+- Description
+- Year Issued
+- Year Retired
+- US SRP (suggested retail price)
+- CAD SRP (Canadian suggested retail price)
 """
 
 import hashlib
@@ -149,7 +158,7 @@ def parse_pdf_items(pdf_content: bytes, collection_name: str, source_url: str) -
                 
                 # Try multiple regex patterns to match different PDF formats
                 # Pattern 1: Full format with all fields
-                item_match = re.match(r'^(\S+)\s+(.+?)\s+(\d{4})\s+(\d{4}|\-)\s+\$?([\d,]+\.?\d*)\s+\$?([\d,]+\.?\d*).*$', line)
+                item_match = re.match(r'^(\S+)\s+(.+?)\s+(\d{4})\s+(\d{4}|\-)\s+\$?([\d,]+(?:\.\d+)?)\s+\$?([\d,]+(?:\.\d+)?).*$', line)
                 
                 # Pattern 2: Without prices at end
                 if not item_match:
