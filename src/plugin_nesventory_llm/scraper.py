@@ -3,15 +3,24 @@ Data scraper for The Village Chronicler website and Department 56 retired produc
 
 This module scrapes collectible item information from local mirror files in:
 - Village/thevillagechronicler.com/All-ProductList.shtml.html
+- Village/retiredproducts.department56.com/*.pdf
 
-The scraper parses the All-ProductList page which contains a table with:
-- Village collection name
-- Item number
-- Item description
-- Dates (manufacturing date range)
-- Where found (links to individual collection pages)
+The scraper parses:
+1. The All-ProductList page which contains a table with:
+   - Village collection name
+   - Item number
+   - Item description
+   - Dates (manufacturing date range)
+   - Where found (links to individual collection pages)
 
-Note: The website https://thevillagechronicler.com is mirrored locally in the repository.
+2. Retired products PDF files which contain:
+   - Item numbers
+   - Detailed descriptions
+   - Year issued
+   - Year retired  
+   - US and Canadian suggested retail prices
+
+Note: Both sources are stored locally in the repository.
 """
 
 import hashlib
@@ -23,7 +32,7 @@ from pathlib import Path
 from typing import Optional
 
 from bs4 import BeautifulSoup
-from PyPDF2 import PdfReader
+from pypdf import PdfReader
 
 from .models import VillageCollection, VillageItem
 
@@ -31,6 +40,7 @@ logger = logging.getLogger(__name__)
 
 # Default local mirror directory (relative to repository root)
 DEFAULT_LOCAL_MIRROR = Path("Village/thevillagechronicler.com")
+DEFAULT_RETIRED_PDFS_DIR = Path("Village/retiredproducts.department56.com")
 
 # Table parsing constants
 MIN_PRODUCT_TABLE_COLUMNS = 5
@@ -267,13 +277,15 @@ def extract_collection_name_from_pdf(pdf_content: bytes, filename: str) -> str:
 class VillageChroniclerScraper:
     """Scraper for The Village Chronicler local mirror files."""
 
-    def __init__(self, data_dir: Path | str = "data", local_mirror_dir: Path | str | None = None):
+    def __init__(self, data_dir: Path | str = "data", local_mirror_dir: Path | str | None = None, retired_pdfs_dir: Path | str | None = None):
         """Initialize the scraper.
 
         Args:
             data_dir: Directory to store scraped data
             local_mirror_dir: Path to local mirror of thevillagechronicler.com.
                              Defaults to "Village/thevillagechronicler.com" if not provided.
+            retired_pdfs_dir: Path to local retired products PDFs directory.
+                             Defaults to "Village/retiredproducts.department56.com" if not provided.
         """
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
@@ -284,9 +296,19 @@ class VillageChroniclerScraper:
         else:
             self.local_mirror_dir = DEFAULT_LOCAL_MIRROR
 
+        # Set retired PDFs directory
+        if retired_pdfs_dir:
+            self.retired_pdfs_dir = Path(retired_pdfs_dir)
+        else:
+            self.retired_pdfs_dir = DEFAULT_RETIRED_PDFS_DIR
+
         # Validate that the local mirror directory exists
         if not self.local_mirror_dir.exists():
             logger.warning(f"Local mirror directory does not exist: {self.local_mirror_dir}")
+
+        # Validate that the retired PDFs directory exists
+        if not self.retired_pdfs_dir.exists():
+            logger.warning(f"Retired PDFs directory does not exist: {self.retired_pdfs_dir}")
 
         self.collections: list[VillageCollection] = []
         self.items: list[VillageItem] = []
@@ -383,18 +405,65 @@ class VillageChroniclerScraper:
         logger.info(f"Scraped {len(items)} items from All-ProductList page")
         return items
 
+    def scrape_retired_pdfs(self) -> list[VillageItem]:
+        """Scrape retired products from local PDF files.
+
+        Reads PDF files from the local retired products directory
+        and extracts item information from each PDF.
+
+        Returns:
+            List of VillageItem objects
+        """
+        logger.info(f"Scraping retired products PDFs from: {self.retired_pdfs_dir}")
+        
+        if not self.retired_pdfs_dir.exists():
+            logger.warning(f"Retired PDFs directory does not exist: {self.retired_pdfs_dir}")
+            return []
+
+        all_items = []
+        
+        # Find all PDF files in the directory
+        pdf_files = list(self.retired_pdfs_dir.glob("*.pdf"))
+        logger.info(f"Found {len(pdf_files)} PDF files")
+
+        for pdf_file in pdf_files:
+            try:
+                # Read PDF content
+                with open(pdf_file, "rb") as f:
+                    pdf_content = f.read()
+
+                # Extract collection name from filename
+                collection_name = extract_collection_name_from_pdf(pdf_content, pdf_file.name)
+
+                # Parse items from PDF
+                items = parse_pdf_items(pdf_content, collection_name, pdf_file.name)
+                all_items.extend(items)
+
+            except Exception as e:
+                logger.error(f"Error processing PDF {pdf_file.name}: {e}")
+                continue
+
+        logger.info(f"Scraped {len(all_items)} items from {len(pdf_files)} PDF files")
+        return all_items
+
     def scrape_all(self) -> tuple[list[VillageCollection], list[VillageItem]]:
         """Scrape all collections and items from local mirror files.
 
-        Reads the All-ProductList page from local files.
+        Reads data from:
+        1. The All-ProductList page from Village Chronicler mirror
+        2. Retired products PDFs from local directory
 
         Returns:
             Tuple of (collections, items)
         """
-        logger.info("Starting scrape from local Village Chronicler mirror")
+        logger.info("Starting scrape from local Village Chronicler mirror and retired PDFs")
 
         # Scrape all items from the All-ProductList page
         self.items = self.scrape_all_products_page()
+
+        # Scrape retired products from PDF files
+        retired_items = self.scrape_retired_pdfs()
+        self.items.extend(retired_items)
 
         # Build collections from the items
         collections_dict = {}
