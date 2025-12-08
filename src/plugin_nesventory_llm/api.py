@@ -10,7 +10,7 @@ from contextlib import asynccontextmanager
 from pathlib import Path
 from typing import Optional
 
-from fastapi import FastAPI, HTTPException, Query
+from fastapi import FastAPI, File, HTTPException, Query, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
@@ -18,12 +18,21 @@ from pydantic import BaseModel
 
 from . import __version__
 from .knowledge_base import KnowledgeBase
-from .models import ItemQuery, ItemSearchResult, LLMResponse, VillageItem
+from .models import (
+    ImageSearchRequest,
+    ImageSearchResult,
+    ItemQuery,
+    ItemSearchResult,
+    LLMResponse,
+    VillageItem,
+)
 
 logger = logging.getLogger(__name__)
 
 # Global knowledge base instance
 kb: Optional[KnowledgeBase] = None
+# Global image search service
+image_search_service = None
 
 
 class HealthResponse(BaseModel):
@@ -47,7 +56,7 @@ class QueryRequest(BaseModel):
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """Initialize knowledge base on startup."""
-    global kb
+    global kb, image_search_service
 
     data_dir = Path("data")
     kb = KnowledgeBase(data_dir=data_dir)
@@ -63,10 +72,21 @@ async def lifespan(app: FastAPI):
     else:
         logger.info("No items found. Use /scrape endpoint to fetch data.")
 
+    # Initialize image search service
+    try:
+        from .image_search import ImageSearchService
+
+        image_search_service = ImageSearchService(kb)
+        logger.info("Image search service initialized")
+    except Exception as e:
+        logger.warning(f"Could not initialize image search service: {e}")
+        image_search_service = None
+
     yield
 
     # Cleanup
     kb = None
+    image_search_service = None
 
 
 app = FastAPI(
@@ -316,6 +336,111 @@ async def identify_item(query: str = Query(..., description="Item name or descri
         }
     else:
         return {"identified": False, "confidence": 0.0, "suggestion": response.answer}
+
+
+# Image Search Endpoints
+
+
+@app.post("/search/image", response_model=ImageSearchResult)
+async def search_by_image(
+    file: UploadFile = File(..., description="Image file containing Department 56 items"),
+    collection: Optional[str] = Query(None, description="Filter by collection"),
+    category: Optional[str] = Query(None, description="Filter by category"),
+    limit: int = Query(10, ge=1, le=100, description="Maximum results to return"),
+    min_confidence: float = Query(0.3, ge=0.0, le=1.0, description="Minimum confidence threshold"),
+):
+    """Search for items by uploading an image.
+
+    Upload an image containing one or more Department 56 collectible items.
+    The system will detect objects in the image and match them against the
+    knowledge base.
+
+    Supported image formats: JPEG, PNG, WebP, BMP
+    """
+    if not kb:
+        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+
+    if not kb.items:
+        raise HTTPException(status_code=404, detail="No items in knowledge base")
+
+    if not image_search_service:
+        raise HTTPException(
+            status_code=503,
+            detail="Image search service not available. Check server logs for details.",
+        )
+
+    # Validate file type
+    if not file.content_type or not file.content_type.startswith("image/"):
+        raise HTTPException(
+            status_code=400, detail=f"Invalid file type: {file.content_type}. Must be an image."
+        )
+
+    try:
+        # Read image data
+        image_data = await file.read()
+
+        # Create search request
+        request = ImageSearchRequest(
+            collection=collection,
+            category=category,
+            limit=limit,
+            min_confidence=min_confidence,
+        )
+
+        # Perform image search
+        result = image_search_service.search_by_image(image_data, request)
+        return result
+
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Image search failed")
+        raise HTTPException(status_code=500, detail=f"Image search failed: {str(e)}")
+
+
+@app.post("/nesventory/identify/image")
+async def identify_item_from_image(
+    file: UploadFile = File(..., description="Image file containing a Department 56 item"),
+):
+    """Identify items from an image for NesVentory integration.
+
+    This endpoint is designed for NesVentory integration. Upload an image
+    containing Department 56 collectible items, and the system will attempt
+    to identify them.
+
+    Returns the best match along with alternatives and detected object descriptions.
+    """
+    if not kb:
+        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+
+    if not kb.items:
+        raise HTTPException(status_code=404, detail="No items in knowledge base")
+
+    if not image_search_service:
+        raise HTTPException(
+            status_code=503,
+            detail="Image search service not available. Check server logs for details.",
+        )
+
+    # Validate file type
+    if not file.content_type or not file.content_type.startswith("image/"):
+        raise HTTPException(
+            status_code=400, detail=f"Invalid file type: {file.content_type}. Must be an image."
+        )
+
+    try:
+        # Read image data
+        image_data = await file.read()
+
+        # Identify items from image
+        result = image_search_service.identify_from_image(image_data)
+        return result
+
+    except ValueError as e:
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.exception("Image identification failed")
+        raise HTTPException(status_code=500, detail=f"Image identification failed: {str(e)}")
 
 
 def create_app() -> FastAPI:
