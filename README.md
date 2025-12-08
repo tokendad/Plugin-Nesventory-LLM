@@ -57,16 +57,21 @@ Access the status page at: http://localhost:8002
 
 If you encounter SSL certificate errors during the Docker build (common in corporate environments with SSL inspection):
 
+**Option 1: Use corporate CA certificates (Recommended)**
+```dockerfile
+# Add to Dockerfile:
+COPY corporate-ca.crt /usr/local/share/ca-certificates/
+RUN update-ca-certificates
+```
+
+**Option 2: Temporary SSL bypass (Development only)**
 ```bash
-# Temporarily bypass SSL verification for the build
+# Only use this in development/testing environments
 docker build --build-arg PIP_TRUSTED_HOST=pypi.org,files.pythonhosted.org \
   -t nesventory-llm:latest .
 ```
 
-Or uncomment the following line in the Dockerfile before building:
-```dockerfile
-ENV PIP_TRUSTED_HOST=pypi.org,files.pythonhosted.org
-```
+⚠️ **Note**: Disabling SSL verification should only be used as a last resort and never in production environments.
 
 ### Docker Environment Variables
 

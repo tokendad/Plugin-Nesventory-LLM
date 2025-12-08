@@ -25,7 +25,7 @@ fi
 chown -R $PUID:$PGID /app/data
 
 # Initialize sample data if data directory is empty
-if [ ! "$(ls -A /app/data/*.json 2>/dev/null)" ]; then
+if ! find /app/data -name '*.json' -type f | grep -q .; then
     echo "Initializing sample data..."
     gosu $PUID:$PGID python -c "from plugin_nesventory_llm.seed_data import save_sample_data; save_sample_data()" || echo "Warning: Could not generate sample data"
 fi
