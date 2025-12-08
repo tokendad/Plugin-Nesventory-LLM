@@ -24,6 +24,43 @@ This plugin provides AI-powered assistance for identifying and learning about De
 
 ## Installation
 
+### Using Docker (Recommended)
+
+The easiest way to run NesVentory LLM is using Docker:
+
+```bash
+# Clone the repository
+git clone https://github.com/tokendad/Plugin-Nesventory-LLM.git
+cd Plugin-Nesventory-LLM
+
+# Build the Docker image
+docker build -t nesventory-llm:latest .
+
+# Run with docker-compose (recommended)
+docker-compose up -d
+
+# Or run directly
+docker run -d \
+  --name nesventory-llm \
+  -p 8002:8002 \
+  -v $(pwd)/data:/app/data \
+  -e PUID=1000 \
+  -e PGID=1000 \
+  -e TZ=UTC \
+  --restart unless-stopped \
+  nesventory-llm:latest
+```
+
+Access the status page at: http://localhost:8002
+
+### Docker Environment Variables
+
+| Variable | Description | Default |
+|----------|-------------|---------|
+| `PUID` | User ID for file permissions | 1000 |
+| `PGID` | Group ID for file permissions | 1000 |
+| `TZ` | Timezone (e.g., America/New_York) | UTC |
+
 ### From Source
 
 ```bash
@@ -41,7 +78,7 @@ pip install -e ".[dev]"
 
 ### Requirements
 
-- Python 3.9 or higher
+- Python 3.9 or higher (or Docker)
 - Dependencies are automatically installed:
   - FastAPI for the REST API
   - sentence-transformers for semantic search
@@ -86,6 +123,20 @@ nesventory-llm serve
 nesventory-llm serve --reload
 ```
 
+### 5. Access the Status Webpage
+
+When using Docker or running the API server, a web-based status page is available at:
+
+```
+http://localhost:8002
+```
+
+The status page provides:
+- **System Status** - Real-time health and statistics
+- **Query Interface** - Search the knowledge base directly from your browser
+- **Build Embeddings** - Rebuild the semantic search index
+- **CLI Commands** - Quick reference for Docker CLI usage
+
 ## CLI Commands
 
 ```bash
@@ -114,18 +165,38 @@ nesventory-llm serve --port 8003
 nesventory-llm serve --reload
 ```
 
+### Using CLI Commands with Docker
+
+When running in Docker, use `docker exec` to run CLI commands:
+
+```bash
+# Query the knowledge base
+docker exec nesventory-llm nesventory-llm query "lighthouse"
+
+# Build embeddings
+docker exec nesventory-llm nesventory-llm build
+
+# Show statistics
+docker exec nesventory-llm nesventory-llm stats
+
+# Interactive query mode
+docker exec -it nesventory-llm nesventory-llm query -i
+```
+
 ## API Endpoints
 
 When running the server (`nesventory-llm serve`), the following endpoints are available:
 
 | Endpoint | Method | Description |
 |----------|--------|-------------|
+| `/` | GET | Status webpage (HTML interface) |
 | `/health` | GET | Health check and status |
 | `/stats` | GET | Knowledge base statistics |
 | `/query` | POST | Natural language query |
 | `/search` | POST | Semantic search with filters |
 | `/items` | GET | List all items |
 | `/items/{id}` | GET | Get specific item |
+| `/build` | POST | Build/rebuild embeddings |
 | `/scrape` | POST | Trigger data scrape |
 | `/nesventory/identify` | POST | Identify item for NesVentory |
 | `/nesventory/collections` | GET | Get collections for NesVentory |

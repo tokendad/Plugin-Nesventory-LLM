@@ -12,6 +12,8 @@ from typing import Optional
 
 from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 
 from . import __version__
@@ -82,6 +84,21 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Mount static files for the status page
+static_dir = Path(__file__).parent / "static"
+if static_dir.exists():
+    app.mount("/static", StaticFiles(directory=str(static_dir)), name="static")
+
+
+@app.get("/")
+async def root():
+    """Serve the status page."""
+    static_file = Path(__file__).parent / "static" / "index.html"
+    if static_file.exists():
+        return FileResponse(static_file)
+    return {"message": "NesVentory LLM Plugin API", "version": __version__}
+
 
 
 @app.get("/health", response_model=HealthResponse)
@@ -203,6 +220,34 @@ async def scrape_data():
     except Exception as e:
         logger.exception("Scraping failed")
         raise HTTPException(status_code=500, detail=f"Scraping failed: {str(e)}")
+
+
+@app.post("/build")
+async def build_embeddings():
+    """Build or rebuild embeddings for the knowledge base.
+
+    This creates the semantic search index for all items.
+    """
+    if not kb:
+        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+
+    if not kb.items:
+        raise HTTPException(
+            status_code=404,
+            detail="No items in knowledge base. Use /scrape to fetch data first.",
+        )
+
+    try:
+        embeddings = kb.build_embeddings(force=True)
+        return {
+            "status": "success",
+            "items_count": len(kb.items),
+            "shape": list(embeddings.shape) if embeddings is not None else None,
+        }
+    except Exception as e:
+        logger.exception("Building embeddings failed")
+        raise HTTPException(status_code=500, detail=f"Building embeddings failed: {str(e)}")
+
 
 
 @app.post("/items/add", response_model=VillageItem)

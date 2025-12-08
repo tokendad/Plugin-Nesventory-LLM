@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  nesventory-llm:
+    image: nesventory-llm:latest
+    container_name: nesventory-llm
+    environment:
+      - PUID=1000    # User ID for file permissions
+      - PGID=1000    # Group ID for file permissions
+      - TZ=UTC       # Timezone (e.g., America/New_York, Europe/London)
+    volumes:
+      - ./data:/app/data  # Persist knowledge base data
+    ports:
+      - "8002:8002"  # Map host port 8002 to container port 8002
+    restart: unless-stopped
+    # Optional: Build from local Dockerfile instead of using pre-built image
+    # build:
+    #   context: .
+    #   dockerfile: Dockerfile
