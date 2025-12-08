@@ -16,6 +16,7 @@ This plugin provides AI-powered assistance for identifying and learning about De
 ## Features
 
 - 🔍 **Semantic Search** - Find items using natural language queries
+- 📸 **Image Search** - Upload photos to identify Department 56 collectibles
 - 🤖 **AI-Powered Responses** - Get detailed information about collectibles
 - 📊 **Knowledge Base** - Pre-seeded with Department 56 item data
 - 🔌 **NesVentory Integration** - Designed as a plugin for NesVentory inventory management
@@ -214,11 +215,13 @@ When running the server (`nesventory-llm serve`), the following endpoints are av
 | `/stats` | GET | Knowledge base statistics |
 | `/query` | POST | Natural language query |
 | `/search` | POST | Semantic search with filters |
+| `/search/image` | POST | Search by uploading an image |
 | `/items` | GET | List all items |
 | `/items/{id}` | GET | Get specific item |
 | `/build` | POST | Build/rebuild embeddings |
 | `/scrape` | POST | Trigger data scrape |
 | `/nesventory/identify` | POST | Identify item for NesVentory |
+| `/nesventory/identify/image` | POST | Identify item from image for NesVentory |
 | `/nesventory/collections` | GET | Get collections for NesVentory |
 
 ### Example API Usage
@@ -241,8 +244,18 @@ curl -X POST http://localhost:8002/search \
     "limit": 10
   }'
 
+# Search by image
+curl -X POST http://localhost:8002/search/image \
+  -F "file=@photo.jpg" \
+  -F "limit=10" \
+  -F "min_confidence=0.3"
+
 # Identify an item (for NesVentory integration)
 curl -X POST "http://localhost:8002/nesventory/identify?query=Scrooge%20counting%20house"
+
+# Identify items from an image (for NesVentory integration)
+curl -X POST http://localhost:8002/nesventory/identify/image \
+  -F "file=@collectible.jpg"
 ```
 
 ## NesVentory Integration
@@ -267,7 +280,90 @@ async def identify_village_item(description: str):
             params={"query": description}
         )
         return response.json()
+
+# Identify items from an image
+async def identify_from_image(image_path: str):
+    async with httpx.AsyncClient() as client:
+        with open(image_path, "rb") as f:
+            files = {"file": f}
+            response = await client.post(
+                "http://localhost:8002/nesventory/identify/image",
+                files=files
+            )
+        return response.json()
 ```
+
+## Image Search
+
+The plugin includes AI-powered image search capabilities, allowing you to identify Department 56 collectibles from photos. This feature uses computer vision to analyze images and match detected objects against the knowledge base.
+
+### How It Works
+
+1. **Upload an Image** - Provide a photo containing one or more Department 56 collectible items
+2. **Object Detection** - The system analyzes the image and generates descriptions of the visible items
+3. **Semantic Matching** - Detected objects are matched against the knowledge base using semantic similarity
+4. **Return Results** - Get a list of matching items with confidence scores
+
+### Supported Image Formats
+
+- JPEG (.jpg, .jpeg)
+- PNG (.png)
+- WebP (.webp)
+- BMP (.bmp)
+
+### Using Image Search
+
+#### Via API
+
+```bash
+# Search for items by uploading an image
+curl -X POST http://localhost:8002/search/image \
+  -F "file=@my_collectible.jpg" \
+  -F "limit=5" \
+  -F "min_confidence=0.3"
+
+# For NesVentory integration
+curl -X POST http://localhost:8002/nesventory/identify/image \
+  -F "file=@my_collectible.jpg"
+```
+
+#### Via Python
+
+```python
+import httpx
+
+async def search_by_image(image_path: str):
+    async with httpx.AsyncClient() as client:
+        with open(image_path, "rb") as f:
+            files = {"file": ("image.jpg", f, "image/jpeg")}
+            params = {
+                "limit": 10,
+                "min_confidence": 0.3,
+                "collection": "Dickens Village"  # Optional filter
+            }
+            response = await client.post(
+                "http://localhost:8002/search/image",
+                files=files,
+                params=params
+            )
+        return response.json()
+```
+
+### Response Format
+
+The image search endpoint returns:
+
+- **detected_objects**: List of objects detected in the image with confidence scores
+- **matched_items**: Department 56 items that match the detected objects
+- **overall_confidence**: Average confidence score across all matches
+- **processing_time_ms**: Time taken to process the image in milliseconds
+
+### Tips for Best Results
+
+- Use clear, well-lit photos
+- Ensure items are visible and not obscured
+- Close-up shots work better than distant photos
+- Multiple items can be detected in a single image
 
 ## Data Sources
 

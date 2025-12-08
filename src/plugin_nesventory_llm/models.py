@@ -110,3 +110,33 @@ class LLMResponse(BaseModel):
         default_factory=list, description="Source items used to generate the answer"
     )
     confidence: float = Field(..., description="Confidence score (0-1)")
+
+
+class ImageSearchRequest(BaseModel):
+    """Request model for image-based search."""
+
+    collection: Optional[str] = Field(None, description="Filter by specific collection")
+    category: Optional[str] = Field(None, description="Filter by category")
+    limit: int = Field(10, description="Maximum number of results to return", ge=1, le=100)
+    min_confidence: float = Field(0.3, description="Minimum confidence threshold", ge=0.0, le=1.0)
+
+
+class DetectedObject(BaseModel):
+    """Represents an object detected in an image."""
+
+    label: str = Field(..., description="Description/label of the detected object")
+    confidence: float = Field(..., description="Detection confidence (0-1)")
+    bounding_box: Optional[dict] = Field(None, description="Bounding box coordinates")
+
+
+class ImageSearchResult(BaseModel):
+    """Result from an image-based search."""
+
+    detected_objects: list[DetectedObject] = Field(
+        default_factory=list, description="Objects detected in the image"
+    )
+    matched_items: list[ItemSearchResult] = Field(
+        default_factory=list, description="Items matched from detected objects"
+    )
+    overall_confidence: float = Field(..., description="Overall confidence score (0-1)")
+    processing_time_ms: float = Field(..., description="Processing time in milliseconds")
