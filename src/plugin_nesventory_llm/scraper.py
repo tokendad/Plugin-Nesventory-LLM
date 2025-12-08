@@ -2,7 +2,14 @@
 Data scraper for The Village Chronicler website.
 
 This module scrapes collectible item information from
-https://thevillagechronicler.com/TheCollections.shtml
+https://thevillagechronicler.com/All-ProductList.shtml
+
+The scraper parses the All-ProductList page which contains a table with:
+- Village collection name
+- Item number
+- Item description  
+- Dates (manufacturing date range)
+- Where found (links to individual collection pages)
 """
 
 import hashlib
@@ -23,6 +30,7 @@ logger = logging.getLogger(__name__)
 # Base URL for the Village Chronicler
 BASE_URL = "https://thevillagechronicler.com"
 COLLECTIONS_URL = f"{BASE_URL}/TheCollections.shtml"
+ALL_PRODUCTS_URL = f"{BASE_URL}/All-ProductList.shtml"
 
 
 def generate_item_id(name: str, item_number: Optional[str] = None) -> str:
@@ -35,6 +43,32 @@ def parse_year(text: str) -> Optional[int]:
     """Extract a year from text."""
     match = re.search(r"\b(19[89]\d|20[0-2]\d)\b", text)
     return int(match.group(1)) if match else None
+
+
+def parse_date_range(text: str) -> tuple[Optional[int], Optional[int]]:
+    """Extract year range from text like '1995-1998' or '2000-Present'.
+    
+    Returns:
+        Tuple of (year_introduced, year_retired)
+    """
+    if not text:
+        return None, None
+    
+    # Match patterns like "1995-1998", "1995-Present", "1995"
+    match = re.search(r"(\d{4})\s*-\s*(\d{4}|Present|present)", text, re.IGNORECASE)
+    if match:
+        year_start = int(match.group(1))
+        year_end_str = match.group(2)
+        year_end = None if year_end_str.lower() == "present" else int(year_end_str)
+        return year_start, year_end
+    
+    # Single year only
+    match = re.search(r"\b(19[89]\d|20[0-2]\d)\b", text)
+    if match:
+        year = int(match.group(1))
+        return year, None
+    
+    return None, None
 
 
 def parse_price(text: str) -> Optional[float]:
@@ -120,6 +154,103 @@ class VillageChroniclerScraper:
 
         logger.info(f"Found {len(collections)} potential collection links")
         return collections
+
+    def scrape_all_products_page(self) -> list[VillageItem]:
+        """Scrape the All-ProductList page to get all items.
+        
+        This page contains a table with all products including:
+        - Village collection
+        - Item Number
+        - Item Description
+        - Dates (year range)
+        - Where found (link to collection detail page)
+        
+        Returns:
+            List of VillageItem objects
+        """
+        logger.info(f"Fetching all products page: {ALL_PRODUCTS_URL}")
+        
+        try:
+            response = self.client.get(ALL_PRODUCTS_URL)
+            response.raise_for_status()
+        except httpx.HTTPError as e:
+            logger.error(f"Failed to fetch all products page: {e}")
+            return []
+        
+        soup = BeautifulSoup(response.text, "html.parser")
+        items = []
+        
+        # Find the main product table
+        table = soup.find("table", id="productTable")
+        if not table:
+            # Fallback: find the first table with enough columns
+            tables = soup.find_all("table")
+            for t in tables:
+                sample_row = t.find("tr")
+                if sample_row and len(sample_row.find_all(["td", "th"])) >= 5:
+                    table = t
+                    break
+        
+        if not table:
+            logger.warning("Could not find product table in All-ProductList page")
+            return []
+        
+        # Get all data rows (skip header if present)
+        rows = table.find("tbody").find_all("tr") if table.find("tbody") else table.find_all("tr")
+        
+        # Filter out header rows
+        data_rows = []
+        for row in rows:
+            cells = row.find_all(["td", "th"])
+            if cells:
+                # Skip if this looks like a header row
+                first_cell_text = cells[0].get_text().strip().lower()
+                if first_cell_text not in ["village collection", "collection", "name"]:
+                    data_rows.append(row)
+        
+        logger.info(f"Found {len(data_rows)} product rows in table")
+        
+        # Parse each row
+        for row in data_rows:
+            cells = row.find_all(["td", "th"])
+            
+            # Expected columns: Collection, Item Number, Description, Dates, Where Found
+            if len(cells) < 5:
+                continue
+            
+            collection_name = clean_text(cells[0].get_text())
+            item_number = clean_text(cells[1].get_text())
+            description = clean_text(cells[2].get_text())
+            dates = clean_text(cells[3].get_text())
+            
+            # Extract detail page URL from "Where Found" column
+            where_found_cell = cells[4]
+            detail_link = where_found_cell.find("a")
+            detail_url = urljoin(BASE_URL, detail_link.get("href")) if detail_link else None
+            
+            # Skip rows without essential data
+            if not description or not collection_name:
+                continue
+            
+            # Parse date range
+            year_introduced, year_retired = parse_date_range(dates)
+            
+            # Create item
+            item = VillageItem(
+                id=generate_item_id(description, item_number),
+                name=description,
+                item_number=item_number if item_number else None,
+                collection=collection_name,
+                year_introduced=year_introduced,
+                year_retired=year_retired,
+                is_retired=year_retired is not None,
+                source_url=detail_url if detail_url else ALL_PRODUCTS_URL,
+            )
+            
+            items.append(item)
+        
+        logger.info(f"Scraped {len(items)} items from All-ProductList page")
+        return items
 
     def scrape_collection_items(self, collection_url: str, collection_name: str) -> list[VillageItem]:
         """Scrape items from a specific collection page.
@@ -259,26 +390,35 @@ class VillageChroniclerScraper:
 
     def scrape_all(self) -> tuple[list[VillageCollection], list[VillageItem]]:
         """Scrape all collections and items from the website.
+        
+        Uses the All-ProductList page to get all items efficiently,
+        then optionally enriches with detail pages.
 
         Returns:
             Tuple of (collections, items)
         """
         logger.info("Starting full scrape of Village Chronicler")
 
-        collection_links = self.scrape_collections_page()
-
-        for coll_info in collection_links:
-            collection = VillageCollection(
-                id=hashlib.md5(coll_info["name"].encode()).hexdigest()[:8],
-                name=coll_info["name"],
-                manufacturer="Department 56",
-            )
-
-            items = self.scrape_collection_items(coll_info["url"], coll_info["name"])
-            collection.item_count = len(items)
-
-            self.collections.append(collection)
-            self.items.extend(items)
+        # First, scrape all items from the All-ProductList page
+        self.items = self.scrape_all_products_page()
+        
+        # Build collections from the items
+        collections_dict = {}
+        for item in self.items:
+            if item.collection and item.collection not in collections_dict:
+                collections_dict[item.collection] = VillageCollection(
+                    id=hashlib.md5(item.collection.encode()).hexdigest()[:8],
+                    name=item.collection,
+                    manufacturer="Department 56",
+                    item_count=0,
+                )
+        
+        # Count items per collection
+        for item in self.items:
+            if item.collection and item.collection in collections_dict:
+                collections_dict[item.collection].item_count += 1
+        
+        self.collections = list(collections_dict.values())
 
         logger.info(f"Scrape complete: {len(self.collections)} collections, {len(self.items)} items")
         return self.collections, self.items
