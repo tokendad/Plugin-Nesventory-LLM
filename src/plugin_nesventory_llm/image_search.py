@@ -21,6 +21,9 @@ logger = logging.getLogger(__name__)
 # Default vision model for image captioning and object detection
 DEFAULT_VISION_MODEL = "Salesforce/blip-image-captioning-base"
 
+# Default confidence for caption-based object detection
+DEFAULT_DETECTION_CONFIDENCE = 0.85
+
 
 class ImageSearchService:
     """Service for analyzing images and finding matching collectible items."""
@@ -130,7 +133,7 @@ class ImageSearchService:
         # Extract key terms that might indicate collectible items
         detected = DetectedObject(
             label=caption,
-            confidence=0.85,  # Base confidence for caption-based detection
+            confidence=DEFAULT_DETECTION_CONFIDENCE,
             bounding_box=None,  # Future: add actual bounding boxes with object detection
         )
 
