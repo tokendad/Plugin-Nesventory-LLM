@@ -258,9 +258,12 @@ class TestRetiredPDFsScraping:
         """Test that scraper handles missing retired PDFs directory gracefully."""
         # Create scraper with non-existent retired PDFs directory
         nonexistent_dir = tmp_path / "nonexistent_pdfs"
+        dummy_mirror_dir = tmp_path / "dummy_mirror"
+        dummy_mirror_dir.mkdir()
+        
         scraper = VillageChroniclerScraper(
             data_dir=tmp_path, 
-            local_mirror_dir=tmp_path,  # Dummy path
+            local_mirror_dir=dummy_mirror_dir,
             retired_pdfs_dir=nonexistent_dir
         )
         items = scraper.scrape_retired_pdfs()
@@ -273,10 +276,12 @@ class TestRetiredPDFsScraping:
         # Create empty retired PDFs directory
         retired_dir = tmp_path / "retired_pdfs"
         retired_dir.mkdir()
+        dummy_mirror_dir = tmp_path / "dummy_mirror"
+        dummy_mirror_dir.mkdir()
         
         scraper = VillageChroniclerScraper(
             data_dir=tmp_path,
-            local_mirror_dir=tmp_path,  # Dummy path
+            local_mirror_dir=dummy_mirror_dir,
             retired_pdfs_dir=retired_dir
         )
         items = scraper.scrape_retired_pdfs()
