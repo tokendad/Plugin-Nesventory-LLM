@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NesVentory LLM - Status</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        
+        .card h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+        
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .status-item {
+            padding: 15px;
+            background: #f8f9fa;
+            border-radius: 5px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .status-item .label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .status-item .value {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .status-healthy {
+            color: #28a745;
+        }
+        
+        .status-warning {
+            color: #ffc107;
+        }
+        
+        .status-error {
+            color: #dc3545;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        input[type="text"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #e0e0e0;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        input[type="text"]:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        button {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .output {
+            background: #f8f9fa;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            font-family: 'Courier New', monospace;
+            max-height: 400px;
+            overflow-y: auto;
+            display: none;
+        }
+        
+        .output.show {
+            display: block;
+        }
+        
+        .loading {
+            display: inline-block;
+            margin-left: 10px;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .loading.show {
+            opacity: 1;
+        }
+        
+        .collections-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        .collection-item {
+            background: #f8f9fa;
+            padding: 10px 15px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .collection-item strong {
+            color: #333;
+        }
+        
+        .collection-item span {
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🏘️ NesVentory LLM</h1>
+            <p>Department 56 Village Collectibles AI Assistant</p>
+        </div>
+        
+        <div class="card">
+            <h2>📊 System Status</h2>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="label">Status</div>
+                    <div class="value status-healthy" id="systemStatus">Loading...</div>
+                </div>
+                <div class="status-item">
+                    <div class="label">Version</div>
+                    <div class="value" id="version">-</div>
+                </div>
+                <div class="status-item">
+                    <div class="label">Items Loaded</div>
+                    <div class="value" id="itemsLoaded">-</div>
+                </div>
+                <div class="status-item">
+                    <div class="label">Embeddings</div>
+                    <div class="value" id="embeddingsStatus">-</div>
+                </div>
+            </div>
+            <div id="collectionsSection" style="margin-top: 20px;">
+                <h3 style="margin-bottom: 10px;">Collections</h3>
+                <div class="collections-grid" id="collections"></div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <h2>🔍 Query Knowledge Base</h2>
+            <div class="form-group">
+                <label for="queryInput">Enter your query about Department 56 collectibles:</label>
+                <input type="text" id="queryInput" placeholder="e.g., Victorian house from Dickens Village">
+            </div>
+            <button onclick="queryKnowledgeBase()">
+                Query
+                <span class="loading" id="queryLoading">⏳</span>
+            </button>
+            <div class="output" id="queryOutput"></div>
+        </div>
+        
+        <div class="card">
+            <h2>🔨 Build Knowledge Base</h2>
+            <p style="margin-bottom: 15px; color: #666;">
+                Build or rebuild the embeddings for semantic search. This process analyzes all items in the knowledge base.
+            </p>
+            <button onclick="buildKnowledgeBase()">
+                Build Embeddings
+                <span class="loading" id="buildLoading">⏳</span>
+            </button>
+            <div class="output" id="buildOutput"></div>
+        </div>
+        
+        <div class="card">
+            <h2>🌐 CLI Commands</h2>
+            <p style="margin-bottom: 15px; color: #666;">
+                Access the CLI through the Docker container:
+            </p>
+            <div style="background: #f8f9fa; padding: 15px; border-radius: 5px; font-family: 'Courier New', monospace;">
+                <div style="margin-bottom: 10px;"><strong># Show help</strong></div>
+                <div style="color: #667eea; margin-bottom: 15px;">docker exec nesventory-llm nesventory-llm --help</div>
+                
+                <div style="margin-bottom: 10px;"><strong># Query the knowledge base</strong></div>
+                <div style="color: #667eea; margin-bottom: 15px;">docker exec nesventory-llm nesventory-llm query "lighthouse"</div>
+                
+                <div style="margin-bottom: 10px;"><strong># Build embeddings</strong></div>
+                <div style="color: #667eea; margin-bottom: 15px;">docker exec nesventory-llm nesventory-llm build</div>
+                
+                <div style="margin-bottom: 10px;"><strong># Show statistics</strong></div>
+                <div style="color: #667eea; margin-bottom: 15px;">docker exec nesventory-llm nesventory-llm stats</div>
+                
+                <div style="margin-bottom: 10px;"><strong># Scrape data</strong></div>
+                <div style="color: #667eea;">docker exec nesventory-llm nesventory-llm scrape</div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Fetch system status on load
+        async function fetchStatus() {
+            try {
+                const response = await fetch('/health');
+                const data = await response.json();
+                
+                document.getElementById('systemStatus').textContent = data.status;
+                document.getElementById('systemStatus').className = 'value status-' + 
+                    (data.status === 'healthy' ? 'healthy' : 'warning');
+                document.getElementById('version').textContent = data.version;
+                document.getElementById('itemsLoaded').textContent = data.items_loaded;
+                document.getElementById('embeddingsStatus').textContent = 
+                    data.embeddings_ready ? 'Ready ✓' : 'Not Built';
+                
+                if (data.items_loaded > 0) {
+                    await fetchCollections();
+                }
+            } catch (error) {
+                console.error('Error fetching status:', error);
+                document.getElementById('systemStatus').textContent = 'Error';
+                document.getElementById('systemStatus').className = 'value status-error';
+            }
+        }
+        
+        async function fetchCollections() {
+            try {
+                const response = await fetch('/stats');
+                const data = await response.json();
+                
+                const collectionsDiv = document.getElementById('collections');
+                if (data.collections && data.collections.length > 0) {
+                    collectionsDiv.innerHTML = data.collections.map(collection => `
+                        <div class="collection-item">
+                            <strong>${collection}</strong>
+                        </div>
+                    `).join('');
+                } else {
+                    collectionsDiv.innerHTML = '<p style="color: #666;">No collections found</p>';
+                }
+            } catch (error) {
+                console.error('Error fetching collections:', error);
+            }
+        }
+        
+        async function queryKnowledgeBase() {
+            const queryInput = document.getElementById('queryInput');
+            const output = document.getElementById('queryOutput');
+            const loading = document.getElementById('queryLoading');
+            
+            const query = queryInput.value.trim();
+            if (!query) {
+                alert('Please enter a query');
+                return;
+            }
+            
+            loading.classList.add('show');
+            output.textContent = 'Searching...';
+            output.classList.add('show');
+            
+            try {
+                const response = await fetch('/query', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        query: query,
+                        limit: 5
+                    })
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    let outputText = `Answer: ${data.answer}\n\nConfidence: ${(data.confidence * 100).toFixed(1)}%\n`;
+                    
+                    if (data.sources && data.sources.length > 0) {
+                        outputText += '\n--- Top Results ---\n\n';
+                        data.sources.forEach((source, idx) => {
+                            outputText += `${idx + 1}. ${source.item.name}\n`;
+                            outputText += `   Collection: ${source.item.collection || 'N/A'}\n`;
+                            if (source.item.item_number) {
+                                outputText += `   Item #: ${source.item.item_number}\n`;
+                            }
+                            outputText += `   Relevance: ${(source.relevance_score * 100).toFixed(1)}%\n\n`;
+                        });
+                    }
+                    
+                    output.textContent = outputText;
+                } else {
+                    output.textContent = `Error: ${data.detail || 'Unknown error'}`;
+                }
+            } catch (error) {
+                output.textContent = `Error: ${error.message}`;
+            } finally {
+                loading.classList.remove('show');
+            }
+        }
+        
+        async function buildKnowledgeBase() {
+            const output = document.getElementById('buildOutput');
+            const loading = document.getElementById('buildLoading');
+            
+            loading.classList.add('show');
+            output.textContent = 'Building embeddings... This may take a minute.';
+            output.classList.add('show');
+            
+            try {
+                const response = await fetch('/build', {
+                    method: 'POST'
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    output.textContent = `Success!\n\nEmbeddings built for ${data.items_count} items.\nShape: ${data.shape}`;
+                    // Refresh status
+                    await fetchStatus();
+                } else {
+                    output.textContent = `Error: ${data.detail || 'Unknown error'}`;
+                }
+            } catch (error) {
+                output.textContent = `Error: ${error.message}`;
+            } finally {
+                loading.classList.remove('show');
+            }
+        }
+        
+        // Allow Enter key to submit query
+        document.getElementById('queryInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                queryKnowledgeBase();
+            }
+        });
+        
+        // Load status on page load
+        fetchStatus();
+        
+        // Refresh status every 30 seconds
+        setInterval(fetchStatus, 30000);
+    </script>
+</body>
+</html>
