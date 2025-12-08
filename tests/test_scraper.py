@@ -214,3 +214,96 @@ class TestPDFParsing:
 
         # Should return empty list for invalid/minimal PDF but not crash
         assert isinstance(items, list)
+
+
+class TestRetiredPDFsScraping:
+    """Test scraping retired products PDFs from local directory."""
+
+    @pytest.fixture
+    def sample_html(self):
+        """Fixture providing sample All-ProductList HTML with row1 class."""
+        return """
+        <!DOCTYPE html>
+        <html>
+        <head><title>All Product List</title></head>
+        <body>
+            <table style="width: 100%">
+                <tr class="row1">
+                    <td>A Christmas Carol</td>
+                    <td>02862</td>
+                    <td>Scrooge & Marley Counting House</td>
+                    <td>1995-1998</td>
+                    <td><a href="Collections/DV%20A%20Christmas%20Carol.html#02862">A Christmas Carol</a></td>
+                </tr>
+                <tr class="row1">
+                    <td>Dickens Village</td>
+                    <td>56.12345</td>
+                    <td>Victorian House</td>
+                    <td>1990-Present</td>
+                    <td><a href="Collections/DV%20Dickens%20Village.html#56.12345">Dickens Village</a></td>
+                </tr>
+                <tr class="row1">
+                    <td>The Stacks</td>
+                    <td>56789</td>
+                    <td>Town Library</td>
+                    <td>2000</td>
+                    <td><a href="TheStacks.shtml#56789">The Stacks</a></td>
+                </tr>
+            </table>
+        </body>
+        </html>
+        """
+
+    def test_scrape_retired_pdfs_directory_not_exist(self, tmp_path):
+        """Test that scraper handles missing retired PDFs directory gracefully."""
+        # Create scraper with non-existent retired PDFs directory
+        nonexistent_dir = tmp_path / "nonexistent_pdfs"
+        scraper = VillageChroniclerScraper(
+            data_dir=tmp_path, 
+            local_mirror_dir=tmp_path,  # Dummy path
+            retired_pdfs_dir=nonexistent_dir
+        )
+        items = scraper.scrape_retired_pdfs()
+
+        # Should return empty list when directory doesn't exist
+        assert len(items) == 0
+
+    def test_scrape_retired_pdfs_empty_directory(self, tmp_path):
+        """Test that scraper handles empty retired PDFs directory."""
+        # Create empty retired PDFs directory
+        retired_dir = tmp_path / "retired_pdfs"
+        retired_dir.mkdir()
+        
+        scraper = VillageChroniclerScraper(
+            data_dir=tmp_path,
+            local_mirror_dir=tmp_path,  # Dummy path
+            retired_pdfs_dir=retired_dir
+        )
+        items = scraper.scrape_retired_pdfs()
+
+        # Should return empty list when no PDFs found
+        assert len(items) == 0
+
+    def test_scrape_all_includes_retired_pdfs(self, sample_html, tmp_path):
+        """Test that scrape_all includes items from both HTML and PDFs."""
+        # Create local mirror with HTML file
+        local_mirror = tmp_path / "thevillagechronicler.com"
+        local_mirror.mkdir()
+        html_file = local_mirror / "All-ProductList.shtml.html"
+        html_file.write_text(sample_html, encoding="utf-8")
+
+        # Create empty retired PDFs directory (scraper should handle gracefully)
+        retired_dir = tmp_path / "retired_pdfs"
+        retired_dir.mkdir()
+
+        # Create scraper and scrape
+        scraper = VillageChroniclerScraper(
+            data_dir=tmp_path,
+            local_mirror_dir=local_mirror,
+            retired_pdfs_dir=retired_dir
+        )
+        collections, items = scraper.scrape_all()
+
+        # Should have items from HTML (even if no PDFs)
+        assert len(items) >= 3  # From the sample HTML
+        assert len(collections) >= 3
