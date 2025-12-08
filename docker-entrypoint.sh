@@ -21,8 +21,8 @@ if ! getent passwd $PUID > /dev/null 2>&1; then
     useradd -u $PUID -g $PGID -d /app -s /bin/bash nesventory
 fi
 
-# Fix permissions for data directory
-chown -R $PUID:$PGID /app/data
+# Fix permissions for data and cache directories
+chown -R $PUID:$PGID /app/data /app/.cache
 
 # Initialize sample data if data directory is empty
 if ! find /app/data -name '*.json' -type f | grep -q .; then

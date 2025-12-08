@@ -20,8 +20,8 @@ COPY README.md /app/
 RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
     pip install --no-cache-dir -e .
 
-# Create data directory
-RUN mkdir -p /app/data
+# Create data and cache directories
+RUN mkdir -p /app/data /app/.cache
 
 # Copy entrypoint script
 COPY docker-entrypoint.sh /usr/local/bin/
