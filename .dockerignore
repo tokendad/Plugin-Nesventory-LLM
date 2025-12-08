@@ -46,8 +46,7 @@ data/*.json
 data/*.pkl
 data/*.db
 
-# Documentation
-README.md
+# Documentation (we need README.md for package install)
 docs/
 
 # CI/CD

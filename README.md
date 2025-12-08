@@ -53,6 +53,21 @@ docker run -d \
 
 Access the status page at: http://localhost:8002
 
+#### Troubleshooting Docker Build
+
+If you encounter SSL certificate errors during the Docker build (common in corporate environments with SSL inspection):
+
+```bash
+# Temporarily bypass SSL verification for the build
+docker build --build-arg PIP_TRUSTED_HOST=pypi.org,files.pythonhosted.org \
+  -t nesventory-llm:latest .
+```
+
+Or uncomment the following line in the Dockerfile before building:
+```dockerfile
+ENV PIP_TRUSTED_HOST=pypi.org,files.pythonhosted.org
+```
+
 ### Docker Environment Variables
 
 | Variable | Description | Default |
@@ -293,6 +308,114 @@ This will fetch data from both sources and save it to the data directory.
 - New England Village (Coastal scenes)
 - Christmas in the City (Urban holidays)
 - Alpine Village (Swiss/German mountains)
+
+## Docker Deployment
+
+### Adding to Existing Docker Compose
+
+To add NesVentory LLM to your existing docker-compose setup, add the following service definition:
+
+```yaml
+services:
+  nesventory-llm:
+    image: nesventory-llm:latest
+    container_name: nesventory-llm
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=UTC
+    volumes:
+      - ./nesventory-llm-data:/app/data
+    ports:
+      - "8002:8002"
+    restart: unless-stopped
+```
+
+Or use the provided `docker-compose.yml` as a starting point.
+
+### Running the Container
+
+Once built, you can run the container using docker-compose or directly:
+
+**Using docker-compose (Recommended):**
+```bash
+docker-compose up -d
+```
+
+**Using docker run:**
+```bash
+docker run -d \
+  --name nesventory-llm \
+  -p 8002:8002 \
+  -v $(pwd)/data:/app/data \
+  -e PUID=$(id -u) \
+  -e PGID=$(id -g) \
+  -e TZ=America/New_York \
+  --restart unless-stopped \
+  nesventory-llm:latest
+```
+
+### Accessing the Status Page
+
+The container provides a web-based status and management interface at:
+```
+http://localhost:8002
+```
+
+Features available through the web interface:
+- System health and statistics
+- Query the knowledge base
+- Build/rebuild embeddings
+- View CLI command reference
+
+### Managing the Container
+
+```bash
+# View logs
+docker logs nesventory-llm
+
+# Follow logs in real-time
+docker logs -f nesventory-llm
+
+# Stop the container
+docker-compose down
+# or
+docker stop nesventory-llm
+
+# Restart the container
+docker-compose restart
+# or
+docker restart nesventory-llm
+
+# Access the container shell
+docker exec -it nesventory-llm /bin/bash
+```
+
+### Persistent Data
+
+The `data` directory is mapped as a volume to persist:
+- Knowledge base items (JSON files)
+- Embeddings (PKL files)
+- Any scraped data
+
+This ensures your data survives container restarts and updates.
+
+### Updating the Container
+
+To update to a new version:
+
+```bash
+# Stop the current container
+docker-compose down
+
+# Pull/rebuild the image
+docker build -t nesventory-llm:latest .
+
+# Start with the new image
+docker-compose up -d
+```
+
+Your data in the `data` volume will be preserved.
 
 ## Development
 

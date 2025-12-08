@@ -15,7 +15,10 @@ COPY src/ /app/src/
 COPY README.md /app/
 
 # Install Python dependencies
-RUN pip install --no-cache-dir -e .
+# Note: In some environments with SSL proxy issues, you may need to set:
+# ENV PIP_TRUSTED_HOST=pypi.org,files.pythonhosted.org
+RUN pip install --no-cache-dir --upgrade pip setuptools wheel && \
+    pip install --no-cache-dir -e .
 
 # Create data directory
 RUN mkdir -p /app/data
