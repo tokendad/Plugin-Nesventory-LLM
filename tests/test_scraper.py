@@ -1,8 +1,8 @@
 """
 Tests for the Village Chronicler scraper.
 """
+
 import pytest
-from pathlib import Path
 
 from plugin_nesventory_llm.scraper import (
     VillageChroniclerScraper,
@@ -67,7 +67,7 @@ class TestUtilityFunctions:
         id1 = generate_item_id("Victorian House", "56.12345")
         id2 = generate_item_id("Victorian House", "56.12345")
         id3 = generate_item_id("Victorian House", "56.54321")
-        
+
         assert id1 == id2  # Same inputs produce same ID
         assert id1 != id3  # Different inputs produce different IDs
         assert id1.startswith("dept56-")
@@ -118,14 +118,14 @@ class TestScraperAllProductsPage:
         local_mirror.mkdir()
         html_file = local_mirror / "All-ProductList.shtml.html"
         html_file.write_text(sample_html, encoding="utf-8")
-        
+
         # Create scraper and scrape
         scraper = VillageChroniclerScraper(data_dir=tmp_path, local_mirror_dir=local_mirror)
         items = scraper.scrape_all_products_page()
-        
+
         # Verify results
         assert len(items) == 3
-        
+
         # Check first item
         item1 = items[0]
         assert item1.name == "Scrooge & Marley Counting House"
@@ -135,7 +135,7 @@ class TestScraperAllProductsPage:
         assert item1.year_retired == 1998
         assert item1.is_retired is True
         assert "Collections/DV%20A%20Christmas%20Carol.html" in item1.source_url
-        
+
         # Check second item (active, not retired)
         item2 = items[1]
         assert item2.name == "Victorian House"
@@ -143,7 +143,7 @@ class TestScraperAllProductsPage:
         assert item2.year_introduced == 1990
         assert item2.year_retired is None
         assert item2.is_retired is False
-        
+
         # Check third item (single year)
         item3 = items[2]
         assert item3.name == "Town Library"
@@ -157,21 +157,21 @@ class TestScraperAllProductsPage:
         local_mirror.mkdir()
         html_file = local_mirror / "All-ProductList.shtml.html"
         html_file.write_text(sample_html, encoding="utf-8")
-        
+
         # Create scraper and scrape
         scraper = VillageChroniclerScraper(data_dir=tmp_path, local_mirror_dir=local_mirror)
         collections, items = scraper.scrape_all()
-        
+
         # Verify we got items
         assert len(items) == 3
-        
+
         # Verify collections were created
         assert len(collections) == 3
         collection_names = {c.name for c in collections}
         assert "A Christmas Carol" in collection_names
         assert "Dickens Village" in collection_names
         assert "The Stacks" in collection_names
-        
+
         # Verify item counts
         for collection in collections:
             assert collection.item_count == 1
@@ -183,7 +183,7 @@ class TestScraperAllProductsPage:
         local_mirror = tmp_path / "nonexistent"
         scraper = VillageChroniclerScraper(data_dir=tmp_path, local_mirror_dir=local_mirror)
         items = scraper.scrape_all_products_page()
-        
+
         # Should return empty list on error
         assert len(items) == 0
 
@@ -193,38 +193,24 @@ class TestPDFParsing:
 
     def test_extract_collection_name_from_filename(self):
         """Test extracting collection name from PDF filename."""
-        from plugin_nesventory_llm.scraper import extract_collection_name_from_pdf
-        
+
         # Test with basic filename
         pdf_content = b"%PDF-1.4\n"
         name = extract_collection_name_from_pdf(pdf_content, "Alpine_Village_2021.pdf")
         assert "Alpine Village" in name
-        
+
         # Test with another filename
         name = extract_collection_name_from_pdf(pdf_content, "Dickens_Village_2022.pdf")
         assert "Dickens Village" in name
 
     def test_parse_pdf_items_with_valid_data(self):
         """Test parsing items from PDF with mock data."""
-        from plugin_nesventory_llm.scraper import parse_pdf_items
-        
-        # Create a simple text-based PDF mock
-        # Real PDFs would be parsed differently, but for testing we can mock the content
-        pdf_text_content = """
-        Alpine Village
-        Item Number Description Year Issued Year Retired US SRP CAD SRP
-        12345 Swiss Chalet 2000 2005 $45.00 $55.00
-        67890 Mountain Lodge 2001 2010 $65.00 $75.00
-        """
-        
-        # For this test, we'll mock the PDF reader to return our test text
-        # In a real scenario, you'd create an actual PDF or use more sophisticated mocking
-        
+
         # Create minimal valid PDF bytes
         pdf_bytes = b"%PDF-1.4\n1 0 obj\n<< /Type /Catalog >>\nendobj\n%%EOF"
-        
+
         # This will test the error handling since the PDF is minimal
         items = parse_pdf_items(pdf_bytes, "Alpine Village", "test.pdf")
-        
+
         # Should return empty list for invalid/minimal PDF but not crash
         assert isinstance(items, list)
