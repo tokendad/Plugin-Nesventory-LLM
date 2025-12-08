@@ -32,7 +32,7 @@ from pathlib import Path
 from typing import Optional
 
 from bs4 import BeautifulSoup
-from pypdf import PdfReader
+from PyPDF2 import PdfReader
 
 from .models import VillageCollection, VillageItem
 
