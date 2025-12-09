@@ -108,8 +108,8 @@ class TestConnectionTest:
         # All error codes should be strings
         for code in error_codes:
             assert isinstance(code, str)
-            # Error codes should be uppercase with underscores
-            assert code.isupper() or "_" in code
+            # Error codes should be uppercase with underscores (e.g., 'NO_ITEMS_LOADED')
+            assert code.replace("_", "").isupper(), f"Error code '{code}' is not properly formatted"
 
 
 class TestHealthEndpoint:

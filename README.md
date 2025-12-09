@@ -233,7 +233,6 @@ curl http://localhost:8002/health
 
 # Connection test (for NesVentory integration)
 curl http://localhost:8002/connection/test
-curl http://localhost:8002/health
 
 # Query the knowledge base
 curl -X POST http://localhost:8002/query \
