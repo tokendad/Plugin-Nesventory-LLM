@@ -7,7 +7,7 @@ village collectibles knowledge base.
 
 import logging
 from contextlib import asynccontextmanager
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -144,7 +144,7 @@ async def connection_test():
         ConnectionTestResponse with overall status, individual component checks,
         and any error codes encountered.
     """
-    timestamp = datetime.utcnow().isoformat() + "Z"
+    timestamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
     checks = {}
     error_codes = []
     overall_status = "ok"
@@ -285,7 +285,11 @@ async def query_items(request: QueryRequest):
     if not kb.items:
         raise HTTPException(
             status_code=404,
-            detail="No items in knowledge base. Use /scrape to fetch data first.",
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
         )
 
     return kb.generate_response(request.query, limit=request.limit)
@@ -303,7 +307,11 @@ async def search_items(query: ItemQuery):
     if not kb.items:
         raise HTTPException(
             status_code=404,
-            detail="No items in knowledge base. Use /scrape to fetch data first.",
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
         )
 
     return kb.search(query)
@@ -337,11 +345,31 @@ async def get_item(item_id: str):
     if not kb:
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
 
+    # Check if database is empty
+    if not kb.items:
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
+        )
+
     for item in kb.items:
         if item.id == item_id:
             return item
 
-    raise HTTPException(status_code=404, detail=f"Item not found: {item_id}")
+    # Item not found in loaded database
+    raise HTTPException(
+        status_code=404,
+        detail={
+            "error": "Item not found",
+            "message": f"Item '{item_id}' not found in knowledge base",
+            "items_loaded": len(kb.items),
+            "item_id": item_id,
+        },
+    )
 
 
 @app.post("/scrape")
@@ -386,7 +414,11 @@ async def build_embeddings():
     if not kb.items:
         raise HTTPException(
             status_code=404,
-            detail="No items in knowledge base. Use /scrape to fetch data first.",
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
         )
 
     try:
@@ -455,7 +487,14 @@ async def identify_item(
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
 
     if not kb.items:
-        raise HTTPException(status_code=404, detail="No items in knowledge base")
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
+        )
 
     response = kb.generate_response(query, limit=3)
 
@@ -494,7 +533,14 @@ async def search_by_image(
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
 
     if not kb.items:
-        raise HTTPException(status_code=404, detail="No items in knowledge base")
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
+        )
 
     if not image_search_service:
         raise HTTPException(
@@ -547,7 +593,14 @@ async def identify_item_from_image(
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
 
     if not kb.items:
-        raise HTTPException(status_code=404, detail="No items in knowledge base")
+        raise HTTPException(
+            status_code=404,
+            detail={
+                "error": "Database empty",
+                "message": "No items loaded in knowledge base. Use /scrape to fetch data first.",
+                "items_loaded": 0,
+            },
+        )
 
     if not image_search_service:
         raise HTTPException(
