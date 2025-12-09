@@ -144,7 +144,7 @@ async def connection_test():
         ConnectionTestResponse with overall status, individual component checks,
         and any error codes encountered.
     """
-    timestamp = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    timestamp = datetime.now(timezone.utc).isoformat(timespec='microseconds').replace('+00:00', 'Z')
     checks = {}
     error_codes = []
     overall_status = "ok"

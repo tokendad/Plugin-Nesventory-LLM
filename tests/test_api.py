@@ -250,7 +250,9 @@ class TestImproved404Errors:
 
     def test_error_messages_are_consistent(self, client):
         """Test that all endpoints use consistent error structure."""
-        endpoints = [
+        # Endpoints that should return 404 when database is empty
+        # Format: (method, path, json_data)
+        endpoints_to_test = [
             ("POST", "/query", {"query": "test"}),
             ("POST", "/search", {"query": "test"}),
             ("POST", "/build", None),
@@ -258,7 +260,7 @@ class TestImproved404Errors:
             ("GET", "/items/test-id", None),
         ]
 
-        for method, path, json_data in endpoints:
+        for method, path, json_data in endpoints_to_test:
             if method == "POST":
                 if json_data:
                     response = client.post(path, json=json_data)
