@@ -211,7 +211,7 @@ async def connection_test():
     if kb:
         try:
             # Try to access the model (this will trigger lazy loading if needed)
-            model = kb.model
+            _ = kb.model
             checks["embedding_model"] = {
                 "status": "ok",
                 "message": f"Embedding model '{kb.model_name}' loaded successfully",
