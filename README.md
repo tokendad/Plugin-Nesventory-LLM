@@ -212,6 +212,7 @@ When running the server (`nesventory-llm serve`), the following endpoints are av
 |----------|--------|-------------|
 | `/` | GET | Status webpage (HTML interface) |
 | `/health` | GET | Health check and status |
+| `/connection/test` | GET | Comprehensive connection test with component status |
 | `/stats` | GET | Knowledge base statistics |
 | `/query` | POST | Natural language query |
 | `/search` | POST | Semantic search with filters |
@@ -229,6 +230,9 @@ When running the server (`nesventory-llm serve`), the following endpoints are av
 ```bash
 # Health check
 curl http://localhost:8002/health
+
+# Connection test (for NesVentory integration)
+curl http://localhost:8002/connection/test
 
 # Query the knowledge base
 curl -X POST http://localhost:8002/query \

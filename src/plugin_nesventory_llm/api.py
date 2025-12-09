@@ -7,6 +7,7 @@ village collectibles knowledge base.
 
 import logging
 from contextlib import asynccontextmanager
+from datetime import datetime
 from pathlib import Path
 from typing import Optional
 
@@ -19,6 +20,7 @@ from pydantic import BaseModel
 from . import __version__
 from .knowledge_base import KnowledgeBase
 from .models import (
+    ConnectionTestResponse,
     ImageSearchRequest,
     ImageSearchResult,
     ItemQuery,
@@ -120,7 +122,6 @@ async def root():
     return {"message": "NesVentory LLM Plugin API", "version": __version__}
 
 
-
 @app.get("/health", response_model=HealthResponse)
 async def health_check():
     """Check the health status of the plugin."""
@@ -129,6 +130,137 @@ async def health_check():
         version=__version__,
         items_loaded=len(kb.items) if kb else 0,
         embeddings_ready=kb.embeddings is not None if kb else False,
+    )
+
+
+@app.get("/connection/test", response_model=ConnectionTestResponse)
+async def connection_test():
+    """Test the connection and status of the LLM plugin.
+
+    This endpoint provides a comprehensive status check for NesVentory integration,
+    including the state of all major components and any error conditions.
+
+    Returns:
+        ConnectionTestResponse with overall status, individual component checks,
+        and any error codes encountered.
+    """
+    timestamp = datetime.utcnow().isoformat() + "Z"
+    checks = {}
+    error_codes = []
+    overall_status = "ok"
+
+    # Check 1: Knowledge base initialization
+    if kb is None:
+        checks["knowledge_base"] = {
+            "status": "error",
+            "message": "Knowledge base not initialized",
+        }
+        error_codes.append("KB_NOT_INITIALIZED")
+        overall_status = "error"
+    else:
+        checks["knowledge_base"] = {
+            "status": "ok",
+            "message": "Knowledge base initialized successfully",
+        }
+
+    # Check 2: Items loaded
+    if kb and len(kb.items) == 0:
+        checks["items"] = {
+            "status": "warning",
+            "message": "No items loaded in knowledge base",
+            "count": 0,
+        }
+        error_codes.append("NO_ITEMS_LOADED")
+        if overall_status == "ok":
+            overall_status = "degraded"
+    elif kb:
+        checks["items"] = {
+            "status": "ok",
+            "message": f"{len(kb.items)} items loaded",
+            "count": len(kb.items),
+        }
+    else:
+        checks["items"] = {
+            "status": "error",
+            "message": "Cannot check items - knowledge base not initialized",
+            "count": 0,
+        }
+
+    # Check 3: Embeddings status
+    if kb and kb.embeddings is None:
+        checks["embeddings"] = {
+            "status": "warning",
+            "message": "Embeddings not built - semantic search unavailable",
+        }
+        error_codes.append("EMBEDDINGS_NOT_READY")
+        if overall_status == "ok":
+            overall_status = "degraded"
+    elif kb:
+        checks["embeddings"] = {
+            "status": "ok",
+            "message": "Embeddings built and ready for semantic search",
+            "shape": list(kb.embeddings.shape) if kb.embeddings is not None else None,
+        }
+    else:
+        checks["embeddings"] = {
+            "status": "error",
+            "message": "Cannot check embeddings - knowledge base not initialized",
+        }
+
+    # Check 4: Embedding model availability
+    if kb:
+        try:
+            # Try to access the model (this will trigger lazy loading if needed)
+            _ = kb.model
+            checks["embedding_model"] = {
+                "status": "ok",
+                "message": f"Embedding model '{kb.model_name}' loaded successfully",
+                "model_name": kb.model_name,
+            }
+        except Exception as e:
+            checks["embedding_model"] = {
+                "status": "error",
+                "message": f"Failed to load embedding model: {str(e)}",
+                "model_name": kb.model_name,
+            }
+            error_codes.append("EMBEDDING_MODEL_ERROR")
+            overall_status = "error"
+    else:
+        checks["embedding_model"] = {
+            "status": "error",
+            "message": "Cannot check embedding model - knowledge base not initialized",
+        }
+
+    # Check 5: Image search service
+    if image_search_service is None:
+        checks["image_search"] = {
+            "status": "warning",
+            "message": "Image search service not available",
+        }
+        error_codes.append("IMAGE_SEARCH_UNAVAILABLE")
+        if overall_status == "ok":
+            overall_status = "degraded"
+    else:
+        checks["image_search"] = {
+            "status": "ok",
+            "message": "Image search service initialized and ready",
+        }
+
+    # Create human-readable message
+    if overall_status == "ok":
+        message = "All systems operational"
+    elif overall_status == "degraded":
+        message = "System operational with some features unavailable"
+    else:
+        message = "System has critical errors"
+
+    return ConnectionTestResponse(
+        status=overall_status,
+        version=__version__,
+        timestamp=timestamp,
+        checks=checks,
+        error_codes=error_codes,
+        message=message,
     )
 
 
@@ -269,7 +401,6 @@ async def build_embeddings():
         raise HTTPException(status_code=500, detail=f"Building embeddings failed: {str(e)}")
 
 
-
 @app.post("/items/add", response_model=VillageItem)
 async def add_item(item: VillageItem):
     """Add a new item to the knowledge base.
@@ -312,7 +443,9 @@ async def get_nesventory_collections():
 
 
 @app.post("/nesventory/identify")
-async def identify_item(query: str = Query(..., description="Item name or description to identify")):
+async def identify_item(
+    query: str = Query(..., description="Item name or description to identify")
+):
     """Identify an item from user input.
 
     This endpoint is designed for NesVentory integration - given a user's

@@ -3,6 +3,7 @@
 import pytest
 
 from plugin_nesventory_llm.models import (
+    ConnectionTestResponse,
     ItemQuery,
     ItemSearchResult,
     LLMResponse,
@@ -36,7 +37,7 @@ class TestVillageItem:
             estimated_value_min=50.00,
             estimated_value_max=75.00,
             original_price=45.00,
-            dimensions="6.5\" x 4\" x 5.5\"",
+            dimensions='6.5" x 4" x 5.5"',
             materials="Porcelain, hand-painted",
         )
         assert item.is_retired is True
@@ -141,3 +142,70 @@ class TestLLMResponse:
         )
         assert len(response.sources) == 0
         assert response.confidence == 0.0
+
+
+class TestConnectionTestResponse:
+    """Tests for ConnectionTestResponse model."""
+
+    def test_create_ok_response(self):
+        """Test creating a successful connection test response."""
+        response = ConnectionTestResponse(
+            status="ok",
+            version="0.1.0",
+            timestamp="2024-01-01T00:00:00Z",
+            checks={
+                "knowledge_base": {"status": "ok", "message": "Initialized"},
+                "items": {"status": "ok", "message": "100 items loaded", "count": 100},
+            },
+            error_codes=[],
+            message="All systems operational",
+        )
+        assert response.status == "ok"
+        assert len(response.error_codes) == 0
+        assert "knowledge_base" in response.checks
+
+    def test_create_degraded_response(self):
+        """Test creating a degraded connection test response."""
+        response = ConnectionTestResponse(
+            status="degraded",
+            version="0.1.0",
+            timestamp="2024-01-01T00:00:00Z",
+            checks={
+                "knowledge_base": {"status": "ok", "message": "Initialized"},
+                "embeddings": {"status": "warning", "message": "Not built"},
+            },
+            error_codes=["EMBEDDINGS_NOT_READY"],
+            message="System operational with some features unavailable",
+        )
+        assert response.status == "degraded"
+        assert len(response.error_codes) == 1
+        assert "EMBEDDINGS_NOT_READY" in response.error_codes
+
+    def test_create_error_response(self):
+        """Test creating an error connection test response."""
+        response = ConnectionTestResponse(
+            status="error",
+            version="0.1.0",
+            timestamp="2024-01-01T00:00:00Z",
+            checks={
+                "knowledge_base": {"status": "error", "message": "Not initialized"},
+            },
+            error_codes=["KB_NOT_INITIALIZED"],
+            message="System has critical errors",
+        )
+        assert response.status == "error"
+        assert "KB_NOT_INITIALIZED" in response.error_codes
+
+    def test_response_serialization(self):
+        """Test that connection test response serializes correctly."""
+        response = ConnectionTestResponse(
+            status="ok",
+            version="0.1.0",
+            timestamp="2024-01-01T00:00:00Z",
+            checks={"test": {"status": "ok"}},
+            error_codes=[],
+        )
+        data = response.model_dump()
+        assert data["status"] == "ok"
+        assert "checks" in data
+        assert isinstance(data["error_codes"], list)

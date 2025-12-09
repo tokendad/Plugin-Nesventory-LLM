@@ -28,7 +28,7 @@ class VillageItem(BaseModel):
                 "estimated_value_min": 50.00,
                 "estimated_value_max": 75.00,
                 "original_price": 45.00,
-                "dimensions": "6.5\" x 4\" x 5.5\"",
+                "dimensions": '6.5" x 4" x 5.5"',
                 "materials": "Porcelain, hand-painted",
                 "notes": "Limited edition of 5000 pieces",
             }
@@ -42,7 +42,9 @@ class VillageItem(BaseModel):
     category: Optional[str] = Field(None, description="Category (e.g., buildings, accessories)")
     description: Optional[str] = Field(None, description="Detailed description of the item")
     year_introduced: Optional[int] = Field(None, description="Year the item was first released")
-    year_retired: Optional[int] = Field(None, description="Year the item was retired (if applicable)")
+    year_retired: Optional[int] = Field(
+        None, description="Year the item was retired (if applicable)"
+    )
     is_retired: bool = Field(False, description="Whether the item has been retired")
     estimated_value_min: Optional[float] = Field(None, description="Minimum estimated value in USD")
     estimated_value_max: Optional[float] = Field(None, description="Maximum estimated value in USD")
@@ -140,3 +142,19 @@ class ImageSearchResult(BaseModel):
     )
     overall_confidence: float = Field(..., description="Overall confidence score (0-1)")
     processing_time_ms: float = Field(..., description="Processing time in milliseconds")
+
+
+class ConnectionTestResponse(BaseModel):
+    """Response from connection test endpoint."""
+
+    status: str = Field(..., description="Overall connection status: 'ok', 'degraded', or 'error'")
+    version: str = Field(..., description="Plugin version")
+    timestamp: str = Field(..., description="ISO 8601 timestamp of the test")
+    checks: dict[str, dict] = Field(
+        ...,
+        description="Individual component check results with status and optional error details",
+    )
+    error_codes: list[str] = Field(
+        default_factory=list, description="List of error codes if any issues detected"
+    )
+    message: Optional[str] = Field(None, description="Human-readable status message")
