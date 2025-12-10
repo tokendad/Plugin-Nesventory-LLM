@@ -615,7 +615,8 @@ class VillageChroniclerScraper:
         # Combine title and snippet for analysis
         text = f"{title} {snippet}"
 
-        # Look for item numbers (common patterns: 5-6 digit numbers, or format like "56.12345")
+        # Look for item numbers (patterns: 5-6 digit numbers, or 2-digit.5-digit like "56.12345")
+        # Department 56 uses formats like "56.12345" where 56 represents the brand
         item_numbers = re.findall(r"\b\d{5,6}\b|\b\d{2}\.\d{5}\b", text)
 
         # Look for collection names
