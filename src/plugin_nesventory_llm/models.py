@@ -178,3 +178,24 @@ class ScrapeRequest(BaseModel):
     search_terms: Optional[list[str]] = Field(
         None, description="Search terms for internet scraping mode"
     )
+
+
+class ErrorDetail(BaseModel):
+    """Standard error detail structure for API responses."""
+
+    error: str = Field(..., description="Error type or category")
+    message: str = Field(..., description="Human-readable error message")
+    error_code: Optional[str] = Field(None, description="Machine-readable error code")
+    details: Optional[dict] = Field(None, description="Additional context-specific details")
+
+
+class ImageUploadError(BaseModel):
+    """Error detail for image upload/processing failures."""
+
+    error: str = Field(..., description="Error type")
+    message: str = Field(..., description="Human-readable error message")
+    error_code: str = Field(..., description="Machine-readable error code")
+    file_info: Optional[dict] = Field(None, description="Information about the uploaded file")
+    suggestions: Optional[list[str]] = Field(
+        None, description="Suggested actions to resolve the error"
+    )

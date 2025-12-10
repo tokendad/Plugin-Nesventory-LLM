@@ -270,7 +270,14 @@ async def connection_test():
 async def get_stats():
     """Get statistics about the knowledge base."""
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
     return kb.get_stats()
 
 
@@ -282,7 +289,14 @@ async def query_items(request: QueryRequest):
     generates a natural language response.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -304,7 +318,14 @@ async def search_items(query: ItemQuery):
     Returns a list of matching items with relevance scores.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -328,7 +349,14 @@ async def list_items(
 ):
     """List all items in the knowledge base with optional filtering."""
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     items = kb.items
 
@@ -345,7 +373,14 @@ async def list_items(
 async def get_item(item_id: str):
     """Get a specific item by ID."""
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     # Check if database is empty
     if not kb.items:
@@ -387,7 +422,14 @@ async def scrape_data(request: ScrapeRequest = ScrapeRequest()):
         request: Scrape configuration with mode and optional search terms
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     try:
         from .scraper import VillageChroniclerScraper
@@ -409,7 +451,24 @@ async def scrape_data(request: ScrapeRequest = ScrapeRequest()):
         }
     except Exception as e:
         logger.exception("Scraping failed")
-        raise HTTPException(status_code=500, detail=f"Scraping failed: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": "Scraping failed",
+                "message": "Failed to scrape data from the configured source",
+                "error_code": "SCRAPING_ERROR",
+                "details": {
+                    "mode": request.mode.value,
+                    "error_type": type(e).__name__,
+                    "error_message": str(e),
+                },
+                "suggestions": [
+                    "Check network connectivity if using REMOTE or INTERNET mode",
+                    "Verify that local data files exist if using LOCAL mode",
+                    "Check server logs for more detailed error information",
+                ],
+            },
+        )
 
 
 @app.post("/build")
@@ -419,7 +478,14 @@ async def build_embeddings():
     This creates the semantic search index for all items.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -440,7 +506,25 @@ async def build_embeddings():
         }
     except Exception as e:
         logger.exception("Building embeddings failed")
-        raise HTTPException(status_code=500, detail=f"Building embeddings failed: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": "Embedding generation failed",
+                "message": "Failed to build semantic search embeddings",
+                "error_code": "EMBEDDING_BUILD_ERROR",
+                "details": {
+                    "items_count": len(kb.items),
+                    "error_type": type(e).__name__,
+                    "error_message": str(e),
+                },
+                "suggestions": [
+                    "Ensure sufficient memory is available",
+                    "Check that the embedding model is properly installed",
+                    "Verify that items have valid text content for embedding",
+                    "Check server logs for more details",
+                ],
+            },
+        )
 
 
 @app.post("/items/add", response_model=VillageItem)
@@ -450,12 +534,35 @@ async def add_item(item: VillageItem):
     This is useful for manually adding items or integrating with NesVentory.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     # Check for duplicates
     for existing in kb.items:
         if existing.id == item.id:
-            raise HTTPException(status_code=409, detail=f"Item already exists: {item.id}")
+            raise HTTPException(
+                status_code=409,
+                detail={
+                    "error": "Duplicate item",
+                    "message": f"Item with ID '{item.id}' already exists in the knowledge base",
+                    "error_code": "ITEM_ALREADY_EXISTS",
+                    "details": {
+                        "item_id": item.id,
+                        "existing_name": existing.name,
+                    },
+                    "suggestions": [
+                        "Use a different item ID",
+                        "Update the existing item instead of adding a new one",
+                        "Check if you intended to add a different item",
+                    ],
+                },
+            )
 
     kb.add_items([item])
     return item
@@ -471,7 +578,14 @@ async def get_nesventory_collections():
     Returns data in a format compatible with NesVentory's item import.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     collections = {}
     for item in kb.items:
@@ -494,7 +608,14 @@ async def identify_item(
     description of an item, it tries to identify the exact Department 56 item.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -540,7 +661,14 @@ async def search_by_image(
     Supported image formats: JPEG, PNG, WebP, BMP
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -555,18 +683,64 @@ async def search_by_image(
     if not image_search_service:
         raise HTTPException(
             status_code=503,
-            detail="Image search service not available. Check server logs for details.",
+            detail={
+                "error": "Service unavailable",
+                "message": "Image search service is not available",
+                "error_code": "IMAGE_SEARCH_SERVICE_UNAVAILABLE",
+                "suggestions": [
+                    "Check server logs for initialization errors",
+                    "Ensure transformers and torch packages are installed",
+                    "Restart the service to retry initialization",
+                ],
+            },
         )
 
     # Validate file type
     if not file.content_type or not file.content_type.startswith("image/"):
         raise HTTPException(
-            status_code=400, detail=f"Invalid file type: {file.content_type}. Must be an image."
+            status_code=400,
+            detail={
+                "error": "Invalid file type",
+                "message": f"File type '{file.content_type}' is not supported. Only image files are accepted.",
+                "error_code": "INVALID_FILE_TYPE",
+                "file_info": {
+                    "content_type": file.content_type,
+                    "filename": file.filename,
+                },
+                "suggestions": [
+                    "Upload an image file (JPEG, PNG, WebP, or BMP)",
+                    "Check that the file extension matches the file format",
+                    "Ensure the file is not corrupted",
+                ],
+            },
         )
 
     try:
         # Read image data
         image_data = await file.read()
+        
+        # Check for empty file
+        if not image_data or len(image_data) == 0:
+            raise HTTPException(
+                status_code=400,
+                detail={
+                    "error": "Empty file",
+                    "message": "The uploaded file is empty",
+                    "error_code": "EMPTY_FILE",
+                    "file_info": {
+                        "filename": file.filename,
+                        "size_bytes": 0,
+                    },
+                    "suggestions": [
+                        "Ensure the file contains valid image data",
+                        "Try uploading a different file",
+                    ],
+                },
+            )
+        
+        # Check file size (warn if too large, > 10MB)
+        if len(image_data) > 10 * 1024 * 1024:
+            logger.warning(f"Large image uploaded: {len(image_data)} bytes")
 
         # Create search request
         request = ImageSearchRequest(
@@ -581,10 +755,48 @@ async def search_by_image(
         return result
 
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        # Handle image loading/processing errors
+        error_message = str(e)
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "error": "Invalid image data",
+                "message": f"Unable to process image: {error_message}",
+                "error_code": "INVALID_IMAGE_DATA",
+                "file_info": {
+                    "filename": file.filename,
+                    "content_type": file.content_type,
+                    "size_bytes": len(image_data) if image_data else 0,
+                },
+                "suggestions": [
+                    "Ensure the file is a valid image format (JPEG, PNG, WebP, BMP)",
+                    "Try converting the image to a standard format",
+                    "Check that the image is not corrupted",
+                ],
+            },
+        )
+    except HTTPException:
+        # Re-raise HTTP exceptions as-is
+        raise
     except Exception as e:
         logger.exception("Image search failed")
-        raise HTTPException(status_code=500, detail=f"Image search failed: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": "Image search failed",
+                "message": "An unexpected error occurred during image search",
+                "error_code": "IMAGE_SEARCH_ERROR",
+                "details": {
+                    "error_type": type(e).__name__,
+                    "error_message": str(e),
+                },
+                "suggestions": [
+                    "Try again with a different image",
+                    "Check server logs for more details",
+                    "Contact support if the issue persists",
+                ],
+            },
+        )
 
 
 @app.post("/nesventory/identify/image")
@@ -600,7 +812,14 @@ async def identify_item_from_image(
     Returns the best match along with alternatives and detected object descriptions.
     """
     if not kb:
-        raise HTTPException(status_code=503, detail="Knowledge base not initialized")
+        raise HTTPException(
+            status_code=503,
+            detail={
+                "error": "Service unavailable",
+                "message": "Knowledge base not initialized",
+                "error_code": "KB_NOT_INITIALIZED",
+            },
+        )
 
     if not kb.items:
         raise HTTPException(
@@ -615,28 +834,112 @@ async def identify_item_from_image(
     if not image_search_service:
         raise HTTPException(
             status_code=503,
-            detail="Image search service not available. Check server logs for details.",
+            detail={
+                "error": "Service unavailable",
+                "message": "Image search service is not available",
+                "error_code": "IMAGE_SEARCH_SERVICE_UNAVAILABLE",
+                "suggestions": [
+                    "Check server logs for initialization errors",
+                    "Ensure transformers and torch packages are installed",
+                    "Restart the service to retry initialization",
+                ],
+            },
         )
 
     # Validate file type
     if not file.content_type or not file.content_type.startswith("image/"):
         raise HTTPException(
-            status_code=400, detail=f"Invalid file type: {file.content_type}. Must be an image."
+            status_code=400,
+            detail={
+                "error": "Invalid file type",
+                "message": f"File type '{file.content_type}' is not supported. Only image files are accepted.",
+                "error_code": "INVALID_FILE_TYPE",
+                "file_info": {
+                    "content_type": file.content_type,
+                    "filename": file.filename,
+                },
+                "suggestions": [
+                    "Upload an image file (JPEG, PNG, WebP, or BMP)",
+                    "Check that the file extension matches the file format",
+                    "Ensure the file is not corrupted",
+                ],
+            },
         )
 
     try:
         # Read image data
         image_data = await file.read()
+        
+        # Check for empty file
+        if not image_data or len(image_data) == 0:
+            raise HTTPException(
+                status_code=400,
+                detail={
+                    "error": "Empty file",
+                    "message": "The uploaded file is empty",
+                    "error_code": "EMPTY_FILE",
+                    "file_info": {
+                        "filename": file.filename,
+                        "size_bytes": 0,
+                    },
+                    "suggestions": [
+                        "Ensure the file contains valid image data",
+                        "Try uploading a different file",
+                    ],
+                },
+            )
+        
+        # Check file size (warn if too large, > 10MB)
+        if len(image_data) > 10 * 1024 * 1024:
+            logger.warning(f"Large image uploaded: {len(image_data)} bytes")
 
         # Identify items from image
         result = image_search_service.identify_from_image(image_data)
         return result
 
     except ValueError as e:
-        raise HTTPException(status_code=400, detail=str(e))
+        # Handle image loading/processing errors
+        error_message = str(e)
+        raise HTTPException(
+            status_code=400,
+            detail={
+                "error": "Invalid image data",
+                "message": f"Unable to process image: {error_message}",
+                "error_code": "INVALID_IMAGE_DATA",
+                "file_info": {
+                    "filename": file.filename,
+                    "content_type": file.content_type,
+                    "size_bytes": len(image_data) if image_data else 0,
+                },
+                "suggestions": [
+                    "Ensure the file is a valid image format (JPEG, PNG, WebP, BMP)",
+                    "Try converting the image to a standard format",
+                    "Check that the image is not corrupted",
+                ],
+            },
+        )
+    except HTTPException:
+        # Re-raise HTTP exceptions as-is
+        raise
     except Exception as e:
         logger.exception("Image identification failed")
-        raise HTTPException(status_code=500, detail=f"Image identification failed: {str(e)}")
+        raise HTTPException(
+            status_code=500,
+            detail={
+                "error": "Image identification failed",
+                "message": "An unexpected error occurred during image identification",
+                "error_code": "IMAGE_IDENTIFICATION_ERROR",
+                "details": {
+                    "error_type": type(e).__name__,
+                    "error_message": str(e),
+                },
+                "suggestions": [
+                    "Try again with a different image",
+                    "Check server logs for more details",
+                    "Contact support if the issue persists",
+                ],
+            },
+        )
 
 
 def create_app() -> FastAPI:
