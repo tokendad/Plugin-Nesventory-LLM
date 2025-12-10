@@ -583,8 +583,8 @@ class VillageChroniclerScraper:
                 title = clean_text(title_link.get_text())
                 url = title_link.get("href", "")
 
-                # Extract snippet
-                snippet_elem = result_div.find("a", class_="result__snippet")
+                # Extract snippet (can be in various elements)
+                snippet_elem = result_div.find(class_="result__snippet")
                 snippet = clean_text(snippet_elem.get_text()) if snippet_elem else ""
 
                 if url and title:
@@ -615,7 +615,7 @@ class VillageChroniclerScraper:
         # Combine title and snippet for analysis
         text = f"{title} {snippet}"
 
-        # Look for item numbers (common pattern: 5-6 digit numbers, sometimes with dots)
+        # Look for item numbers (common patterns: 5-6 digit numbers, or format like "56.12345")
         item_numbers = re.findall(r"\b\d{5,6}\b|\b\d{2}\.\d{5}\b", text)
 
         # Look for collection names
