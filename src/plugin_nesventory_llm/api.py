@@ -26,6 +26,8 @@ from .models import (
     ItemQuery,
     ItemSearchResult,
     LLMResponse,
+    ScrapeMode,
+    ScrapeRequest,
     VillageItem,
 )
 
@@ -373,10 +375,16 @@ async def get_item(item_id: str):
 
 
 @app.post("/scrape")
-async def scrape_data():
-    """Trigger a scrape of the Village Chronicler website.
+async def scrape_data(request: ScrapeRequest = ScrapeRequest()):
+    """Trigger a scrape with configurable options.
 
-    This fetches the latest item data and rebuilds the embeddings.
+    Supports three modes:
+    - LOCAL: Scrape from local mirror files (default)
+    - REMOTE: Scrape from remote websites
+    - INTERNET: Search internet with tailored phrases
+
+    Args:
+        request: Scrape configuration with mode and optional search terms
     """
     if not kb:
         raise HTTPException(status_code=503, detail="Knowledge base not initialized")
@@ -384,8 +392,8 @@ async def scrape_data():
     try:
         from .scraper import VillageChroniclerScraper
 
-        with VillageChroniclerScraper(kb.data_dir) as scraper:
-            collections, items = scraper.scrape_all()
+        with VillageChroniclerScraper(kb.data_dir, mode=request.mode) as scraper:
+            collections, items = scraper.scrape_all(search_terms=request.search_terms)
             scraper.save_data()
 
         # Reload the knowledge base
@@ -394,8 +402,10 @@ async def scrape_data():
 
         return {
             "status": "success",
+            "mode": request.mode.value,
             "collections_found": len(collections),
             "items_found": len(items),
+            "search_terms": request.search_terms if request.mode == ScrapeMode.INTERNET else None,
         }
     except Exception as e:
         logger.exception("Scraping failed")
