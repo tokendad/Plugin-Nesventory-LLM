@@ -52,6 +52,16 @@ REMOTE_DEPARTMENT56_URL = "https://www.department56.com"
 MIN_PRODUCT_TABLE_COLUMNS = 5
 HEADER_CELL_INDICATORS = ["village collection", "collection", "name"]
 
+# Default search terms for internet scraping
+DEFAULT_SEARCH_TERMS = [
+    "Department 56 village collectibles",
+    "Department 56 Dickens Village",
+    "Department 56 Snow Village"
+]
+
+# User agent for HTTP requests
+USER_AGENT = "NesVentory-LLM/0.1.0"
+
 
 def generate_item_id(name: str, item_number: Optional[str] = None) -> str:
     """Generate a unique ID for an item based on its name and item number."""
@@ -336,7 +346,7 @@ class VillageChroniclerScraper:
             self.client = httpx.Client(
                 timeout=30.0, 
                 follow_redirects=True,
-                headers={"User-Agent": "NesVentory-LLM/0.1.0"}
+                headers={"User-Agent": USER_AGENT}
             )
         return self
 
@@ -603,12 +613,8 @@ class VillageChroniclerScraper:
             # Scrape using internet search
             logger.info("Scraping using internet search")
             if not search_terms:
-                logger.warning("No search terms provided for internet scraping")
-                search_terms = [
-                    "Department 56 village collectibles",
-                    "Department 56 Dickens Village",
-                    "Department 56 Snow Village"
-                ]
+                logger.warning("No search terms provided, using defaults")
+                search_terms = DEFAULT_SEARCH_TERMS
             self.items = self.scrape_internet_search(search_terms)
 
         # Build collections from the items
