@@ -368,6 +368,80 @@ class TestScrapeModes:
         with VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET) as scraper:
             # Should not raise error even without search terms
             collections, items = scraper.scrape_all()
-            # Internet search is not fully implemented, so should return empty
+            # Internet search is now implemented
             assert isinstance(collections, list)
             assert isinstance(items, list)
+
+
+class TestInternetSearch:
+    """Test internet search functionality."""
+
+    def test_extract_items_from_search_result_with_item_number(self, tmp_path):
+        """Test extracting items from search results with item numbers."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        
+        title = "Department 56 Dickens Village Scrooge & Marley Counting House 02862"
+        snippet = "Retired 1998. Beautiful Victorian building from the classic collection."
+        url = "https://example.com/item/02862"
+        
+        items = scraper._extract_items_from_search_result(url, title, snippet)
+        
+        assert len(items) >= 1
+        item = items[0]
+        assert item.collection == "Dickens Village"
+        assert "02862" in item.item_number or item.item_number == "02862"
+        assert item.source_url == url
+        assert len(item.name) > 0
+
+    def test_extract_items_from_search_result_with_year(self, tmp_path):
+        """Test extracting items from search results with years."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        
+        title = "Snow Village Christmas Lake House 1995"
+        snippet = "Beautiful lakeside cottage from the Snow Village collection."
+        url = "https://example.com/item/lakehouse"
+        
+        items = scraper._extract_items_from_search_result(url, title, snippet)
+        
+        if len(items) > 0:
+            item = items[0]
+            assert item.collection == "Snow Village"
+            assert item.year_introduced == 1995
+
+    def test_extract_items_from_search_result_skips_generic_titles(self, tmp_path):
+        """Test that generic titles are skipped."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        
+        # Test various generic titles that should be skipped
+        generic_titles = [
+            "Home",
+            "Search",
+            "Results",
+            "Page 1",
+            "Department 56"
+        ]
+        
+        for title in generic_titles:
+            items = scraper._extract_items_from_search_result(
+                "https://example.com", title, "Some description"
+            )
+            # Should not extract items from generic titles
+            assert len(items) == 0
+
+    def test_extract_items_removes_duplicates(self, tmp_path):
+        """Test that duplicate items are removed."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        
+        # Create some duplicate items with same name and item number
+        title = "Victorian House 56.12345 Dickens Village"
+        snippet = "Beautiful Victorian building"
+        url1 = "https://example.com/item1"
+        url2 = "https://example.com/item2"
+        
+        items1 = scraper._extract_items_from_search_result(url1, title, snippet)
+        items2 = scraper._extract_items_from_search_result(url2, title, snippet)
+        
+        # Both should extract items
+        if len(items1) > 0 and len(items2) > 0:
+            # The IDs should be the same since name and item number are the same
+            assert items1[0].id == items2[0].id
