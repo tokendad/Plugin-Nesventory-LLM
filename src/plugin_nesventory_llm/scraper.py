@@ -31,10 +31,11 @@ import re
 from pathlib import Path
 from typing import Optional
 
+import httpx
 from bs4 import BeautifulSoup
 from PyPDF2 import PdfReader
 
-from .models import VillageCollection, VillageItem
+from .models import ScrapeMode, VillageCollection, VillageItem
 
 logger = logging.getLogger(__name__)
 
@@ -42,9 +43,24 @@ logger = logging.getLogger(__name__)
 DEFAULT_LOCAL_MIRROR = Path("Village/thevillagechronicler.com")
 DEFAULT_RETIRED_PDFS_DIR = Path("Village/retiredproducts.department56.com")
 
+# Remote URLs for scraping
+REMOTE_VILLAGE_CHRONICLER_URL = "https://thevillagechronicler.com/All-ProductList.shtml"
+REMOTE_RETIRED_PRODUCTS_BASE_URL = "https://retiredproducts.department56.com"
+REMOTE_DEPARTMENT56_URL = "https://www.department56.com"
+
 # Table parsing constants
 MIN_PRODUCT_TABLE_COLUMNS = 5
 HEADER_CELL_INDICATORS = ["village collection", "collection", "name"]
+
+# Default search terms for internet scraping
+DEFAULT_SEARCH_TERMS = [
+    "Department 56 village collectibles",
+    "Department 56 Dickens Village",
+    "Department 56 Snow Village"
+]
+
+# User agent for HTTP requests
+USER_AGENT = "NesVentory-LLM/0.1.0"
 
 
 def generate_item_id(name: str, item_number: Optional[str] = None) -> str:
@@ -275,9 +291,15 @@ def extract_collection_name_from_pdf(pdf_content: bytes, filename: str) -> str:
 
 
 class VillageChroniclerScraper:
-    """Scraper for The Village Chronicler local mirror files."""
+    """Scraper for The Village Chronicler - supports local and remote scraping."""
 
-    def __init__(self, data_dir: Path | str = "data", local_mirror_dir: Path | str | None = None, retired_pdfs_dir: Path | str | None = None):
+    def __init__(
+        self,
+        data_dir: Path | str = "data",
+        local_mirror_dir: Path | str | None = None,
+        retired_pdfs_dir: Path | str | None = None,
+        mode: ScrapeMode = ScrapeMode.LOCAL,
+    ):
         """Initialize the scraper.
 
         Args:
@@ -286,9 +308,11 @@ class VillageChroniclerScraper:
                              Defaults to "Village/thevillagechronicler.com" if not provided.
             retired_pdfs_dir: Path to local retired products PDFs directory.
                              Defaults to "Village/retiredproducts.department56.com" if not provided.
+            mode: Scrape mode - LOCAL, REMOTE, or INTERNET
         """
         self.data_dir = Path(data_dir)
         self.data_dir.mkdir(parents=True, exist_ok=True)
+        self.mode = mode
 
         # Set local mirror directory
         if local_mirror_dir:
@@ -302,22 +326,106 @@ class VillageChroniclerScraper:
         else:
             self.retired_pdfs_dir = DEFAULT_RETIRED_PDFS_DIR
 
-        # Validate that the local mirror directory exists
-        if not self.local_mirror_dir.exists():
+        # Validate that the local mirror directory exists (for local mode)
+        if self.mode == ScrapeMode.LOCAL and not self.local_mirror_dir.exists():
             logger.warning(f"Local mirror directory does not exist: {self.local_mirror_dir}")
 
-        # Validate that the retired PDFs directory exists
-        if not self.retired_pdfs_dir.exists():
+        # Validate that the retired PDFs directory exists (for local mode)
+        if self.mode == ScrapeMode.LOCAL and not self.retired_pdfs_dir.exists():
             logger.warning(f"Retired PDFs directory does not exist: {self.retired_pdfs_dir}")
 
         self.collections: list[VillageCollection] = []
         self.items: list[VillageItem] = []
+        
+        # HTTP client for remote scraping
+        self.client: Optional[httpx.Client] = None
 
     def __enter__(self):
+        # Initialize HTTP client for remote scraping
+        if self.mode in (ScrapeMode.REMOTE, ScrapeMode.INTERNET):
+            self.client = httpx.Client(
+                timeout=30.0, 
+                follow_redirects=True,
+                headers={"User-Agent": USER_AGENT}
+            )
         return self
 
     def __exit__(self, exc_type, exc_val, exc_tb):
-        pass
+        if self.client:
+            self.client.close()
+            self.client = None
+
+    def _parse_all_products_html(self, html_content: str, source_label: str) -> list[VillageItem]:
+        """Parse All-ProductList HTML content to extract items.
+        
+        Args:
+            html_content: HTML content to parse
+            source_label: Label for logging (e.g., "local file" or "remote URL")
+            
+        Returns:
+            List of VillageItem objects
+        """
+        soup = BeautifulSoup(html_content, "html.parser")
+        items = []
+
+        # Find the main product table - look for table with rows that have class="row1"
+        table = None
+        tables = soup.find_all("table")
+        for t in tables:
+            # Check if this table has product rows (with class="row1")
+            if t.find("tr", class_="row1"):
+                table = t
+                break
+
+        if not table:
+            logger.warning(f"Could not find product table with row1 class in {source_label}")
+            return []
+
+        # Get all data rows with class="row1" (product rows)
+        data_rows = table.find_all("tr", class_="row1")
+        logger.info(f"Found {len(data_rows)} product rows in {source_label}")
+
+        # Parse each row
+        for row in data_rows:
+            cells = row.find_all(["td", "th"])
+
+            # Expected columns: Collection, Item Number, Description, Dates, Where Found
+            if len(cells) < MIN_PRODUCT_TABLE_COLUMNS:
+                continue
+
+            collection_name = clean_text(cells[0].get_text())
+            item_number = clean_text(cells[1].get_text())
+            description = clean_text(cells[2].get_text())
+            dates = clean_text(cells[3].get_text())
+
+            # Extract detail page URL from "Where Found" column
+            where_found_cell = cells[4]
+            detail_link = where_found_cell.find("a")
+            detail_url = detail_link.get("href") if detail_link else None
+
+            # Skip rows without essential data
+            if not description or not collection_name:
+                continue
+
+            # Parse date range
+            year_introduced, year_retired = parse_date_range(dates)
+
+            # Create item
+            item = VillageItem(
+                id=generate_item_id(description, item_number),
+                name=description,
+                item_number=item_number if item_number else None,
+                collection=collection_name,
+                year_introduced=year_introduced,
+                year_retired=year_retired,
+                is_retired=year_retired is not None,
+                source_url=detail_url if detail_url else source_label,
+            )
+
+            items.append(item)
+
+        logger.info(f"Scraped {len(items)} items from {source_label}")
+        return items
 
     def scrape_all_products_page(self) -> list[VillageItem]:
         """Scrape the All-ProductList page from local file to get all items.
@@ -342,67 +450,83 @@ class VillageChroniclerScraper:
             logger.error(f"Failed to read local file {local_file}: {e}")
             return []
 
-        soup = BeautifulSoup(html_content, "html.parser")
-        items = []
+        return self._parse_all_products_html(html_content, str(local_file))
 
-        # Find the main product table - look for table with rows that have class="row1"
-        table = None
-        tables = soup.find_all("table")
-        for t in tables:
-            # Check if this table has product rows (with class="row1")
-            if t.find("tr", class_="row1"):
-                table = t
-                break
+    def scrape_remote_village_chronicler(self) -> list[VillageItem]:
+        """Scrape the All-ProductList page from remote Village Chronicler website.
 
-        if not table:
-            logger.warning("Could not find product table with row1 class in All-ProductList page")
+        Returns:
+            List of VillageItem objects
+        """
+        if not self.client:
+            logger.error("HTTP client not initialized for remote scraping")
             return []
 
-        # Get all data rows with class="row1" (product rows)
-        data_rows = table.find_all("tr", class_="row1")
+        logger.info(f"Fetching all products page from: {REMOTE_VILLAGE_CHRONICLER_URL}")
 
-        logger.info(f"Found {len(data_rows)} product rows in table")
+        try:
+            response = self.client.get(REMOTE_VILLAGE_CHRONICLER_URL)
+            response.raise_for_status()
+            html_content = response.text
+            return self._parse_all_products_html(html_content, REMOTE_VILLAGE_CHRONICLER_URL)
+        except httpx.HTTPError as e:
+            logger.error(f"Failed to fetch remote page {REMOTE_VILLAGE_CHRONICLER_URL}: {e}")
+            return []
 
-        # Parse each row
-        for row in data_rows:
-            cells = row.find_all(["td", "th"])
+    def scrape_remote_department56(self) -> list[VillageItem]:
+        """Scrape from department56.com website.
 
-            # Expected columns: Collection, Item Number, Description, Dates, Where Found
-            if len(cells) < MIN_PRODUCT_TABLE_COLUMNS:
-                continue
+        Returns:
+            List of VillageItem objects
+        """
+        if not self.client:
+            logger.error("HTTP client not initialized for remote scraping")
+            return []
 
-            collection_name = clean_text(cells[0].get_text())
-            item_number = clean_text(cells[1].get_text())
-            description = clean_text(cells[2].get_text())
-            dates = clean_text(cells[3].get_text())
+        logger.info(f"Fetching from: {REMOTE_DEPARTMENT56_URL}")
+        items = []
 
-            # Extract detail page URL from "Where Found" column (stored as local file reference)
-            where_found_cell = cells[4]
-            detail_link = where_found_cell.find("a")
-            detail_url = detail_link.get("href") if detail_link else None
-
-            # Skip rows without essential data
-            if not description or not collection_name:
-                continue
-
-            # Parse date range
-            year_introduced, year_retired = parse_date_range(dates)
-
-            # Create item
-            item = VillageItem(
-                id=generate_item_id(description, item_number),
-                name=description,
-                item_number=item_number if item_number else None,
-                collection=collection_name,
-                year_introduced=year_introduced,
-                year_retired=year_retired,
-                is_retired=year_retired is not None,
-                source_url=detail_url if detail_url else "All-ProductList.shtml.html",
+        try:
+            # Note: This is a placeholder. The actual implementation would need to
+            # analyze the structure of department56.com and extract product data.
+            # For now, we'll just log that this feature needs implementation.
+            logger.warning(
+                f"Scraping from {REMOTE_DEPARTMENT56_URL} is not fully implemented yet. "
+                "The site structure needs to be analyzed to extract product data."
             )
+        except httpx.HTTPError as e:
+            logger.error(f"Failed to fetch from {REMOTE_DEPARTMENT56_URL}: {e}")
 
-            items.append(item)
+        return items
 
-        logger.info(f"Scraped {len(items)} items from All-ProductList page")
+    def scrape_internet_search(self, search_terms: list[str]) -> list[VillageItem]:
+        """Scrape the internet using tailored search terms.
+
+        Args:
+            search_terms: List of search terms/phrases to use
+
+        Returns:
+            List of VillageItem objects
+        """
+        if not self.client:
+            logger.error("HTTP client not initialized for internet scraping")
+            return []
+
+        logger.info(f"Performing internet search with terms: {search_terms}")
+        items = []
+
+        # Note: This is a placeholder for internet search functionality.
+        # A full implementation would:
+        # 1. Use a search API (Google Custom Search, Bing, DuckDuckGo)
+        # 2. Parse search results for relevant pages
+        # 3. Extract Department 56 product information from results
+        # 4. Download and process images if available
+        logger.warning(
+            "Internet search scraping is not fully implemented yet. "
+            "This feature requires integration with a search API and "
+            "implementation of data extraction from search results."
+        )
+
         return items
 
     def scrape_retired_pdfs(self) -> list[VillageItem]:
@@ -446,24 +570,52 @@ class VillageChroniclerScraper:
         logger.info(f"Scraped {len(all_items)} items from {len(pdf_files)} PDF files")
         return all_items
 
-    def scrape_all(self) -> tuple[list[VillageCollection], list[VillageItem]]:
-        """Scrape all collections and items from local mirror files.
+    def scrape_all(self, search_terms: Optional[list[str]] = None) -> tuple[list[VillageCollection], list[VillageItem]]:
+        """Scrape all collections and items based on the configured mode.
 
         Reads data from:
-        1. The All-ProductList page from Village Chronicler mirror
-        2. Retired products PDFs from local directory
+        - LOCAL mode: Local mirror files (Village Chronicler and PDFs)
+        - REMOTE mode: Remote websites (Village Chronicler, Department56)
+        - INTERNET mode: Internet search with provided search terms
+
+        Args:
+            search_terms: Search terms for INTERNET mode (optional)
 
         Returns:
             Tuple of (collections, items)
         """
-        logger.info("Starting scrape from local Village Chronicler mirror and retired PDFs")
+        logger.info(f"Starting scrape in {self.mode.value} mode")
 
-        # Scrape all items from the All-ProductList page
-        self.items = self.scrape_all_products_page()
+        if self.mode == ScrapeMode.LOCAL:
+            # Scrape from local mirror files
+            logger.info("Scraping from local Village Chronicler mirror and retired PDFs")
+            self.items = self.scrape_all_products_page()
+            retired_items = self.scrape_retired_pdfs()
+            self.items.extend(retired_items)
 
-        # Scrape retired products from PDF files
-        retired_items = self.scrape_retired_pdfs()
-        self.items.extend(retired_items)
+        elif self.mode == ScrapeMode.REMOTE:
+            # Scrape from remote websites
+            logger.info("Scraping from remote websites")
+            self.items = []
+            
+            # Scrape Village Chronicler
+            village_items = self.scrape_remote_village_chronicler()
+            self.items.extend(village_items)
+            
+            # Scrape Department56.com (placeholder)
+            dept56_items = self.scrape_remote_department56()
+            self.items.extend(dept56_items)
+            
+            # Note: Retired products PDFs would need to be fetched remotely
+            # This is not implemented in this version
+
+        elif self.mode == ScrapeMode.INTERNET:
+            # Scrape using internet search
+            logger.info("Scraping using internet search")
+            if not search_terms:
+                logger.warning("No search terms provided, using defaults")
+                search_terms = DEFAULT_SEARCH_TERMS
+            self.items = self.scrape_internet_search(search_terms)
 
         # Build collections from the items
         collections_dict = {}

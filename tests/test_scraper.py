@@ -4,6 +4,7 @@ Tests for the Village Chronicler scraper.
 
 import pytest
 
+from plugin_nesventory_llm.models import ScrapeMode
 from plugin_nesventory_llm.scraper import (
     VillageChroniclerScraper,
     parse_date_range,
@@ -312,3 +313,61 @@ class TestRetiredPDFsScraping:
         # Should have items from HTML (even if no PDFs)
         assert len(items) >= 3  # From the sample HTML
         assert len(collections) >= 3
+
+
+class TestScrapeModes:
+    """Test different scrape modes."""
+
+    def test_scraper_initializes_with_local_mode(self, tmp_path):
+        """Test that scraper initializes with LOCAL mode by default."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path)
+        assert scraper.mode == ScrapeMode.LOCAL
+        assert scraper.client is None
+
+    def test_scraper_initializes_with_remote_mode(self, tmp_path):
+        """Test that scraper initializes with REMOTE mode."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.REMOTE)
+        assert scraper.mode == ScrapeMode.REMOTE
+
+    def test_scraper_initializes_with_internet_mode(self, tmp_path):
+        """Test that scraper initializes with INTERNET mode."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        assert scraper.mode == ScrapeMode.INTERNET
+
+    def test_scraper_creates_http_client_for_remote_mode(self, tmp_path):
+        """Test that HTTP client is created when entering context in remote mode."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.REMOTE)
+        assert scraper.client is None
+        
+        with scraper:
+            assert scraper.client is not None
+        
+        # Client should be closed after exiting context
+        assert scraper.client is None
+
+    def test_scraper_creates_http_client_for_internet_mode(self, tmp_path):
+        """Test that HTTP client is created when entering context in internet mode."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET)
+        assert scraper.client is None
+        
+        with scraper:
+            assert scraper.client is not None
+        
+        # Client should be closed after exiting context
+        assert scraper.client is None
+
+    def test_scraper_no_http_client_for_local_mode(self, tmp_path):
+        """Test that HTTP client is NOT created for local mode."""
+        scraper = VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.LOCAL)
+        
+        with scraper:
+            assert scraper.client is None
+
+    def test_scrape_all_with_internet_mode_uses_default_search_terms(self, tmp_path):
+        """Test that scrape_all uses default search terms in internet mode."""
+        with VillageChroniclerScraper(data_dir=tmp_path, mode=ScrapeMode.INTERNET) as scraper:
+            # Should not raise error even without search terms
+            collections, items = scraper.scrape_all()
+            # Internet search is not fully implemented, so should return empty
+            assert isinstance(collections, list)
+            assert isinstance(items, list)

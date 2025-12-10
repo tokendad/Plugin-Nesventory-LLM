@@ -5,9 +5,18 @@ These models represent the structure of collectible items from
 The Village Chronicler's collections (thevillagechronicler.com).
 """
 
+from enum import Enum
 from typing import Optional
 
 from pydantic import BaseModel, ConfigDict, Field
+
+
+class ScrapeMode(str, Enum):
+    """Scrape mode options."""
+
+    LOCAL = "local"  # Scrape from local mirror files
+    REMOTE = "remote"  # Scrape from remote websites
+    INTERNET = "internet"  # Search internet with tailored phrases
 
 
 class VillageItem(BaseModel):
@@ -158,3 +167,14 @@ class ConnectionTestResponse(BaseModel):
         default_factory=list, description="List of error codes if any issues detected"
     )
     message: Optional[str] = Field(None, description="Human-readable status message")
+
+
+class ScrapeRequest(BaseModel):
+    """Request model for scraping data."""
+
+    mode: ScrapeMode = Field(
+        ScrapeMode.LOCAL, description="Scrape mode: local, remote, or internet"
+    )
+    search_terms: Optional[list[str]] = Field(
+        None, description="Search terms for internet scraping mode"
+    )
