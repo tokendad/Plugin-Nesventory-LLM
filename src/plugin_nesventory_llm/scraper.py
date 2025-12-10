@@ -17,7 +17,7 @@ The scraper parses:
    - Item numbers
    - Detailed descriptions
    - Year issued
-   - Year retired  
+   - Year retired
    - US and Canadian suggested retail prices
 
 Note: Both sources are stored locally in the repository.
@@ -56,7 +56,7 @@ HEADER_CELL_INDICATORS = ["village collection", "collection", "name"]
 DEFAULT_SEARCH_TERMS = [
     "Department 56 village collectibles",
     "Department 56 Dickens Village",
-    "Department 56 Snow Village"
+    "Department 56 Snow Village",
 ]
 
 # User agent for HTTP requests
@@ -336,7 +336,7 @@ class VillageChroniclerScraper:
 
         self.collections: list[VillageCollection] = []
         self.items: list[VillageItem] = []
-        
+
         # HTTP client for remote scraping
         self.client: Optional[httpx.Client] = None
 
@@ -344,9 +344,7 @@ class VillageChroniclerScraper:
         # Initialize HTTP client for remote scraping
         if self.mode in (ScrapeMode.REMOTE, ScrapeMode.INTERNET):
             self.client = httpx.Client(
-                timeout=30.0, 
-                follow_redirects=True,
-                headers={"User-Agent": USER_AGENT}
+                timeout=30.0, follow_redirects=True, headers={"User-Agent": USER_AGENT}
             )
         return self
 
@@ -357,11 +355,11 @@ class VillageChroniclerScraper:
 
     def _parse_all_products_html(self, html_content: str, source_label: str) -> list[VillageItem]:
         """Parse All-ProductList HTML content to extract items.
-        
+
         Args:
             html_content: HTML content to parse
             source_label: Label for logging (e.g., "local file" or "remote URL")
-            
+
         Returns:
             List of VillageItem objects
         """
@@ -515,17 +513,171 @@ class VillageChroniclerScraper:
         logger.info(f"Performing internet search with terms: {search_terms}")
         items = []
 
-        # Note: This is a placeholder for internet search functionality.
-        # A full implementation would:
-        # 1. Use a search API (Google Custom Search, Bing, DuckDuckGo)
-        # 2. Parse search results for relevant pages
-        # 3. Extract Department 56 product information from results
-        # 4. Download and process images if available
-        logger.warning(
-            "Internet search scraping is not fully implemented yet. "
-            "This feature requires integration with a search API and "
-            "implementation of data extraction from search results."
-        )
+        # Perform DuckDuckGo searches for each term
+        for search_term in search_terms:
+            try:
+                search_results = self._search_duckduckgo(search_term)
+                logger.info(f"Found {len(search_results)} results for '{search_term}'")
+
+                # Process each search result URL
+                for result in search_results[:5]:  # Limit to top 5 results per search
+                    url = result.get("url", "")
+                    title = result.get("title", "")
+                    snippet = result.get("snippet", "")
+
+                    # Try to extract product information from the result
+                    extracted_items = self._extract_items_from_search_result(url, title, snippet)
+                    items.extend(extracted_items)
+
+            except Exception as e:
+                logger.error(f"Error searching for '{search_term}': {e}")
+                continue
+
+        # Remove duplicates based on item ID
+        unique_items = {}
+        for item in items:
+            if item.id not in unique_items:
+                unique_items[item.id] = item
+
+        items = list(unique_items.values())
+        logger.info(f"Internet search complete: found {len(items)} unique items")
+
+        return items
+
+    def _search_duckduckgo(self, query: str, max_results: int = 10) -> list[dict]:
+        """Search DuckDuckGo and return results.
+
+        Args:
+            query: Search query
+            max_results: Maximum number of results to return
+
+        Returns:
+            List of dictionaries with 'url', 'title', and 'snippet' keys
+        """
+        if not self.client:
+            return []
+
+        logger.debug(f"Searching DuckDuckGo for: {query}")
+
+        try:
+            # DuckDuckGo HTML search
+            search_url = "https://html.duckduckgo.com/html/"
+            params = {"q": query}
+
+            response = self.client.post(search_url, data=params)
+            response.raise_for_status()
+
+            soup = BeautifulSoup(response.text, "html.parser")
+            results = []
+
+            # Parse search results
+            for result_div in soup.find_all("div", class_="result"):
+                if len(results) >= max_results:
+                    break
+
+                # Extract title and URL
+                title_link = result_div.find("a", class_="result__a")
+                if not title_link:
+                    continue
+
+                title = clean_text(title_link.get_text())
+                url = title_link.get("href", "")
+
+                # Extract snippet (can be in various elements)
+                snippet_elem = result_div.find(class_="result__snippet")
+                snippet = clean_text(snippet_elem.get_text()) if snippet_elem else ""
+
+                if url and title:
+                    results.append({"url": url, "title": title, "snippet": snippet})
+
+            logger.debug(f"DuckDuckGo search returned {len(results)} results")
+            return results
+
+        except Exception as e:
+            logger.error(f"Error searching DuckDuckGo: {e}")
+            return []
+
+    def _extract_items_from_search_result(
+        self, url: str, title: str, snippet: str
+    ) -> list[VillageItem]:
+        """Extract Department 56 items from a search result.
+
+        Args:
+            url: URL of the search result
+            title: Title of the search result
+            snippet: Snippet/description from search result
+
+        Returns:
+            List of VillageItem objects
+        """
+        items = []
+
+        # Combine title and snippet for analysis
+        text = f"{title} {snippet}"
+
+        # Look for item numbers (patterns: 5-6 digit numbers, or 2-digit.5-digit like "56.12345")
+        # Department 56 uses formats like "56.12345" where 56 represents the brand
+        item_numbers = re.findall(r"\b\d{5,6}\b|\b\d{2}\.\d{5}\b", text)
+
+        # Look for collection names
+        known_collections = [
+            "Dickens Village",
+            "Snow Village",
+            "North Pole",
+            "New England Village",
+            "Alpine Village",
+            "Christmas in the City",
+            "Coca Cola",
+            "Heritage Village",
+        ]
+
+        collection = None
+        for coll in known_collections:
+            if coll.lower() in text.lower():
+                collection = coll
+                break
+
+        # Look for years in the text
+        years = re.findall(r"\b(19[89]\d|20[0-2]\d)\b", text)
+        year_introduced = int(years[0]) if years else None
+
+        # Extract potential item name from title
+        # Remove common website names and extra text
+        name = title
+        for remove_text in ["Department 56", "Dept 56", "Dept. 56", " | ", " - "]:
+            if remove_text in name:
+                parts = name.split(remove_text)
+                # Take the longest part as the likely item name
+                name = max(parts, key=len).strip()
+
+        # Clean up the name
+        name = re.sub(r"\s+", " ", name).strip()
+
+        # Only create an item if we have meaningful information
+        if len(name) > 5 and (collection or item_numbers or year_introduced):
+            item_number = item_numbers[0] if item_numbers else None
+
+            # Skip if the name looks like it's just a website name or too generic
+            skip_patterns = [
+                r"^home\s*$",
+                r"^search\s*$",
+                r"^results\s*$",
+                r"^page\s+\d+$",
+                r"^department\s+56\s*$",
+            ]
+            if any(re.match(pattern, name.lower()) for pattern in skip_patterns):
+                return items
+
+            item = VillageItem(
+                id=generate_item_id(name, item_number),
+                name=name,
+                item_number=item_number,
+                collection=collection,
+                year_introduced=year_introduced,
+                source_url=url,
+            )
+            items.append(item)
+            logger.debug(f"Extracted item: {name} (#{item_number}) from {url}")
 
         return items
 
@@ -539,13 +691,13 @@ class VillageChroniclerScraper:
             List of VillageItem objects
         """
         logger.info(f"Scraping retired products PDFs from: {self.retired_pdfs_dir}")
-        
+
         if not self.retired_pdfs_dir.exists():
             logger.warning(f"Retired PDFs directory does not exist: {self.retired_pdfs_dir}")
             return []
 
         all_items = []
-        
+
         # Find all PDF files in the directory
         pdf_files = list(self.retired_pdfs_dir.glob("*.pdf"))
         logger.info(f"Found {len(pdf_files)} PDF files")
@@ -570,7 +722,9 @@ class VillageChroniclerScraper:
         logger.info(f"Scraped {len(all_items)} items from {len(pdf_files)} PDF files")
         return all_items
 
-    def scrape_all(self, search_terms: Optional[list[str]] = None) -> tuple[list[VillageCollection], list[VillageItem]]:
+    def scrape_all(
+        self, search_terms: Optional[list[str]] = None
+    ) -> tuple[list[VillageCollection], list[VillageItem]]:
         """Scrape all collections and items based on the configured mode.
 
         Reads data from:
@@ -597,15 +751,15 @@ class VillageChroniclerScraper:
             # Scrape from remote websites
             logger.info("Scraping from remote websites")
             self.items = []
-            
+
             # Scrape Village Chronicler
             village_items = self.scrape_remote_village_chronicler()
             self.items.extend(village_items)
-            
+
             # Scrape Department56.com (placeholder)
             dept56_items = self.scrape_remote_department56()
             self.items.extend(dept56_items)
-            
+
             # Note: Retired products PDFs would need to be fetched remotely
             # This is not implemented in this version
 
