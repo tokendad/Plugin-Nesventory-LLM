@@ -181,7 +181,16 @@ class ScrapeRequest(BaseModel):
 
 
 class ErrorDetail(BaseModel):
-    """Standard error detail structure for API responses."""
+    """Standard error detail structure for API responses.
+    
+    Note: These models serve as documentation and type hints for API error responses.
+    They are not directly imported in api.py because FastAPI's HTTPException
+    detail parameter accepts any value and doesn't enforce model validation.
+    However, these models are useful for:
+    - OpenAPI/Swagger documentation
+    - Client code generation
+    - Type hints in custom error handlers
+    """
 
     error: str = Field(..., description="Error type or category")
     message: str = Field(..., description="Human-readable error message")
@@ -190,7 +199,11 @@ class ErrorDetail(BaseModel):
 
 
 class ImageUploadError(BaseModel):
-    """Error detail for image upload/processing failures."""
+    """Error detail for image upload/processing failures.
+    
+    Extended error structure specifically for image-related endpoints,
+    including file metadata and actionable suggestions.
+    """
 
     error: str = Field(..., description="Error type")
     message: str = Field(..., description="Human-readable error message")
