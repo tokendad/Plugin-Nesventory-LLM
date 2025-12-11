@@ -115,6 +115,22 @@
             transition: border-color 0.3s;
         }
         
+        input[type="file"] {
+            width: 100%;
+            padding: 15px;
+            border: 2px dashed #667eea;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            background: #f8f9fa;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        
+        input[type="file"]:hover {
+            background: #e9ecef;
+            border-color: #764ba2;
+        }
+        
         input[type="text"]:focus,
         textarea:focus,
         select:focus {
@@ -289,6 +305,22 @@
                 <span class="loading" id="buildLoading">⏳</span>
             </button>
             <div class="output" id="buildOutput"></div>
+        </div>
+        
+        <div class="card">
+            <h2>📷 Test Image Upload</h2>
+            <p style="margin-bottom: 15px; color: #666;">
+                Upload an image to test item identification. This helps diagnose connection errors with the API.
+            </p>
+            <div class="form-group">
+                <label for="imageInput">Select an image file:</label>
+                <input type="file" id="imageInput" accept="image/*" style="border: 2px dashed #667eea; padding: 15px;">
+            </div>
+            <button onclick="uploadImage()">
+                Upload & Identify
+                <span class="loading" id="imageLoading">⏳</span>
+            </button>
+            <div class="output" id="imageOutput"></div>
         </div>
         
         <div class="card">
@@ -511,6 +543,133 @@
                 }
             } catch (error) {
                 output.textContent = `Error: ${error.message}`;
+            } finally {
+                loading.classList.remove('show');
+            }
+        }
+        
+        async function uploadImage() {
+            const imageInput = document.getElementById('imageInput');
+            const output = document.getElementById('imageOutput');
+            const loading = document.getElementById('imageLoading');
+            
+            // Validate file selection
+            if (!imageInput.files || imageInput.files.length === 0) {
+                alert('Please select an image file');
+                return;
+            }
+            
+            const file = imageInput.files[0];
+            
+            loading.classList.add('show');
+            output.textContent = 'Uploading and processing image...';
+            output.classList.add('show');
+            
+            try {
+                // Create form data
+                const formData = new FormData();
+                formData.append('file', file);
+                
+                const response = await fetch('/nesventory/identify/image', {
+                    method: 'POST',
+                    body: formData
+                });
+                
+                const data = await response.json();
+                
+                if (response.ok) {
+                    // Success - display results
+                    let outputText = '✅ Image Upload Successful!\n\n';
+                    
+                    if (data.identified) {
+                        outputText += `Identified: ${data.item.name}\n`;
+                        outputText += `Confidence: ${(data.confidence * 100).toFixed(1)}%\n`;
+                        
+                        if (data.item.collection) {
+                            outputText += `Collection: ${data.item.collection}\n`;
+                        }
+                        if (data.item.item_number) {
+                            outputText += `Item #: ${data.item.item_number}\n`;
+                        }
+                        if (data.item.category) {
+                            outputText += `Category: ${data.item.category}\n`;
+                        }
+                        
+                        if (data.alternatives && data.alternatives.length > 0) {
+                            outputText += '\n--- Alternative Matches ---\n';
+                            data.alternatives.forEach((alt, idx) => {
+                                outputText += `${idx + 1}. ${alt.name}\n`;
+                            });
+                        }
+                        
+                        if (data.detections && data.detections.length > 0) {
+                            outputText += '\n--- Detected Objects ---\n';
+                            data.detections.forEach((det, idx) => {
+                                outputText += `${idx + 1}. ${det.label} (${(det.confidence * 100).toFixed(1)}%)\n`;
+                            });
+                        }
+                    } else {
+                        outputText += 'No items identified in the image.\n';
+                        if (data.message) {
+                            outputText += `\n${data.message}`;
+                        }
+                    }
+                    
+                    output.textContent = outputText;
+                } else {
+                    // Error - display structured error message
+                    let outputText = '❌ Error Processing Image\n\n';
+                    
+                    const detail = data.detail;
+                    
+                    if (typeof detail === 'object' && detail !== null) {
+                        // Structured error from PR #28
+                        if (detail.error) {
+                            outputText += `Error: ${detail.error}\n`;
+                        }
+                        if (detail.error_code) {
+                            outputText += `Error Code: ${detail.error_code}\n`;
+                        }
+                        if (detail.message) {
+                            outputText += `\nMessage: ${detail.message}\n`;
+                        }
+                        
+                        // File information
+                        if (detail.file_info) {
+                            outputText += '\n--- File Information ---\n';
+                            if (detail.file_info.filename) {
+                                outputText += `Filename: ${detail.file_info.filename}\n`;
+                            }
+                            if (detail.file_info.content_type) {
+                                outputText += `Content Type: ${detail.file_info.content_type}\n`;
+                            }
+                            if (detail.file_info.size_bytes !== undefined) {
+                                outputText += `Size: ${detail.file_info.size_bytes} bytes\n`;
+                            }
+                        }
+                        
+                        // Suggestions
+                        if (detail.suggestions && detail.suggestions.length > 0) {
+                            outputText += '\n--- Suggestions ---\n';
+                            detail.suggestions.forEach((suggestion, idx) => {
+                                outputText += `${idx + 1}. ${suggestion}\n`;
+                            });
+                        }
+                        
+                        // Additional details
+                        if (detail.details) {
+                            outputText += '\n--- Additional Details ---\n';
+                            outputText += JSON.stringify(detail.details, null, 2);
+                        }
+                    } else {
+                        // Simple error message
+                        outputText += `${detail || 'Unknown error'}`;
+                    }
+                    
+                    output.textContent = outputText;
+                }
+            } catch (error) {
+                output.textContent = `❌ Network Error\n\nFailed to connect to the API.\nError: ${error.message}`;
             } finally {
                 loading.classList.remove('show');
             }
