@@ -37,7 +37,10 @@ EXPOSE 8002
 # Set default environment variables
 ENV PUID=1000 \
     PGID=1000 \
-    TZ=UTC
+    TZ=UTC \
+    HF_HOME=/app/.cache/huggingface \
+    TORCH_HOME=/app/.cache/torch \
+    YOLO_CONFIG_DIR=/app/.cache/Ultralytics
 
 # Use entrypoint script
 ENTRYPOINT ["/usr/local/bin/docker-entrypoint.sh"]

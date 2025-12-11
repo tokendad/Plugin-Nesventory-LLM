@@ -24,6 +24,10 @@ fi
 # Fix permissions for data and cache directories
 chown -R $PUID:$PGID /app/data /app/.cache
 
+# Create cache subdirectories for ML models
+mkdir -p /app/.cache/huggingface /app/.cache/torch /app/.cache/Ultralytics/models
+chown -R $PUID:$PGID /app/.cache
+
 # Initialize sample data if data directory is empty
 if ! find /app/data -name '*.json' -type f | grep -q .; then
     echo "Initializing sample data..."

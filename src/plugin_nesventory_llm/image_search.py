@@ -114,7 +114,28 @@ class ImageSearchService:
             try:
                 from ultralytics import YOLO
                 logger.info(f"Loading YOLO model: {self.yolo_model_name}")
-                self._yolo_detector = YOLO(self.yolo_model_name)
+                
+                # Ensure model is downloaded to cache directory
+                # If YOLO_CONFIG_DIR is set, ultralytics will use it for model storage
+                # Otherwise, construct path in cache directory
+                cache_dir = os.environ.get('YOLO_CONFIG_DIR', os.path.expanduser('~/.cache/Ultralytics'))
+                model_cache_path = Path(cache_dir) / 'models' / self.yolo_model_name
+                
+                # Create cache directory if it doesn't exist
+                model_cache_path.parent.mkdir(parents=True, exist_ok=True)
+                
+                # Check if model exists in cache, otherwise YOLO will download it there
+                if model_cache_path.exists():
+                    logger.info(f"Using cached YOLO model from {model_cache_path}")
+                    self._yolo_detector = YOLO(str(model_cache_path))
+                else:
+                    logger.info(f"Downloading YOLO model to {model_cache_path}")
+                    # Download to cache directory
+                    self._yolo_detector = YOLO(self.yolo_model_name)
+                    # Move downloaded model to cache if it was downloaded to current directory
+                    if Path(self.yolo_model_name).exists():
+                        Path(self.yolo_model_name).rename(model_cache_path)
+                        self._yolo_detector = YOLO(str(model_cache_path))
             except ImportError:
                 logger.warning("ultralytics not installed. Falling back to BLIP captioning.")
                 self.use_yolo = False
