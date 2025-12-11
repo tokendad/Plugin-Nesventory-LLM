@@ -314,7 +314,7 @@
             </p>
             <div class="form-group">
                 <label for="imageInput">Select an image file:</label>
-                <input type="file" id="imageInput" accept="image/*" style="border: 2px dashed #667eea; padding: 15px;">
+                <input type="file" id="imageInput" accept="image/*">
             </div>
             <button onclick="uploadImage()">
                 Upload & Identify
@@ -555,7 +555,8 @@
             
             // Validate file selection
             if (!imageInput.files || imageInput.files.length === 0) {
-                alert('Please select an image file');
+                output.textContent = '⚠️ Please select an image file to upload';
+                output.classList.add('show');
                 return;
             }
             
