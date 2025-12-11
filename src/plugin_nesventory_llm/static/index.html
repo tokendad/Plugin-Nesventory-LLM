@@ -599,20 +599,26 @@
                         if (data.alternatives && data.alternatives.length > 0) {
                             outputText += '\n--- Alternative Matches ---\n';
                             data.alternatives.forEach((alt, idx) => {
-                                outputText += `${idx + 1}. ${alt.name}\n`;
+                                outputText += `${idx + 1}. ${alt.name || 'Unknown'}\n`;
                             });
                         }
                         
-                        if (data.detections && data.detections.length > 0) {
+                        if (data.detected_objects && data.detected_objects.length > 0) {
                             outputText += '\n--- Detected Objects ---\n';
-                            data.detections.forEach((det, idx) => {
-                                outputText += `${idx + 1}. ${det.label} (${(det.confidence * 100).toFixed(1)}%)\n`;
+                            data.detected_objects.forEach((label, idx) => {
+                                outputText += `${idx + 1}. ${label}\n`;
                             });
                         }
                     } else {
                         outputText += 'No items identified in the image.\n';
-                        if (data.message) {
-                            outputText += `\n${data.message}`;
+                        if (data.suggestion) {
+                            outputText += `\n${data.suggestion}`;
+                        }
+                        if (data.detected_objects && data.detected_objects.length > 0) {
+                            outputText += '\n\n--- Detected Objects ---\n';
+                            data.detected_objects.forEach((label, idx) => {
+                                outputText += `${idx + 1}. ${label}\n`;
+                            });
                         }
                     }
                     
