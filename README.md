@@ -105,7 +105,7 @@ pip install -e ".[dev]"
     - Ubuntu/Debian: `apt-get install tesseract-ocr`
     - macOS: `brew install tesseract`
     - Windows: Download from [UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
-  - OpenGL libraries (for YOLO): `apt-get install libgl1-mesa-glx libglib2.0-0`
+  - OpenGL libraries (for YOLO): `apt-get install libgl1 libglib2.0-0`
 - **Python dependencies** (automatically installed):
   - FastAPI for the REST API
   - sentence-transformers for semantic search

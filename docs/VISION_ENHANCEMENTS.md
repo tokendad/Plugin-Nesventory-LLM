@@ -78,7 +78,7 @@ python scripts/build_catalog_embeddings.py \
 
 Added system dependencies:
 - `tesseract-ocr` and `tesseract-ocr-eng` - OCR engine
-- `libgl1-mesa-glx` and `libglib2.0-0` - OpenGL for YOLO
+- `libgl1` and `libglib2.0-0` - OpenGL for YOLO
 
 ### 6. Documentation (`README.md`)
 
