@@ -114,6 +114,15 @@ class ImageSearchService:
             try:
                 from ultralytics import YOLO
                 logger.info(f"Loading YOLO model: {self.yolo_model_name}")
+                
+                # Ensure we have a writable directory for model weights
+                # Ultralytics downloads models to the weights directory within YOLO_CONFIG_DIR
+                # or to current directory if not set. We ensure it uses our cache.
+                cache_dir = os.environ.get('YOLO_CONFIG_DIR', '/tmp/Ultralytics')
+                weights_dir = Path(cache_dir) / 'weights'
+                weights_dir.mkdir(parents=True, exist_ok=True)
+                
+                # YOLO will automatically download to the weights directory when using a model name like "yolov8n.pt"
                 self._yolo_detector = YOLO(self.yolo_model_name)
             except ImportError:
                 logger.warning("ultralytics not installed. Falling back to BLIP captioning.")
