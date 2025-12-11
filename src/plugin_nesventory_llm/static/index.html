@@ -246,6 +246,29 @@
                     <div class="value" id="embeddingsStatus">-</div>
                 </div>
             </div>
+            <h3 style="margin-top: 20px; margin-bottom: 10px;">Vision Subsystems</h3>
+            <div class="status-grid">
+                <div class="status-item">
+                    <div class="label">BLIP (Captioning)</div>
+                    <div class="value" id="status-blip">-</div>
+                    <div style="font-size: 0.75rem; color: #666; margin-top: 5px;" id="status-blip-msg"></div>
+                </div>
+                <div class="status-item">
+                    <div class="label">YOLO (Detection)</div>
+                    <div class="value" id="status-yolo">-</div>
+                    <div style="font-size: 0.75rem; color: #666; margin-top: 5px;" id="status-yolo-msg"></div>
+                </div>
+                <div class="status-item">
+                    <div class="label">OCR (Tesseract)</div>
+                    <div class="value" id="status-ocr">-</div>
+                    <div style="font-size: 0.75rem; color: #666; margin-top: 5px;" id="status-ocr-msg"></div>
+                </div>
+                <div class="status-item">
+                    <div class="label">CLIP (Matching)</div>
+                    <div class="value" id="status-clip">-</div>
+                    <div style="font-size: 0.75rem; color: #666; margin-top: 5px;" id="status-clip-msg"></div>
+                </div>
+            </div>
             <div id="collectionsSection" style="margin-top: 20px;">
                 <h3 style="margin-bottom: 10px;">Collections</h3>
                 <div class="collections-grid" id="collections"></div>
@@ -351,18 +374,115 @@
         // Fetch system status on load
         async function fetchStatus() {
             try {
-                const response = await fetch('/health');
-                const data = await response.json();
+                // Fetch basic health status
+                const healthResponse = await fetch('/health');
+                const healthData = await healthResponse.json();
                 
-                document.getElementById('systemStatus').textContent = data.status;
+                document.getElementById('systemStatus').textContent = healthData.status;
                 document.getElementById('systemStatus').className = 'value status-' + 
-                    (data.status === 'healthy' ? 'healthy' : 'warning');
-                document.getElementById('version').textContent = data.version;
-                document.getElementById('itemsLoaded').textContent = data.items_loaded;
+                    (healthData.status === 'healthy' ? 'healthy' : 'warning');
+                document.getElementById('version').textContent = healthData.version;
+                document.getElementById('itemsLoaded').textContent = healthData.items_loaded;
                 document.getElementById('embeddingsStatus').textContent = 
-                    data.embeddings_ready ? 'Ready ✓' : 'Not Built';
+                    healthData.embeddings_ready ? 'Ready ✓' : 'Not Built';
                 
-                if (data.items_loaded > 0) {
+                // Fetch detailed connection test with vision subsystems
+                try {
+                    const connResponse = await fetch('/connection/test');
+                    const connData = await connResponse.json();
+                    
+                    // Update BLIP status
+                    if (connData.checks && connData.checks.blip) {
+                        const blip = connData.checks.blip;
+                        const blipEl = document.getElementById('status-blip');
+                        const blipMsgEl = document.getElementById('status-blip-msg');
+                        
+                        if (blip.status === 'ok') {
+                            blipEl.textContent = '✓ Available';
+                            blipEl.className = 'value status-healthy';
+                        } else if (blip.status === 'warning') {
+                            blipEl.textContent = '⚠ Warning';
+                            blipEl.className = 'value status-warning';
+                        } else {
+                            blipEl.textContent = '✗ Unavailable';
+                            blipEl.className = 'value status-error';
+                        }
+                        blipMsgEl.textContent = blip.message || '';
+                    }
+                    
+                    // Update YOLO status
+                    if (connData.checks && connData.checks.yolo) {
+                        const yolo = connData.checks.yolo;
+                        const yoloEl = document.getElementById('status-yolo');
+                        const yoloMsgEl = document.getElementById('status-yolo-msg');
+                        
+                        if (yolo.status === 'ok') {
+                            yoloEl.textContent = '✓ Available';
+                            yoloEl.className = 'value status-healthy';
+                        } else if (yolo.status === 'warning') {
+                            yoloEl.textContent = '⚠ Warning';
+                            yoloEl.className = 'value status-warning';
+                        } else {
+                            yoloEl.textContent = '✗ Unavailable';
+                            yoloEl.className = 'value status-error';
+                        }
+                        yoloMsgEl.textContent = yolo.message || '';
+                    }
+                    
+                    // Update OCR status
+                    if (connData.checks && connData.checks.ocr) {
+                        const ocr = connData.checks.ocr;
+                        const ocrEl = document.getElementById('status-ocr');
+                        const ocrMsgEl = document.getElementById('status-ocr-msg');
+                        
+                        if (ocr.status === 'ok') {
+                            ocrEl.textContent = '✓ Available';
+                            ocrEl.className = 'value status-healthy';
+                        } else if (ocr.status === 'warning') {
+                            ocrEl.textContent = '⚠ Warning';
+                            ocrEl.className = 'value status-warning';
+                        } else {
+                            ocrEl.textContent = '✗ Unavailable';
+                            ocrEl.className = 'value status-error';
+                        }
+                        ocrMsgEl.textContent = ocr.message || '';
+                    }
+                    
+                    // Update CLIP status
+                    if (connData.checks && connData.checks.clip) {
+                        const clip = connData.checks.clip;
+                        const clipEl = document.getElementById('status-clip');
+                        const clipMsgEl = document.getElementById('status-clip-msg');
+                        
+                        if (clip.status === 'ok') {
+                            clipEl.textContent = '✓ Available';
+                            clipEl.className = 'value status-healthy';
+                        } else if (clip.status === 'warning') {
+                            clipEl.textContent = '⚠ Warning';
+                            clipEl.className = 'value status-warning';
+                        } else {
+                            clipEl.textContent = '✗ Unavailable';
+                            clipEl.className = 'value status-error';
+                        }
+                        clipMsgEl.textContent = clip.message || '';
+                    }
+                } catch (connError) {
+                    console.error('Error fetching connection test:', connError);
+                    // Set all vision subsystems to error state
+                    ['blip', 'yolo', 'ocr', 'clip'].forEach(subsystem => {
+                        const el = document.getElementById('status-' + subsystem);
+                        const msgEl = document.getElementById('status-' + subsystem + '-msg');
+                        if (el) {
+                            el.textContent = '✗ Error';
+                            el.className = 'value status-error';
+                        }
+                        if (msgEl) {
+                            msgEl.textContent = 'Failed to fetch status';
+                        }
+                    });
+                }
+                
+                if (healthData.items_loaded > 0) {
                     await fetchCollections();
                 }
             } catch (error) {

@@ -458,6 +458,14 @@ class ImageSearchService:
 
         # Detect objects (YOLO or caption-based)
         detected_objects = self._detect_objects(image, caption)
+        
+        # Log each detected object with detailed information
+        logger.info(f"Image search detected {len(detected_objects)} object(s)")
+        for idx, obj in enumerate(detected_objects):
+            logger.info(
+                f"  Detection {idx}: label='{obj.label}', confidence={obj.confidence:.4f}, "
+                f"ocr_text={repr(obj.ocr_text)}, bbox={obj.bounding_box}, class_name={obj.class_name}"
+            )
 
         # Search for items matching the detected objects
         matched_items = []
@@ -466,18 +474,28 @@ class ImageSearchService:
         if detected_objects:
             # Try CLIP matching first if available
             if self.use_clip and self._clip_embeddings is not None:
+                logger.info("Performing CLIP matching for detected objects")
                 # For each detected object, get CLIP matches
                 all_clip_matches = []
-                for obj in detected_objects:
-                    # Get crop if available
-                    if obj.bounding_box:
-                        x1, y1, x2, y2 = obj.bounding_box
-                        crop = image.crop((x1, y1, x2, y2))
-                    else:
-                        crop = image
-                    
-                    clip_matches = self._match_with_clip(crop, top_k=request.limit)
-                    all_clip_matches.extend(clip_matches)
+                for idx, obj in enumerate(detected_objects):
+                    try:
+                        # Get crop if available
+                        if obj.bounding_box:
+                            x1, y1, x2, y2 = obj.bounding_box
+                            crop = image.crop((x1, y1, x2, y2))
+                        else:
+                            crop = image
+                        
+                        clip_matches = self._match_with_clip(crop, top_k=request.limit)
+                        logger.info(f"  Detection {idx} CLIP matches: {len(clip_matches)} candidates")
+                        for match in clip_matches:
+                            logger.info(
+                                f"    CLIP match: sku={match['sku']}, name='{match['name']}', "
+                                f"score={match['score']:.4f}"
+                            )
+                        all_clip_matches.extend(clip_matches)
+                    except Exception as e:
+                        logger.warning(f"  Detection {idx} CLIP matching failed: {e}")
                 
                 # Convert CLIP matches to ItemSearchResult format
                 # For now, we'll search KB by SKU to get full item details
@@ -485,39 +503,77 @@ class ImageSearchService:
                 for match in all_clip_matches:
                     if match['sku'] not in seen_skus and match['score'] >= request.min_confidence:
                         seen_skus.add(match['sku'])
-                        # Try to find item in KB by SKU/name
-                        query = ItemQuery(
-                            query=match['name'],
-                            limit=1
-                        )
-                        kb_results = self.kb.search(query)
-                        if kb_results:
-                            # Use CLIP score instead of text relevance score
-                            result = kb_results[0]
-                            result.relevance_score = match['score']
-                            result.match_reason = f"CLIP visual similarity: {match['score']:.2f}"
-                            matched_items.append(result)
+                        try:
+                            # Try to find item in KB by SKU/name
+                            query = ItemQuery(
+                                query=match['name'],
+                                limit=1
+                            )
+                            kb_results = self.kb.search(query)
+                            if kb_results:
+                                # Use CLIP score instead of text relevance score
+                                result = kb_results[0]
+                                result.relevance_score = match['score']
+                                result.match_reason = f"CLIP visual similarity: {match['score']:.2f}"
+                                matched_items.append(result)
+                                logger.info(
+                                    f"    KB lookup success: item_id={result.item.id}, "
+                                    f"name='{result.item.name}', score={match['score']:.4f}"
+                                )
+                            else:
+                                logger.warning(
+                                    f"    KB lookup failed for CLIP match: sku={match['sku']}, "
+                                    f"name='{match['name']}'"
+                                )
+                        except Exception as e:
+                            logger.warning(f"    KB lookup error for {match['name']}: {e}")
                         
                         if len(matched_items) >= request.limit:
                             break
             
             # Fallback to text-based search if CLIP didn't find enough matches
-            if len(matched_items) < request.limit and caption:
-                query = ItemQuery(
-                    query=caption,
-                    collection=request.collection,
-                    category=request.category,
-                    limit=request.limit - len(matched_items),
-                )
-
-                search_results = self.kb.search(query)
-
-                # Filter by minimum confidence and avoid duplicates
-                seen_item_ids = {item.item.id for item in matched_items}
-                for result in search_results:
-                    if result.relevance_score >= request.min_confidence and result.item.id not in seen_item_ids:
-                        matched_items.append(result)
-                        seen_item_ids.add(result.item.id)
+            if len(matched_items) < request.limit:
+                # Use caption for text-based search or detected object labels
+                for idx, obj in enumerate(detected_objects):
+                    try:
+                        # Build query text from OCR and label
+                        query_parts = []
+                        if obj.ocr_text:
+                            query_parts.append(obj.ocr_text)
+                        if obj.label and obj.label not in query_parts:
+                            query_parts.append(obj.label)
+                        if caption and caption not in query_parts:
+                            query_parts.append(caption)
+                        
+                        query_text = " ".join(query_parts) if query_parts else caption
+                        
+                        if query_text:
+                            query = ItemQuery(
+                                query=query_text,
+                                collection=request.collection,
+                                category=request.category,
+                                limit=request.limit - len(matched_items),
+                            )
+                            
+                            logger.info(f"  Detection {idx} text-based KB search: query='{query_text}'")
+                            search_results = self.kb.search(query)
+                            logger.info(f"    Text search returned {len(search_results)} result(s)")
+                            
+                            # Filter by minimum confidence and avoid duplicates
+                            seen_item_ids = {item.item.id for item in matched_items}
+                            for result in search_results:
+                                if result.relevance_score >= request.min_confidence and result.item.id not in seen_item_ids:
+                                    matched_items.append(result)
+                                    seen_item_ids.add(result.item.id)
+                                    logger.info(
+                                        f"      Result: item_id={result.item.id}, name='{result.item.name}', "
+                                        f"score={result.relevance_score:.4f}"
+                                    )
+                            
+                            if len(matched_items) >= request.limit:
+                                break
+                    except Exception as e:
+                        logger.warning(f"  Detection {idx} text-based search failed: {e}")
 
             if matched_items:
                 overall_confidence = sum(r.relevance_score for r in matched_items) / len(
@@ -525,6 +581,10 @@ class ImageSearchService:
                 )
 
         processing_time = (time.time() - start_time) * 1000  # Convert to milliseconds
+        logger.info(
+            f"Image search completed: {len(matched_items)} match(es), "
+            f"overall_confidence={overall_confidence:.4f}, processing_time={processing_time:.2f}ms"
+        )
 
         return ImageSearchResult(
             detected_objects=detected_objects,
