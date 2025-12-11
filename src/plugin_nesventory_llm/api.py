@@ -5,6 +5,7 @@ This provides REST API endpoints for querying the Department 56
 village collectibles knowledge base.
 """
 
+import importlib
 import logging
 from contextlib import asynccontextmanager
 from datetime import datetime, timezone
@@ -247,6 +248,180 @@ async def connection_test():
             "status": "ok",
             "message": "Image search service initialized and ready",
         }
+
+    # Check 6: BLIP (vision model for image captioning)
+    if image_search_service is not None:
+        # Check if transformers package is available
+        try:
+            importlib.import_module('transformers')
+            # Check if model is already loaded
+            if image_search_service._vision_model is not None:
+                checks["blip"] = {
+                    "status": "ok",
+                    "message": f"BLIP model loaded: {image_search_service.vision_model_name}",
+                }
+            else:
+                checks["blip"] = {
+                    "status": "ok",
+                    "message": f"BLIP available (not loaded, lazy load): {image_search_service.vision_model_name}",
+                }
+        except ImportError:
+            checks["blip"] = {
+                "status": "error",
+                "message": "transformers package not installed",
+            }
+            if overall_status == "ok":
+                overall_status = "degraded"
+    else:
+        checks["blip"] = {
+            "status": "error",
+            "message": "Image search service not initialized",
+        }
+        if overall_status == "ok":
+            overall_status = "degraded"
+
+    # Check 7: YOLO (object detection)
+    if image_search_service is not None:
+        if not image_search_service.use_yolo:
+            checks["yolo"] = {
+                "status": "warning",
+                "message": "YOLO disabled in configuration",
+            }
+            if overall_status == "ok":
+                overall_status = "degraded"
+        else:
+            # Check if ultralytics package is available
+            try:
+                importlib.import_module('ultralytics')
+                # Check if model is already loaded
+                if image_search_service._yolo_detector is not None:
+                    checks["yolo"] = {
+                        "status": "ok",
+                        "message": f"YOLO model loaded: {image_search_service.yolo_model_name}",
+                    }
+                else:
+                    checks["yolo"] = {
+                        "status": "ok",
+                        "message": f"YOLO available (not loaded, lazy load): {image_search_service.yolo_model_name}",
+                    }
+            except ImportError:
+                checks["yolo"] = {
+                    "status": "error",
+                    "message": "ultralytics package not installed",
+                }
+                if overall_status == "ok":
+                    overall_status = "degraded"
+    else:
+        checks["yolo"] = {
+            "status": "error",
+            "message": "Image search service not initialized",
+        }
+        if overall_status == "ok":
+            overall_status = "degraded"
+
+    # Check 8: OCR (Tesseract)
+    if image_search_service is not None:
+        if not image_search_service.use_ocr:
+            checks["ocr"] = {
+                "status": "warning",
+                "message": "OCR disabled in configuration",
+            }
+            if overall_status == "ok":
+                overall_status = "degraded"
+        else:
+            # Check if pytesseract package is available
+            try:
+                importlib.import_module('pytesseract')
+                # Check if OCR has been tested
+                if image_search_service._ocr_available is True:
+                    checks["ocr"] = {
+                        "status": "ok",
+                        "message": "Tesseract OCR available and tested",
+                    }
+                elif image_search_service._ocr_available is False:
+                    checks["ocr"] = {
+                        "status": "error",
+                        "message": "Tesseract OCR failed initialization test",
+                    }
+                    if overall_status == "ok":
+                        overall_status = "degraded"
+                else:
+                    checks["ocr"] = {
+                        "status": "ok",
+                        "message": "pytesseract available (not tested, lazy load)",
+                    }
+            except ImportError:
+                checks["ocr"] = {
+                    "status": "error",
+                    "message": "pytesseract package not installed",
+                }
+                if overall_status == "ok":
+                    overall_status = "degraded"
+    else:
+        checks["ocr"] = {
+            "status": "error",
+            "message": "Image search service not initialized",
+        }
+        if overall_status == "ok":
+            overall_status = "degraded"
+
+    # Check 9: CLIP (visual similarity matching)
+    if image_search_service is not None:
+        if not image_search_service.use_clip:
+            checks["clip"] = {
+                "status": "warning",
+                "message": "CLIP disabled in configuration",
+            }
+            if overall_status == "ok":
+                overall_status = "degraded"
+        else:
+            # Check if transformers package is available
+            try:
+                importlib.import_module('transformers')
+                # Check if model is already loaded
+                if image_search_service._clip_model is not None:
+                    # Check if embeddings are loaded
+                    if image_search_service._clip_embeddings is not None:
+                        checks["clip"] = {
+                            "status": "ok",
+                            "message": f"CLIP model and embeddings loaded: {image_search_service.clip_model_name}",
+                        }
+                    else:
+                        checks["clip"] = {
+                            "status": "warning",
+                            "message": f"CLIP model loaded but embeddings not available at {image_search_service.catalog_embeddings_path}",
+                        }
+                        if overall_status == "ok":
+                            overall_status = "degraded"
+                else:
+                    # Check if embeddings file exists
+                    embeddings_path = Path(image_search_service.catalog_embeddings_path)
+                    if embeddings_path.exists():
+                        checks["clip"] = {
+                            "status": "ok",
+                            "message": f"CLIP available (not loaded, lazy load): {image_search_service.clip_model_name}, embeddings file exists",
+                        }
+                    else:
+                        checks["clip"] = {
+                            "status": "warning",
+                            "message": f"CLIP available but embeddings not found at {image_search_service.catalog_embeddings_path}",
+                        }
+                        if overall_status == "ok":
+                            overall_status = "degraded"
+            except ImportError:
+                checks["clip"] = {
+                    "status": "error",
+                    "message": "transformers package not installed",
+                }
+                if overall_status == "ok":
+                    overall_status = "degraded"
+    else:
+        checks["clip"] = {
+            "status": "error",
+            "message": "Image search service not initialized",
+        }
+        if overall_status == "ok":
+            overall_status = "degraded"
 
     # Create human-readable message
     if overall_status == "ok":
