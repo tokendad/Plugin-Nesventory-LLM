@@ -100,11 +100,24 @@ pip install -e ".[dev]"
 ### Requirements
 
 - Python 3.9 or higher (or Docker)
-- Dependencies are automatically installed:
+- **System dependencies** (for advanced vision features):
+  - Tesseract OCR (for text extraction from images)
+    - Ubuntu/Debian: `apt-get install tesseract-ocr`
+    - macOS: `brew install tesseract`
+    - Windows: Download from [UB-Mannheim/tesseract](https://github.com/UB-Mannheim/tesseract/wiki)
+  - OpenGL libraries (for YOLO): `apt-get install libgl1-mesa-glx libglib2.0-0`
+- **Python dependencies** (automatically installed):
   - FastAPI for the REST API
   - sentence-transformers for semantic search
+  - **ultralytics (YOLOv8)** for object detection
+  - **transformers** for CLIP and BLIP vision models
+  - **pytesseract** for OCR
+  - **faiss-cpu** for fast similarity search (optional, falls back to sklearn)
   - BeautifulSoup4 for web scraping
+  - PyTorch for deep learning models
   - scikit-learn for similarity calculations
+
+**Note:** When using Docker, all system dependencies are pre-installed in the container.
 
 ## Quick Start
 
@@ -299,14 +312,75 @@ async def identify_from_image(image_path: str):
 
 ## Image Search
 
-The plugin includes AI-powered image search capabilities, allowing you to identify Department 56 collectibles from photos. This feature uses computer vision to analyze images and match detected objects against the knowledge base.
+The plugin includes AI-powered image search capabilities with advanced computer vision, allowing you to identify Department 56 collectibles from photos. The system uses a multi-modal approach combining:
+
+- **YOLOv8** - State-of-the-art object detection for identifying items with bounding boxes
+- **CLIP** - Vision-language model for semantic image-based catalog matching
+- **Tesseract OCR** - Text extraction from item labels and signage
+- **BLIP** - Image captioning for fallback description generation
 
 ### How It Works
 
 1. **Upload an Image** - Provide a photo containing one or more Department 56 collectible items
-2. **Object Detection** - The system analyzes the image and generates descriptions of the visible items
-3. **Semantic Matching** - Detected objects are matched against the knowledge base using semantic similarity
-4. **Return Results** - Get a list of matching items with confidence scores
+2. **Object Detection** - YOLOv8 detects objects and provides bounding boxes (falls back to BLIP if unavailable)
+3. **Text Extraction** - Tesseract OCR extracts any visible text from detected items
+4. **Visual Matching** - CLIP embeddings match detected objects against a precomputed catalog
+5. **Semantic Fallback** - If CLIP catalog isn't available, uses text-based semantic search
+6. **Return Results** - Get a list of matching items with confidence scores, bounding boxes, and OCR text
+
+### Enhanced Detection Capabilities
+
+**With YOLO + CLIP + OCR (Recommended):**
+- Detects multiple objects in a single image with precise bounding boxes
+- Matches items visually against catalog images using CLIP embeddings
+- Extracts text from item labels, boxes, and signage
+- Higher accuracy for visual identification
+
+**Fallback Mode (BLIP only):**
+- Generates descriptive captions of the entire image
+- Uses text-based semantic search for matching
+- Works without additional setup
+
+### Setting Up CLIP Catalog Matching
+
+To enable visual matching with CLIP, you need to prepare a catalog CSV and build embeddings:
+
+#### 1. Create Catalog CSV
+
+Create `data/catalog.csv` with your item catalog:
+
+```csv
+sku,image_path,name
+56789,images/56789.jpg,Victorian House with Lights  
+56790,images/56790.jpg,Christmas Church
+56791,images/56791.jpg,Snow Village Inn
+```
+
+**Required columns:**
+- `sku` - Unique product identifier
+- `image_path` - Path to product image (relative or absolute)
+- `name` - Product name/description
+
+#### 2. Build CLIP Embeddings
+
+Run the embedding builder script:
+
+```bash
+# Locally
+python scripts/build_catalog_embeddings.py
+
+# In Docker
+docker exec nesventory-llm python scripts/build_catalog_embeddings.py
+
+# Custom paths
+python scripts/build_catalog_embeddings.py \
+  --catalog path/to/catalog.csv \
+  --output path/to/embeddings.npz \
+  --model openai/clip-vit-base-patch32 \
+  --batch-size 32
+```
+
+This creates `data/catalog_embeddings.npz` containing CLIP embeddings for visual matching.
 
 ### Supported Image Formats
 
@@ -355,12 +429,41 @@ async def search_by_image(image_path: str):
 
 ### Response Format
 
-The image search endpoint returns:
+The image search endpoint returns enhanced detection results:
 
-- **detected_objects**: List of objects detected in the image with confidence scores
-- **matched_items**: Department 56 items that match the detected objects
-- **overall_confidence**: Average confidence score across all matches
-- **processing_time_ms**: Time taken to process the image in milliseconds
+```json
+{
+  "detected_objects": [
+    {
+      "label": "building at position (120, 45)",
+      "confidence": 0.87,
+      "bounding_box": [120, 45, 380, 290],
+      "ocr_text": "Victorian House 1995",
+      "class_name": "building"
+    }
+  ],
+  "matched_items": [
+    {
+      "item": {
+        "id": "dept56-56789",
+        "name": "Victorian House with Lights",
+        "collection": "Dickens Village",
+        ...
+      },
+      "relevance_score": 0.92,
+      "match_reason": "CLIP visual similarity: 0.92"
+    }
+  ],
+  "overall_confidence": 0.92,
+  "processing_time_ms": 1247.56
+}
+```
+
+**New in this version:**
+- `bounding_box` - Pixel coordinates [x1, y1, x2, y2] for detected objects
+- `ocr_text` - Text extracted from objects via Tesseract OCR
+- `class_name` - Object class from YOLO detector
+- `match_reason` - Explanation of matching method (CLIP vs text-based)
 
 ### Tips for Best Results
 
