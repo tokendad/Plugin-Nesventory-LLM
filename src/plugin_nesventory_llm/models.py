@@ -137,7 +137,9 @@ class DetectedObject(BaseModel):
 
     label: str = Field(..., description="Description/label of the detected object")
     confidence: float = Field(..., description="Detection confidence (0-1)")
-    bounding_box: Optional[dict] = Field(None, description="Bounding box coordinates")
+    bounding_box: Optional[list[int]] = Field(None, description="Bounding box coordinates [x1, y1, x2, y2]")
+    ocr_text: Optional[str] = Field(None, description="Text extracted from object via OCR")
+    class_name: Optional[str] = Field(None, description="Class name from object detector")
 
 
 class ImageSearchResult(BaseModel):
