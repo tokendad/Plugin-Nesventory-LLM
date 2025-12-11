@@ -122,8 +122,10 @@ class ImageSearchService:
                 weights_dir = Path(cache_dir) / 'weights'
                 weights_dir.mkdir(parents=True, exist_ok=True)
                 
-                # YOLO will automatically download to the weights directory when using a model name like "yolov8n.pt"
-                self._yolo_detector = YOLO(self.yolo_model_name)
+                # Provide the full path to the model file so YOLO downloads to the correct location
+                # If only the model name is provided, YOLO tries to download to the current directory
+                model_path = weights_dir / self.yolo_model_name
+                self._yolo_detector = YOLO(str(model_path))
             except ImportError:
                 logger.warning("ultralytics not installed. Falling back to BLIP captioning.")
                 self.use_yolo = False
