@@ -115,27 +115,15 @@ class ImageSearchService:
                 from ultralytics import YOLO
                 logger.info(f"Loading YOLO model: {self.yolo_model_name}")
                 
-                # Ensure model is downloaded to cache directory
-                # If YOLO_CONFIG_DIR is set, ultralytics will use it for model storage
-                # Otherwise, construct path in cache directory
-                cache_dir = os.environ.get('YOLO_CONFIG_DIR', os.path.expanduser('~/.cache/Ultralytics'))
-                model_cache_path = Path(cache_dir) / 'models' / self.yolo_model_name
+                # Ensure we have a writable directory for model weights
+                # Ultralytics downloads models to the weights directory within YOLO_CONFIG_DIR
+                # or to current directory if not set. We ensure it uses our cache.
+                cache_dir = os.environ.get('YOLO_CONFIG_DIR', os.path.join(os.path.expanduser('~'), '.config', 'Ultralytics'))
+                weights_dir = Path(cache_dir) / 'weights'
+                weights_dir.mkdir(parents=True, exist_ok=True)
                 
-                # Create cache directory if it doesn't exist
-                model_cache_path.parent.mkdir(parents=True, exist_ok=True)
-                
-                # Check if model exists in cache, otherwise YOLO will download it there
-                if model_cache_path.exists():
-                    logger.info(f"Using cached YOLO model from {model_cache_path}")
-                    self._yolo_detector = YOLO(str(model_cache_path))
-                else:
-                    logger.info(f"Downloading YOLO model to {model_cache_path}")
-                    # Download to cache directory
-                    self._yolo_detector = YOLO(self.yolo_model_name)
-                    # Move downloaded model to cache if it was downloaded to current directory
-                    if Path(self.yolo_model_name).exists():
-                        Path(self.yolo_model_name).rename(model_cache_path)
-                        self._yolo_detector = YOLO(str(model_cache_path))
+                # YOLO will automatically download to the weights directory when using a model name like "yolov8n.pt"
+                self._yolo_detector = YOLO(self.yolo_model_name)
             except ImportError:
                 logger.warning("ultralytics not installed. Falling back to BLIP captioning.")
                 self.use_yolo = False
