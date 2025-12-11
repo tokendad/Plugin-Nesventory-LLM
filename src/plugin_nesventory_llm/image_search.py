@@ -118,7 +118,7 @@ class ImageSearchService:
                 # Ensure we have a writable directory for model weights
                 # Ultralytics downloads models to the weights directory within YOLO_CONFIG_DIR
                 # or to current directory if not set. We ensure it uses our cache.
-                cache_dir = os.environ.get('YOLO_CONFIG_DIR', os.path.join(os.path.expanduser('~'), '.config', 'Ultralytics'))
+                cache_dir = os.environ.get('YOLO_CONFIG_DIR', '/tmp/Ultralytics')
                 weights_dir = Path(cache_dir) / 'weights'
                 weights_dir.mkdir(parents=True, exist_ok=True)
                 
