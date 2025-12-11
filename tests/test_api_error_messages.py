@@ -202,22 +202,20 @@ class TestConsistentErrorStructure:
         """Test that all database empty errors have consistent structure."""
         # These endpoints should all return consistent empty database errors
         endpoints = [
-            ("POST", "/query", {"query": "test"}),
-            ("POST", "/search", {"query": "test"}),
-            ("POST", "/build"),
-            ("POST", "/nesventory/identify?query=test"),
-            ("GET", "/items/test-id"),
+            ("POST", "/query", {"query": "test"}, {}),
+            ("POST", "/search", {"query": "test"}, {}),
+            ("POST", "/build", None, {}),
+            ("POST", "/nesventory/identify", None, {"query": "test"}),
+            ("GET", "/items/test-id", None, {}),
         ]
         
-        for method, path, *args in endpoints:
-            json_data = args[0] if args else None
-            
+        for method, path, json_data, params in endpoints:
             if method == "POST" and json_data:
-                response = client.post(path, json=json_data)
+                response = client.post(path, json=json_data, params=params)
             elif method == "POST":
-                response = client.post(path)
+                response = client.post(path, params=params)
             else:
-                response = client.get(path)
+                response = client.get(path, params=params)
             
             # Should return 404 or 503
             if response.status_code == 404:

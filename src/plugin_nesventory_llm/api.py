@@ -756,6 +756,8 @@ async def search_by_image(
 
     except ValueError as e:
         # Handle image loading/processing errors
+        # Note: image_data is guaranteed to be defined here since ValueError
+        # would only be raised by search_by_image after image_data is set
         error_message = str(e)
         raise HTTPException(
             status_code=400,
@@ -766,7 +768,7 @@ async def search_by_image(
                 "file_info": {
                     "filename": file.filename,
                     "content_type": file.content_type,
-                    "size_bytes": len(image_data) if image_data else 0,
+                    "size_bytes": len(image_data),
                 },
                 "suggestions": [
                     "Ensure the file is a valid image format (JPEG, PNG, WebP, BMP)",
@@ -899,6 +901,8 @@ async def identify_item_from_image(
 
     except ValueError as e:
         # Handle image loading/processing errors
+        # Note: image_data is guaranteed to be defined here since ValueError
+        # would only be raised by identify_from_image after image_data is set
         error_message = str(e)
         raise HTTPException(
             status_code=400,
@@ -909,7 +913,7 @@ async def identify_item_from_image(
                 "file_info": {
                     "filename": file.filename,
                     "content_type": file.content_type,
-                    "size_bytes": len(image_data) if image_data else 0,
+                    "size_bytes": len(image_data),
                 },
                 "suggestions": [
                     "Ensure the file is a valid image format (JPEG, PNG, WebP, BMP)",
